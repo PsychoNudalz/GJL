@@ -8,18 +8,20 @@ public class InteractableObjectScript : MonoBehaviour
 {
     [SerializeField] private List<InteractableEvent> interactEvents;
     
-    public void Interact(Tools t)
+    public bool Interact(Tools t)
     {
         print($"Interacting with {gameObject.name}");
         UnityEvent e = GetEventByToolEnum(t);
         if (e != null)
         {
             e.Invoke();
+            return true;
         }
         else
         {
             Debug.LogError("Failed to envoke event");
         }
+        return false;
     }
 
     UnityEvent GetEventByToolEnum(Tools t)

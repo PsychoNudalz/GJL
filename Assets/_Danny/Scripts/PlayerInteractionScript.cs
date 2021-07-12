@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteractionScript : MonoBehaviour
 {
+    
     [SerializeField] private float interactDistance = 5f;
 
     private Camera mainCamera;

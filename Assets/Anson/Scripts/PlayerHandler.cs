@@ -6,12 +6,12 @@ public class PlayerHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] PlayerControllerScript playerControllerScript;
-    [SerializeField] PlayerInteractionScript playerInteractionScript;
+    [SerializeField] PlayerInventory playerInventory;
     void Awake()
     {
         playerControllerScript = GetComponent<PlayerControllerScript>();
-        playerInteractionScript = GetComponent<PlayerInteractionScript>();
-        playerControllerScript.PlayerInteractionScript = playerInteractionScript;
+        playerInventory = GetComponent<PlayerInventory>();
+        playerControllerScript.PlayerInventory = playerInventory;
     }
 
     // Update is called once per frame

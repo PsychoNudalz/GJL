@@ -29,7 +29,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 520129393707708394}
   m_Father: {fileID: 3009744721695695894}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -259,7 +260,7 @@ GameObject:
   - component: {fileID: 6601299561315320118}
   - component: {fileID: 7436245444037090630}
   - component: {fileID: 7343703365256052785}
-  - component: {fileID: 8616685848709716017}
+  - component: {fileID: 2421703166155355815}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -296,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerControllerScript: {fileID: 0}
-  playerInteractionScript: {fileID: 0}
+  playerInventory: {fileID: 0}
 --- !u!143 &7436245444037090624
 CharacterController:
   m_ObjectHideFlags: 0
@@ -486,8 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73c427b627b4714387758ca8e8faacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInteractionScript: {fileID: 0}
---- !u!114 &8616685848709716017
+  interactDistance: 5
+  playerInventory: {fileID: 0}
+--- !u!114 &2421703166155355815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,7 +498,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 7436245444037090634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82058f9aab1e10448bc0da240216686d, type: 3}
+  m_Script: {fileID: 11500000, guid: cd20b618b1b85784fa9c47a73aebb57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 5
+  items: []
+  index: 0
+  currentItem: {fileID: 0}
+  handPostision: {fileID: 520129393707708394}
+--- !u!1 &8782208794997748847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 520129393707708394}
+  m_Layer: 0
+  m_Name: HandTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &520129393707708394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782208794997748847}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.481, y: -0.202, z: 0.715}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1199725469815913693}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

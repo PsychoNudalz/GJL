@@ -12,6 +12,7 @@ public class ItemScript : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] List<Collider> colliders;
 
+    public Tools ToolType { get => toolType;}
 
     public void OnPickUp()
     {
@@ -20,7 +21,7 @@ public class ItemScript : MonoBehaviour
     }
     public void OnUse()
     {
-
+        Destroy(gameObject);
     }
     public void OnDrop()
     {
