@@ -6,7 +6,12 @@ using UnityEngine.InputSystem.Controls;
 
 public enum Tools {Stick, Hammer};
 
+[System.Serializable]
 public class InteractableEvent
 {
-    UnityEvent interactableEvent;
+    [SerializeField] Tools tool;
+    [SerializeField] UnityEvent uEvent;
+
+    public Tools Tool { get => tool; set => tool = value; }
+    public UnityEvent UEvent { get => uEvent; set => uEvent = value; }
 }
