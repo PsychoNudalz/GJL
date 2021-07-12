@@ -252,11 +252,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7816289045734148080}
+  - component: {fileID: 1091844153724346111}
   - component: {fileID: 7436245444037090624}
   - component: {fileID: 7436245444037090637}
   - component: {fileID: 851943998678988730}
   - component: {fileID: 6601299561315320118}
   - component: {fileID: 7436245444037090630}
+  - component: {fileID: 7343703365256052785}
   - component: {fileID: 8616685848709716017}
   m_Layer: 8
   m_Name: Player
@@ -281,6 +283,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091844153724346111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436245444037090634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c07aa92eb1d134584c22efb8357331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControllerScript: {fileID: 0}
+  playerInteractionScript: {fileID: 0}
 --- !u!143 &7436245444037090624
 CharacterController:
   m_ObjectHideFlags: 0
@@ -458,6 +474,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7343703365256052785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436245444037090634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73c427b627b4714387758ca8e8faacf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInteractionScript: {fileID: 0}
 --- !u!114 &8616685848709716017
 MonoBehaviour:
   m_ObjectHideFlags: 0

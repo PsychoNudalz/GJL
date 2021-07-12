@@ -14,7 +14,7 @@ public class PlayerInteractionScript : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    public void OnInteract()
+    public void Interact()
     {
         RaycastHit HitInfo;
         if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out HitInfo, interactDistance))

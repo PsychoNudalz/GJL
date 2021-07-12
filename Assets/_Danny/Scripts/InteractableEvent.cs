@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem.Controls;
 
-public enum Tools {Stick, Hammer};
 
 [System.Serializable]
 public class InteractableEvent

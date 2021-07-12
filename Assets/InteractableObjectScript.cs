@@ -16,6 +16,10 @@ public class InteractableObjectScript : MonoBehaviour
         {
             e.Invoke();
         }
+        else
+        {
+            Debug.LogError("Failed to envoke event");
+        }
     }
 
     UnityEvent GetEventByToolEnum(Tools t)
