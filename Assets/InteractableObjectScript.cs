@@ -5,10 +5,11 @@ using UnityEngine.Events;
 
 public class InteractableObjectScript : MonoBehaviour
 {
-    [SerializeField] private UnityEvent interactEvent;
+    [SerializeField] private List<InteractableEvent> interactEvents;
     
     public void Interact()
     {
-        interactEvent.Invoke();
+        print($"Interacting with {gameObject.name}");
+        
     }
 }

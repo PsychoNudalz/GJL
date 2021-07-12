@@ -6,7 +6,7 @@ using UnityEngine.InputSystem.Controls;
 
 public enum Tools {Stick, Hammer};
 
-public class InteractableEvent : MonoBehaviour
+public class InteractableEvent
 {
     UnityEvent interactableEvent;
 }

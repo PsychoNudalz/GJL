@@ -14,15 +14,20 @@ public class PlayerInteractionScript : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    void FixedUpdate()
+    void  OnInteract()
     {
         RaycastHit HitInfo;
         if (Physics.Raycast(mainCamera.transform.position,mainCamera.transform.forward, out HitInfo, interactDistance))
         {
             if (HitInfo.collider.gameObject.CompareTag("Interactable"))
             {
-                Debug.DrawLine(mainCamera.transform.position,HitInfo.point,Color.green);
+                Debug.DrawLine(mainCamera.transform.position,HitInfo.point,Color.green,1f);
                 print($"{HitInfo.collider.gameObject} is interactable");
+                InteractableObjectScript interactableObjectScript = HitInfo.collider.gameObject.GetComponent<InteractableObjectScript>();
+                if (interactableObjectScript != null)
+                {
+                    interactableObjectScript.Interact();
+                }
             }
         }
     }
