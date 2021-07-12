@@ -26,7 +26,7 @@ public class PlayerInteractionScript : MonoBehaviour
                 InteractableObjectScript interactableObjectScript = HitInfo.collider.gameObject.GetComponent<InteractableObjectScript>();
                 if (interactableObjectScript != null)
                 {
-                    interactableObjectScript.Interact();
+                    interactableObjectScript.Interact(Tools.Hammer);
                 }
             }
         }
