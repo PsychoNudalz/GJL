@@ -14,19 +14,25 @@ public class PlayerInteractionScript : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    void  OnInteract()
+    public void OnInteract()
     {
         RaycastHit HitInfo;
-        if (Physics.Raycast(mainCamera.transform.position,mainCamera.transform.forward, out HitInfo, interactDistance))
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out HitInfo, interactDistance))
         {
             if (HitInfo.collider.gameObject.CompareTag("Interactable"))
             {
-                Debug.DrawLine(mainCamera.transform.position,HitInfo.point,Color.green,1f);
+                Debug.DrawLine(mainCamera.transform.position, HitInfo.point, Color.green, 1f);
                 print($"{HitInfo.collider.gameObject} is interactable");
-                InteractableObjectScript interactableObjectScript = HitInfo.collider.gameObject.GetComponent<InteractableObjectScript>();
-                if (interactableObjectScript != null)
+                if (HitInfo.collider.gameObject.TryGetComponent(out InteractableObjectScript interactableObjectScript)){
+
+                    if (interactableObjectScript != null)
+                    {
+                        interactableObjectScript.Interact(Tools.Stick);
+                    }
+                }
+                else
                 {
-                    interactableObjectScript.Interact(Tools.Stick);
+                    Debug.LogError("Failed to get interactable script");
                 }
             }
         }
