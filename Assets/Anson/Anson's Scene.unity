@@ -201,7 +201,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 142123629}
           m_TargetAssemblyTypeName: AnimationObject, Assembly-CSharp
-          m_MethodName: Play_Int
+          m_MethodName: Play_Bool
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -211,6 +211,8 @@ MonoBehaviour:
             m_StringArgument: Close/1
             m_BoolArgument: 0
           m_CallState: 2
+  lockAfterInteract: 0
+  interactionLock: 0
 --- !u!4 &77752922
 Transform:
   m_ObjectHideFlags: 0
@@ -268,7 +270,9 @@ GameObject:
   - component: {fileID: 86404473}
   - component: {fileID: 86404472}
   - component: {fileID: 86404471}
-  m_Layer: 0
+  - component: {fileID: 86404474}
+  - component: {fileID: 86404475}
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,6 +355,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86404469}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &86404474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86404469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69470761b1cb1e4da245c580012ca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeInTexcoordChannel: 1
+  cospatialVertexDistance: 0.01
+--- !u!114 &86404475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86404469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69470761b1cb1e4da245c580012ca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeInTexcoordChannel: 1
+  cospatialVertexDistance: 0.01
 --- !u!1 &105350463
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +394,8 @@ GameObject:
   - component: {fileID: 105350464}
   - component: {fileID: 105350466}
   - component: {fileID: 105350465}
-  m_Layer: 0
+  - component: {fileID: 105350467}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,6 +465,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105350463}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &105350467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105350463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69470761b1cb1e4da245c580012ca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeInTexcoordChannel: 1
+  cospatialVertexDistance: 0.01
 --- !u!1 &142123628
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +765,8 @@ GameObject:
   - component: {fileID: 834086641}
   - component: {fileID: 834086643}
   - component: {fileID: 834086642}
-  m_Layer: 0
+  - component: {fileID: 834086644}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,6 +836,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834086640}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &834086644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834086640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69470761b1cb1e4da245c580012ca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeInTexcoordChannel: 1
+  cospatialVertexDistance: 0.01
 --- !u!1 &1073029695
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +861,8 @@ GameObject:
   - component: {fileID: 1073029696}
   - component: {fileID: 1073029699}
   - component: {fileID: 1073029698}
-  m_Layer: 3
+  - component: {fileID: 1073029697}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,6 +883,20 @@ Transform:
   m_Father: {fileID: 77752922}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1073029697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073029695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69470761b1cb1e4da245c580012ca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeInTexcoordChannel: 1
+  cospatialVertexDistance: 0.01
 --- !u!23 &1073029698
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1324,7 +1401,8 @@ GameObject:
   - component: {fileID: 1668604722}
   - component: {fileID: 1668604724}
   - component: {fileID: 1668604723}
-  m_Layer: 0
+  - component: {fileID: 1668604725}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1394,6 +1472,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668604721}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1668604725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668604721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69470761b1cb1e4da245c580012ca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeInTexcoordChannel: 1
+  cospatialVertexDistance: 0.01
 --- !u!1 &1669750469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1545,8 @@ GameObject:
   - component: {fileID: 1756499526}
   - component: {fileID: 1756499528}
   - component: {fileID: 1756499527}
-  m_Layer: 0
+  - component: {fileID: 1756499529}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1523,6 +1616,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756499525}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1756499529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756499525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69470761b1cb1e4da245c580012ca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeInTexcoordChannel: 1
+  cospatialVertexDistance: 0.01
 --- !u!1 &1769275107
 GameObject:
   m_ObjectHideFlags: 0
