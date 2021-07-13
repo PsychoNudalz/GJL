@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 9063297176803219175}
   - component: {fileID: 9063297176803219177}
   - component: {fileID: 9063297176803219174}
-  m_Layer: 6
+  - component: {fileID: 9063297176803219176}
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +94,9 @@ GameObject:
   - component: {fileID: 9063297177262677934}
   - component: {fileID: 9063297177262677935}
   - component: {fileID: 9063297177262677932}
-  m_Layer: 0
+  - component: {fileID: 1895793242}
+  - component: {fileID: 1895793243}
+  m_Layer: 7
   m_Name: Hammer
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -161,3 +164,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.5, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1895793242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063297177262677933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014d3adbac9e84c42a50ca7fc6155eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1895793243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063297177262677933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
