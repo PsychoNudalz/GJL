@@ -11,6 +11,17 @@ public class InteractableObjectScript : MonoBehaviour
     [Header("Interaction Lock")]
     [SerializeField] bool lockAfterInteract = true; 
     [SerializeField] bool interactionLock;
+
+    [Header("Animation")]
+    [SerializeField] Animator animator;
+
+    private void Awake()
+    {
+        if (!animator)
+        {
+            animator = GetComponent<Animator>();
+        }
+    }
     public bool Interact(Tools t)
     {
         if (interactionLock)
@@ -18,10 +29,12 @@ public class InteractableObjectScript : MonoBehaviour
             return false;
         }
         print($"Interacting with {gameObject.name}");
-        UnityEvent e = GetEventByToolEnum(t);
+        InteractableEvent e = GetEventByToolEnum(t);
         if (e != null)
         {
-            e.Invoke();
+            e.InteractEvent.Invoke();
+            animator.Play(e.InteractAnimation);
+
             if (lockAfterInteract)
             {
                 interactionLock = true;
@@ -35,13 +48,35 @@ public class InteractableObjectScript : MonoBehaviour
         return false;
     }
 
-    UnityEvent GetEventByToolEnum(Tools t)
+    public void Preview(Tools t)
+    {
+        if (interactionLock)
+        {
+            return;
+        }
+        InteractableEvent e = GetEventByToolEnum(t);
+        if (e != null)
+        {
+            animator.Play(e.PreviewAnimation);
+
+            return ;
+        }
+        else
+        {
+            Debug.Log("Invalid tool to use");
+        }
+        return ;
+    }
+
+
+
+    InteractableEvent GetEventByToolEnum(Tools t)
     {
         foreach(InteractableEvent ie in interactEvents)
         {
             if (ie.Tool.Equals(t))
             {
-                return ie.UEvent;
+                return ie;
             }
         }
         return null;

@@ -6,7 +6,8 @@ public class PlayerControllerScript : MonoBehaviour
 {
     [Header("Interact")]
     [SerializeField] private float interactDistance = 5f;
-
+    [SerializeField] float  previewRate = 0.5f;
+    [SerializeField] float lastPreview;
 
     [Header("Other Components")]
     [SerializeField] PlayerInventory playerInventory;
@@ -25,7 +26,10 @@ public class PlayerControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Time.time - lastPreview >= previewRate && playerInventory.CurrentItem!= null) {
+            PreviewInteractable();
+            lastPreview = Time.time;
+        }
     }
     public void OnInteract()
     {
@@ -83,6 +87,7 @@ public class PlayerControllerScript : MonoBehaviour
                     if (interactableObjectScript.Interact(playerInventory.CurrentItem.ToolType))
                     {
                         playerInventory.RemoveItem();
+                        lastPreview = Time.time;
                     }
                 }
             }
@@ -92,5 +97,31 @@ public class PlayerControllerScript : MonoBehaviour
             }
         }
 
+    }
+
+    private void PreviewInteractable()
+    {
+        RaycastHit HitInfo;
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out HitInfo, interactDistance))
+        {
+
+            if (HitInfo.collider.gameObject.CompareTag("Interactable"))
+            {
+                Debug.DrawLine(mainCamera.transform.position, HitInfo.point, Color.green, 1f);
+                print($"{HitInfo.collider.gameObject} is Preview");
+                if (HitInfo.collider.gameObject.TryGetComponent(out InteractableObjectScript interactableObjectScript))
+                {
+
+                    if (interactableObjectScript != null)
+                    {
+                        interactableObjectScript.Preview(playerInventory.CurrentItem.ToolType);
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Failed to get interactable script");
+                }
+            }
+        }
     }
 }

@@ -9,8 +9,14 @@ using UnityEngine.InputSystem.Controls;
 public class InteractableEvent
 {
     [SerializeField] Tools tool;
-    [SerializeField] UnityEvent uEvent;
-
+    [SerializeField] UnityEvent interactEvent;
+    [Header("Animation")]
+    [SerializeField] string interactAnimation;
+    [SerializeField] string previewAnimation;
     public Tools Tool { get => tool; set => tool = value; }
-    public UnityEvent UEvent { get => uEvent; set => uEvent = value; }
+    public UnityEvent InteractEvent { get => interactEvent; set => interactEvent = value; }
+    public string InteractAnimation { get => interactAnimation; set => interactAnimation = value; }
+    public string PreviewAnimation { get => previewAnimation; set => previewAnimation = value; }
+
+
 }
