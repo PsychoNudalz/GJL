@@ -130,9 +130,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 521920075}
     m_Modifications:
+    - target: {fileID: 610145988572531631, guid: edd30a107ee9073478c86319009965fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_Name
       value: StickModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_IsActive
@@ -202,7 +210,9 @@ GameObject:
   - component: {fileID: 77752923}
   - component: {fileID: 77752924}
   - component: {fileID: 77752925}
-  m_Layer: 3
+  - component: {fileID: 77752927}
+  - component: {fileID: 77752926}
+  m_Layer: 6
   m_Name: Interactable
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -352,6 +362,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &77752926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77752920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014d3adbac9e84c42a50ca7fc6155eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &77752927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77752920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &86404469
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,8 +682,16 @@ PrefabInstance:
       value: HammerModel
       objectReference: {fileID: 0}
     - target: {fileID: 2321617260357936899, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321617260357936899, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321617261755837365, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
@@ -725,9 +773,49 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: d4af7ae15caf74c4caf7f865176ec6bf, type: 2}
     - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: toolOutlineColour.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: toolOutlineColour.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: pushableOutlineColour.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: pushableOutlineColour.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: pushableOutlineColour.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: interactableOutlineColour.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: interactableOutlineColour.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
       propertyPath: fadeCurve.m_Curve.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: highlightMaterials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d4af7ae15caf74c4caf7f865176ec6bf, type: 2}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: highlightMaterials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 08851d8a4fab10c4b8702e1b06197846, type: 2}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: highlightMaterials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: de2368b3bcf498b4ea2ce078fe97972c, type: 2}
     - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
       propertyPath: fadeCurve.m_Curve.Array.data[1].time
       value: 0.25
@@ -839,7 +927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 521920075}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Stick_Anim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,6 +957,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 521920075}
     m_Modifications:
+    - target: {fileID: 610145988572531631, guid: edd30a107ee9073478c86319009965fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1402678848106097274, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -876,6 +968,10 @@ PrefabInstance:
     - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_Name
       value: StickModel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_IsActive
@@ -998,7 +1094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 919055248}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Animations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,6 +1230,10 @@ PrefabInstance:
       value: HammerModel (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2321617260357936899, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321617260357936899, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1141,6 +1241,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1faf2cb175ba1b146964e0f402947ce3, type: 2}
+    - target: {fileID: 2321617261755837365, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
 --- !u!4 &935038685 stripped
@@ -1334,7 +1438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199957707}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Hammer_Anim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1366,7 +1470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1400574249}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Sounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1399,7 +1503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1581057118}
   - component: {fileID: 1581057119}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Sound_Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1495,6 +1599,133 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1732866875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732866879}
+  - component: {fileID: 1732866878}
+  - component: {fileID: 1732866877}
+  - component: {fileID: 1732866876}
+  - component: {fileID: 1732866881}
+  - component: {fileID: 1732866880}
+  m_Layer: 3
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1732866876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732866875}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1732866877
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732866875}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b6e40c7ca54bcff478e9d6bde17b277a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1732866878
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732866875}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1732866879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732866875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.3, y: 1.4582934, z: -0.051354885}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1732866880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732866875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1732866881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732866875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014d3adbac9e84c42a50ca7fc6155eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1769275107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1769275108}
   - component: {fileID: 1769275109}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Sound_Stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
