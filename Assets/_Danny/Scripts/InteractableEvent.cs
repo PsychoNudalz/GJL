@@ -18,6 +18,5 @@ public class InteractableEvent
     public UnityEvent InteractEvent { get => interactEvent; set => interactEvent = value; }
     public string InteractAnimation { get => interactAnimation; set => interactAnimation = value; }
     public string PreviewAnimation { get => previewAnimation; set => previewAnimation = value; }
-
-
+    public float InteractDelay { get => interactDelay; set => interactDelay = value; }
 }

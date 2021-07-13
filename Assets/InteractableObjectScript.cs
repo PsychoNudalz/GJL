@@ -9,7 +9,7 @@ public class InteractableObjectScript : MonoBehaviour
     [SerializeField] private List<InteractableEvent> interactEvents;
 
     [Header("Interaction Lock")]
-    [SerializeField] bool lockAfterInteract = true; 
+    [SerializeField] bool lockAfterInteract = true;
     [SerializeField] bool interactionLock;
 
     [Header("Animation")]
@@ -32,8 +32,7 @@ public class InteractableObjectScript : MonoBehaviour
         InteractableEvent e = GetEventByToolEnum(t);
         if (e != null)
         {
-            e.InteractEvent.Invoke();
-            animator.Play(e.InteractAnimation);
+            PlayEvent(e);
 
             if (lockAfterInteract)
             {
@@ -48,6 +47,20 @@ public class InteractableObjectScript : MonoBehaviour
         return false;
     }
 
+    private void PlayEvent(InteractableEvent e)
+    {
+        if (e.InteractDelay <= 0)
+        {
+
+            e.InteractEvent.Invoke();
+        }
+        else
+        {
+            StartCoroutine(DelayPlayEvent(e));
+        }
+        animator.Play(e.InteractAnimation);
+    }
+
     public void Preview(Tools t)
     {
         if (interactionLock)
@@ -59,20 +72,20 @@ public class InteractableObjectScript : MonoBehaviour
         {
             animator.Play(e.PreviewAnimation);
 
-            return ;
+            return;
         }
         else
         {
             Debug.Log("Invalid tool to use");
         }
-        return ;
+        return;
     }
 
 
 
     InteractableEvent GetEventByToolEnum(Tools t)
     {
-        foreach(InteractableEvent ie in interactEvents)
+        foreach (InteractableEvent ie in interactEvents)
         {
             if (ie.Tool.Equals(t))
             {
@@ -90,5 +103,12 @@ public class InteractableObjectScript : MonoBehaviour
             temp.Add(i.Tool);
         }
         return temp;
+    }
+
+    IEnumerator DelayPlayEvent(InteractableEvent e)
+    {
+        yield return new WaitForSeconds(e.InteractDelay);
+        e.InteractEvent.Invoke();
+
     }
 }
