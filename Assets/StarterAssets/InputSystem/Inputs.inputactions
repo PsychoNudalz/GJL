@@ -68,6 +68,14 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Highlight",
+                    "type": "Button",
+                    "id": "d69d7bcd-c271-4380-a2ad-803ad7f5f0d5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -299,6 +307,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ScrollItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc6db8f9-608c-4fd6-9355-5a0fdd9b6ccf",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Highlight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30917a7f-5289-411c-be60-e0e1ec7e3b47",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Highlight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -14,6 +14,7 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] PlayerInventory playerInventory;
 
     private Camera mainCamera;
+    private bool highlightObjects = false;
 
     public PlayerInventory PlayerInventory { get => playerInventory; set => playerInventory = value; }
 
@@ -138,6 +139,29 @@ public class PlayerControllerScript : MonoBehaviour
             wasPreview = false;
             playerInventory.ShowUsableTools(new List<Tools>());
 
+        }
+    }
+
+    void ToggleObjectHighlighting()
+    {
+        highlightObjects = !highlightObjects;
+        GameObject[] tools = GameObject.FindGameObjectsWithTag("Tool");
+        GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
+        foreach (GameObject tool in tools)
+        {
+            ObjectHighlighter highlighterScript = tool.GetComponent<ObjectHighlighter>();
+            if (highlighterScript)
+            {
+                highlighterScript.SetHighlighted(highlightObjects);
+            }
+        }
+        foreach (GameObject interactable in interactables)
+        {
+            ObjectHighlighter highlighterScript = interactable.GetComponent<ObjectHighlighter>();
+            if (highlighterScript)
+            {
+                highlighterScript.SetHighlighted(highlightObjects);
+            }
         }
     }
 }
