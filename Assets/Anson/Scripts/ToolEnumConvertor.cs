@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Tools { Stick, Hammer };
+public enum Tools { Stick, Hammer, Fuse, Blowtorch };
 
 public static class ToolEnumConvertor
 {
