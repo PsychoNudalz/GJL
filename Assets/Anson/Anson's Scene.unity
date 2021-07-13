@@ -716,6 +716,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: timeToHighlight
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: highlightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: d4af7ae15caf74c4caf7f865176ec6bf, type: 2}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].time
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639918962, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7343703365256052785, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
       propertyPath: previewRate
       value: 0.1
