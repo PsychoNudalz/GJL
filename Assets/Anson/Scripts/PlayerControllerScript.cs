@@ -87,7 +87,7 @@ public class PlayerControllerScript : MonoBehaviour
 
                 if (interactableObjectScript != null)
                 {
-                    if (interactableObjectScript.Interact(playerInventory.CurrentItem.ToolType))
+                    if (playerInventory.CurrentItem&& interactableObjectScript.Interact(playerInventory.CurrentItem.ToolType))
                     {
                         playerInventory.RemoveItem();
                         lastPreview = Time.time;
@@ -111,7 +111,7 @@ public class PlayerControllerScript : MonoBehaviour
             if (HitInfo.collider.gameObject.CompareTag("Interactable"))
             {
                 Debug.DrawLine(mainCamera.transform.position, HitInfo.point, Color.green, 1f);
-                print($"{HitInfo.collider.gameObject} is Preview");
+                //print($"{HitInfo.collider.gameObject} is Preview");
                 if (HitInfo.collider.gameObject.TryGetComponent(out InteractableObjectScript interactableObjectScript))
                 {
 
