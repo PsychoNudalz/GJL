@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Events;
 
 /// <summary>
 /// Anson:
@@ -24,6 +25,7 @@ public class LifeSystemScript : MonoBehaviour
     public float delayDeath = 0;
     [SerializeField] GameObject detactchGameObject;
     [SerializeField] float detactchedDestroyTime = 5;
+    [SerializeField] UnityEvent deathEvent;
 
     Coroutine deathCoroutine;
 
@@ -251,6 +253,7 @@ public class LifeSystemScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        deathEvent.Invoke();
 
     }
 

@@ -1,5 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7241038284677346099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: InteractableHighlightTrans
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: InteractableHighlightTrans
+    Event: 500
+    filterSettings:
+      RenderQueueType: 1
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 0
+      PassNames: []
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 1
+    depthCompareFunction: 8
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
 --- !u!114 &-5585309155705388131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +54,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: InteractableHighlight
-    Event: 300
+    Event: 500
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -54,7 +93,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: ToolHighlighting
-    Event: 300
+    Event: 500
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -91,10 +130,11 @@ MonoBehaviour:
   m_Name: ForwardRenderer
   m_EditorClassIdentifier: 
   m_RendererFeatures:
+  - {fileID: 814833526804854676}
   - {fileID: -5585309155705388131}
   - {fileID: -2576137685157724459}
-  - {fileID: 814833526804854676}
-  m_RendererFeatureMap: 9d837145eafe7cb2d53ead9f6cb83fdc94374884c6de4e0b
+  - {fileID: -7241038284677346099}
+  m_RendererFeatureMap: 94374884c6de4e0b9d837145eafe7cb2d53ead9f6cb83fdccd8ccd740baa829b
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -138,7 +178,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: PushableHighlight
-    Event: 300
+    Event: 500
     filterSettings:
       RenderQueueType: 0
       LayerMask:
