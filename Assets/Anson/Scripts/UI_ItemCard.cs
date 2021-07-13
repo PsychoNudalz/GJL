@@ -18,7 +18,7 @@ public class UI_ItemCard : MonoBehaviour
     public ItemScript Item { get => item;}
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         ResetEffects();
     }

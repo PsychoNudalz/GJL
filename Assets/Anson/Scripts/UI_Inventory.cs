@@ -37,7 +37,6 @@ public class UI_Inventory : MonoBehaviour
     public void UpdateEquip()
     {
         SetEquip(playerInventory.CurrentItem);
-
     }
 
     private void ResetInventoryList()
