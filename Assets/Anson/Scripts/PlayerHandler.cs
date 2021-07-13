@@ -12,22 +12,32 @@ public class PlayerHandler : MonoBehaviour
     [Header("UI")]
     [SerializeField] UI_Handler uI_Handler;
 
+    public static GameObject PlayerInstance;
+
     public PlayerControllerScript PlayerControllerScript { get => playerControllerScript;}
     public PlayerInventory PlayerInventory { get => playerInventory;}
     public UI_Handler UI_Handler { get => uI_Handler;}
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        playerControllerScript = GetComponent<PlayerControllerScript>();
-        playerInventory = GetComponent<PlayerInventory>();
-        playerControllerScript.PlayerInventory = playerInventory;
-
-        if (!uI_Handler)
+        if(PlayerInstance != null)
         {
-            uI_Handler = FindObjectOfType<UI_Handler>();
+            Destroy(gameObject);
         }
-        playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
+        else
+        {
+            PlayerInstance = gameObject;
+            DontDestroyOnLoad(gameObject);
+            playerControllerScript = GetComponent<PlayerControllerScript>();
+            playerInventory = GetComponent<PlayerInventory>();
+            playerControllerScript.PlayerInventory = playerInventory;
+
+            if (!uI_Handler)
+            {
+                uI_Handler = FindObjectOfType<UI_Handler>();
+            }
+            playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
+        }
     }
 
     // Update is called once per frame
