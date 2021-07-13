@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b24f1da68203d440825c2ce98070309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxWobble: 0.1
-  WobbleSpeed: 2
+  MaxWobble: 0.03
+  WobbleSpeed: 1.2
   Recovery: 1
 --- !u!1 &8930956677977701883
 GameObject:
@@ -197,8 +197,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolType: 3
   uISprite: {fileID: 0}
-  rb: {fileID: 0}
-  colliders: []
+  rb: {fileID: 5157403845139369398}
+  colliders:
+  - {fileID: 8527479184414292663}
 --- !u!54 &5157403845139369398
 Rigidbody:
   m_ObjectHideFlags: 0

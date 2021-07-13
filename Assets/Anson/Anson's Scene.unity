@@ -1084,16 +1084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835a092c6d2d4b84ea1c9c8499caff3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &897310145 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 8527479184414292663, guid: 19d1be30e46eeaa489830ad8eb1e5b44, type: 3}
-  m_PrefabInstance: {fileID: 8930956678542407231}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &897310146 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 5157403845139369398, guid: 19d1be30e46eeaa489830ad8eb1e5b44, type: 3}
-  m_PrefabInstance: {fileID: 8930956678542407231}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &919055247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,26 +2094,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4529787853704419212, guid: 19d1be30e46eeaa489830ad8eb1e5b44, type: 3}
-      propertyPath: MaxWobble
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4529787853704419212, guid: 19d1be30e46eeaa489830ad8eb1e5b44, type: 3}
-      propertyPath: WobbleSpeed
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5128793033233781047, guid: 19d1be30e46eeaa489830ad8eb1e5b44, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 897310146}
-    - target: {fileID: 5128793033233781047, guid: 19d1be30e46eeaa489830ad8eb1e5b44, type: 3}
-      propertyPath: colliders.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5128793033233781047, guid: 19d1be30e46eeaa489830ad8eb1e5b44, type: 3}
-      propertyPath: colliders.Array.data[0]
-      value: 
-      objectReference: {fileID: 897310145}
     - target: {fileID: 8930956678352333697, guid: 19d1be30e46eeaa489830ad8eb1e5b44, type: 3}
       propertyPath: m_Name
       value: Gun
