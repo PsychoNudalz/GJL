@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 7072338582437658577}
   - component: {fileID: 7072338582437658576}
   - component: {fileID: 7072338582437658579}
-  m_Layer: 0
+  - component: {fileID: 1192128079}
+  - component: {fileID: 1192128080}
+  m_Layer: 7
   m_Name: Stick
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -79,6 +81,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.7275858, z: 0.1}
   m_Center: {x: 0, y: 0.26331925, z: 0}
+--- !u!114 &1192128079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072338582437658578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014d3adbac9e84c42a50ca7fc6155eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1192128080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072338582437658578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &9205102991652012014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,9 +118,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7072338582437658606}
     m_Modifications:
+    - target: {fileID: 610145988572531631, guid: edd30a107ee9073478c86319009965fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_Name
       value: StickModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6619288586462045797, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_RootOrder

@@ -520,8 +520,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871deec0a7292dc43bcfc1f5d65f48a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlineWidth: 15
+  interactableOutlineColour: {r: 0, g: 1, b: 0, a: 1}
+  pushableOutlineColour: {r: 0, g: 0, b: 1, a: 1}
+  toolOutlineColour: {r: 1, g: 0, b: 0, a: 1}
+  highlightMaterials:
+  - {fileID: 2100000, guid: 88022619f8a2c804a9cf957bafc18262, type: 2}
+  - {fileID: 2100000, guid: d620308e85b56044ca5e8bf3642d8307, type: 2}
+  - {fileID: 2100000, guid: b087d71b0c79be449af018759fbd9d55, type: 2}
   timeToHighlight: 2.5
-  highlightMaterial: {fileID: 2100000, guid: d620308e85b56044ca5e8bf3642d8307, type: 2}
   fadeCurve:
     serializedVersion: 2
     m_Curve:

@@ -4,18 +4,34 @@ using UnityEngine;
 
 public class ToggleObjectHighlights : MonoBehaviour
 {
+    [Header("Outlines")] 
+    [SerializeField][Range(0,50)] private float outlineWidth = 5f;
+    [SerializeField] private Color interactableOutlineColour;
+    [SerializeField] private Color pushableOutlineColour;
+    [SerializeField] private Color toolOutlineColour;
+
+    [Space]
+    [SerializeField] private Material[] highlightMaterials;
+
+    [Header("Highlight time and Fade curve")]
     [SerializeField] private float timeToHighlight = 5f;
-    [SerializeField] private Material highlightMaterial;
     [SerializeField] private AnimationCurve fadeCurve;
 
     private bool highlightObjects = false;
     private float highlightTimer;
+
+    public Color PushableOutlineColour => pushableOutlineColour;
+    public Color InteractableOutlineColour => interactableOutlineColour;
+    public Color ToolOutlineColour => toolOutlineColour;
+
+    public float OutlineWidth => outlineWidth;
 
 
     void Start()
     {
         SetHighlightObjects(highlightObjects);
         highlightTimer = 0;
+        SetHighlightMaterialAlphas(0f);
     }
 
     void FixedUpdate()
@@ -23,7 +39,7 @@ public class ToggleObjectHighlights : MonoBehaviour
         if (highlightObjects)
         {
             highlightTimer += Time.deltaTime;
-            highlightMaterial.SetFloat("_Alpha",fadeCurve.Evaluate(highlightTimer/timeToHighlight));
+            SetHighlightMaterialAlphas(fadeCurve.Evaluate(highlightTimer / timeToHighlight));
         }
         if (highlightTimer >= timeToHighlight)
         {
@@ -33,11 +49,24 @@ public class ToggleObjectHighlights : MonoBehaviour
         }
     }
 
+    private void SetHighlightMaterialAlphas(float alphaValue)
+    {
+        foreach (Material material in highlightMaterials)
+        {
+            material.SetFloat("_Alpha", alphaValue);
+        }
+    }
+
     public void OnHighlight()
     {
         highlightObjects = true;
         SetHighlightObjects(highlightObjects);
 
+    }
+
+    void OnDestroy()
+    {
+        SetHighlightObjects(false);
     }
 
     void ToggleObjectHighlighting()

@@ -50,6 +50,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &943408937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6684149930052220103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bf2c2e8bb5761498f8ab20b31b2ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!95 &2317227040920415077
 Animator:
   serializedVersion: 3
@@ -69,6 +82,166 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &462717896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7044638833392454683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bf2c2e8bb5761498f8ab20b31b2ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!95 &360493992
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659501734161821424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &360493991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659501734161821424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2212b4836b7b541b969364e15f57e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactEvents:
+  - tool: 1
+    interactEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 462717896}
+          m_TargetAssemblyTypeName: AnimationObject, Assembly-CSharp
+          m_MethodName: Play_Bool
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: DoorOpen/1
+            m_BoolArgument: 0
+          m_CallState: 2
+    interactAnimation: 
+    previewAnimation: 
+  lockAfterInteract: 1
+  interactionLock: 0
+  animator: {fileID: 0}
+--- !u!114 &360493993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659501734161821424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014d3adbac9e84c42a50ca7fc6155eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &360493994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659501734161821424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &493414582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957117613691931650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2212b4836b7b541b969364e15f57e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactEvents:
+  - tool: 0
+    interactEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 943408937}
+          m_TargetAssemblyTypeName: AnimationObject, Assembly-CSharp
+          m_MethodName: Play_Bool
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: DoorOpen/1
+            m_BoolArgument: 0
+          m_CallState: 2
+    interactAnimation: 
+    previewAnimation: 
+  lockAfterInteract: 1
+  interactionLock: 0
+  animator: {fileID: 0}
+--- !u!114 &493414587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957117613691931650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014d3adbac9e84c42a50ca7fc6155eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &493414588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957117613691931650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2317227040939144963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,9 +301,25 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: -2565254411825972479, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2565254411825972479, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
       propertyPath: m_Name
       value: SpawnLevelModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360538690872367603, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360538690872367603, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 6717413235886820425, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -169,6 +358,16 @@ PrefabInstance:
 --- !u!4 &2856065883911360744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
+  m_PrefabInstance: {fileID: 2317227040939144963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7659501734161821424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5360538690872367603, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
+  m_PrefabInstance: {fileID: 2317227040939144963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8957117613691931650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2565254411825972479, guid: 54c567970560b9043b3f8f93631444b7, type: 3}
   m_PrefabInstance: {fileID: 2317227040939144963}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7044638833392454683 stripped
