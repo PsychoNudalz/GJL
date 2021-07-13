@@ -299,6 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControllerScript: {fileID: 0}
   playerInventory: {fileID: 0}
+  uI_Handler: {fileID: 0}
 --- !u!143 &7436245444037090624
 CharacterController:
   m_ObjectHideFlags: 0
@@ -489,8 +490,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDistance: 7.5
-  previewRate: 0.5
+  previewRate: 0.1
   lastPreview: 0
+  wasPreview: 0
   playerInventory: {fileID: 0}
 --- !u!114 &2421703166155355815
 MonoBehaviour:
@@ -508,6 +510,7 @@ MonoBehaviour:
   index: 0
   currentItem: {fileID: 0}
   handPostision: {fileID: 520129393707708394}
+  uI_Inventory: {fileID: 0}
 --- !u!114 &1639918962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,34 +524,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineWidth: 15
-  interactableOutlineColour: {r: 0, g: 1, b: 0, a: 1}
-  pushableOutlineColour: {r: 0, g: 0, b: 1, a: 1}
-  toolOutlineColour: {r: 1, g: 0, b: 0, a: 1}
+  interactableOutlineColour: {r: 1, g: 1, b: 0, a: 1}
+  pushableOutlineColour: {r: 1, g: 0, b: 0, a: 1}
+  toolOutlineColour: {r: 0, g: 1, b: 0, a: 1}
   highlightMaterials:
-  - {fileID: 2100000, guid: 88022619f8a2c804a9cf957bafc18262, type: 2}
-  - {fileID: 2100000, guid: d620308e85b56044ca5e8bf3642d8307, type: 2}
-  - {fileID: 2100000, guid: b087d71b0c79be449af018759fbd9d55, type: 2}
-  timeToHighlight: 2.5
+  - {fileID: 2100000, guid: d4af7ae15caf74c4caf7f865176ec6bf, type: 2}
+  - {fileID: 2100000, guid: 08851d8a4fab10c4b8702e1b06197846, type: 2}
+  - {fileID: 2100000, guid: de2368b3bcf498b4ea2ce078fe97972c, type: 2}
+  timeToHighlight: 1.5
   fadeCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 34
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.25
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 34
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
