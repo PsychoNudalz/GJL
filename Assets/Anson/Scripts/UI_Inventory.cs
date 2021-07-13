@@ -58,7 +58,6 @@ public class UI_Inventory : MonoBehaviour
         {
             if (ic && ic.Item.Equals(i))
             {
-                print("Getting " + i);
                 return ic;
             }
         }
@@ -84,5 +83,14 @@ public class UI_Inventory : MonoBehaviour
             return;
         }
         currentCard.SetEquipEffect(true);
+    }
+    public void HighlightUsable(List<Tools> itemTools)
+    {
+        foreach(UI_ItemCard ic in allItemCards)
+        {
+
+            ic.SetUsableEffect(itemTools.Contains(ic.ToolType));
+        }
+
     }
 }

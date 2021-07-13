@@ -6,8 +6,9 @@ public class PlayerControllerScript : MonoBehaviour
 {
     [Header("Interact")]
     [SerializeField] private float interactDistance = 5f;
-    [SerializeField] float  previewRate = 0.5f;
+    [SerializeField] float previewRate = 0.5f;
     [SerializeField] float lastPreview;
+    [SerializeField] bool wasPreview;
 
     [Header("Other Components")]
     [SerializeField] PlayerInventory playerInventory;
@@ -26,7 +27,8 @@ public class PlayerControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - lastPreview >= previewRate && playerInventory.CurrentItem!= null) {
+        if (Time.time - lastPreview >= previewRate && playerInventory.CurrentItem != null)
+        {
             PreviewInteractable();
             lastPreview = Time.time;
         }
@@ -115,6 +117,8 @@ public class PlayerControllerScript : MonoBehaviour
                     if (interactableObjectScript != null)
                     {
                         interactableObjectScript.Preview(playerInventory.CurrentItem.ToolType);
+                        playerInventory.ShowUsableTools(interactableObjectScript.GetTools());
+                        wasPreview = true;
                     }
                 }
                 else
@@ -122,6 +126,18 @@ public class PlayerControllerScript : MonoBehaviour
                     Debug.LogError("Failed to get interactable script");
                 }
             }
+            else if (wasPreview)
+            {
+                wasPreview = false;
+                playerInventory.ShowUsableTools(new List<Tools>());
+
+            }
+        }
+        else if (wasPreview)
+        {
+            wasPreview = false;
+            playerInventory.ShowUsableTools(new List<Tools>());
+
         }
     }
 }

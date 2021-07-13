@@ -127,4 +127,9 @@ public class PlayerInventory : MonoBehaviour
 
     }
 
+    public void ShowUsableTools(List<Tools> tools)
+    {
+        uI_Inventory.HighlightUsable(tools);
+    }
+
 }

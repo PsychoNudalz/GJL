@@ -8,6 +8,7 @@ public class UI_ItemCard : MonoBehaviour
 {
     [Header("Variables")]
     [SerializeField] ItemScript item;
+    [SerializeField] Tools toolType;
 
     [Header("UI")]
     [SerializeField] Image image;
@@ -16,6 +17,7 @@ public class UI_ItemCard : MonoBehaviour
     [SerializeField] GameObject usableEffect;
 
     public ItemScript Item { get => item;}
+    public Tools ToolType { get => toolType;}
 
     // Start is called before the first frame update
     void Awake()
@@ -37,6 +39,7 @@ public class UI_ItemCard : MonoBehaviour
         }
         nameField.text = ToolEnumConvertor.ToName(item.ToolType);
         this.item = item;
+        this.toolType = item.ToolType;
     }
 
     public void ResetEffects()

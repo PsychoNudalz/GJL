@@ -81,4 +81,14 @@ public class InteractableObjectScript : MonoBehaviour
         }
         return null;
     }
+
+    public List<Tools> GetTools()
+    {
+        List<Tools> temp = new List<Tools>();
+        foreach (InteractableEvent i in interactEvents)
+        {
+            temp.Add(i.Tool);
+        }
+        return temp;
+    }
 }

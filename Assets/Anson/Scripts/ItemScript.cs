@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Tools { Stick, Hammer };
-
-
 public class ItemScript : MonoBehaviour
 {
 
