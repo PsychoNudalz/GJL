@@ -9,10 +9,12 @@ public class ItemScript : MonoBehaviour
 {
 
     [SerializeField] Tools toolType;
+    [SerializeField] Sprite uISprite;
     [SerializeField] Rigidbody rb;
     [SerializeField] List<Collider> colliders;
 
     public Tools ToolType { get => toolType;}
+    public Sprite UISprite { get => uISprite; set => uISprite = value; }
 
     public void OnPickUp()
     {

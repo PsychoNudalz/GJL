@@ -11,8 +11,12 @@ public class PlayerInventory : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] Transform handPostision;
+    [Header("UI")]
+    [SerializeField] UI_Inventory uI_Inventory;
 
     public ItemScript CurrentItem { get => currentItem; }
+    public List<ItemScript> Items { get => items; set => items = value; }
+    public UI_Inventory UI_Inventory { get => uI_Inventory; set => uI_Inventory = value; }
 
     public void AddItem(ItemScript i)
     {
@@ -24,7 +28,9 @@ public class PlayerInventory : MonoBehaviour
             i.transform.rotation = handPostision.rotation;
             i.transform.position = handPostision.position;
             index = items.Count - 1;
+            uI_Inventory.UpdateInventoryList();
             UpdateItem();
+
         }
         else
         {
@@ -63,7 +69,7 @@ public class PlayerInventory : MonoBehaviour
             SetIndex(0);
             return;
         }
-        SetIndex((index - 1) % items.Count);
+        SetIndex((index - 1+items.Count) % items.Count);
     }
 
     public void NextItem()
@@ -86,6 +92,7 @@ public class PlayerInventory : MonoBehaviour
             currentItem = items[index];
             EquipItem();
         }
+        //UI_Inventory.SetEquip(currentItem);
     }
 
     void HosterItem()
@@ -99,6 +106,13 @@ public class PlayerInventory : MonoBehaviour
     void EquipItem()
     {
         currentItem.gameObject.SetActive(true);
+        try
+        {
+            uI_Inventory.UpdateEquip();
+        }catch(System.Exception e)
+        {
+            Debug.LogWarning(e.StackTrace);
+        }
     }
 
     public void RemoveItem()
@@ -109,6 +123,8 @@ public class PlayerInventory : MonoBehaviour
         }
         currentItem.OnUse();
         PrevItem();
+        uI_Inventory.UpdateInventoryList();
+
     }
 
 }

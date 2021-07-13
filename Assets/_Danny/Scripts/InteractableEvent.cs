@@ -10,6 +10,7 @@ public class InteractableEvent
 {
     [SerializeField] Tools tool;
     [SerializeField] UnityEvent interactEvent;
+    [SerializeField] float interactDelay;
     [Header("Animation")]
     [SerializeField] string interactAnimation;
     [SerializeField] string previewAnimation;
