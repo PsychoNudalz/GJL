@@ -9,6 +9,7 @@ public class PlayerHandler : MonoBehaviour
     [SerializeField] PlayerInventory playerInventory;
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         playerControllerScript = GetComponent<PlayerControllerScript>();
         playerInventory = GetComponent<PlayerInventory>();
         playerControllerScript.PlayerInventory = playerInventory;
