@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class RoomLoaderScript : MonoBehaviour
 {
-    [SerializeField] private int sceneIndexToLoad = 0;
+    
     [SerializeField] private bool isReload;
 
     private void OnTriggerEnter(Collider other)
@@ -23,7 +23,7 @@ public class RoomLoaderScript : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene(sceneIndexToLoad);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             }
             catch (Exception e)
