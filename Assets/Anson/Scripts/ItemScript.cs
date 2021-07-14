@@ -23,27 +23,36 @@ public class ItemScript : MonoBehaviour
     }
 
 
-    public void OnPickUp()
+    void Start()
     {
-        SetPhysics(false);
-        Debug.Log("Picked Up: " + ToolEnumConvertor.ToName(toolType));
+        if (transform.parent == null || !transform.parent.name.Equals("Tools"))
+        {
+            if (PlayerHandler.PlayerInstance.GetComponent<PlayerInventory>().Items.Contains(toolType))
+            {
+                Destroy(gameObject);
+            }
+        }
     }
+    /*public void OnPickUp()
+    {
+        SetOnPlayer(false);
+        Debug.Log("Picked Up: " + ToolEnumConvertor.ToName(toolType));
+    }*/
     public void OnUse()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
-    public void OnDrop()
+    /*public void OnDrop()
     {
-        SetPhysics(true);
-
-    }
+        SetOnPlayer(true);
+    }*/
 
     /// <summary>
     /// set the physics of the item
     /// True means activating phycis
     /// </summary>
     /// <param name="b"></param>
-    void SetPhysics(bool b)
+    internal void SetOnPlayer(bool b)
     {
         rb.isKinematic = !false;
         foreach (Collider c in colliders)

@@ -7,20 +7,31 @@ using UnityEngine.SceneManagement;
 public class RoomLoaderScript : MonoBehaviour
 {
     [SerializeField] private int sceneIndexToLoad = 0;
+    [SerializeField] private bool isReload;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            print($"Loading Next Room - {sceneIndexToLoad}");
             try
             {
-                SceneManager.LoadScene(sceneIndexToLoad);
+                if (isReload)
+                {
+                    SceneManager.LoadScene(
+                        PlayerHandler.PlayerInstance.GetComponent<CheckpointScript>().ReloadCheckpoint()
+                        );
+                }
+                else
+                {
+                    SceneManager.LoadScene(sceneIndexToLoad);
+                }
             }
             catch (Exception e)
             {
                 Debug.LogError(e);
             }
         }
+
+        GetComponent<Collider>().enabled = false;
     }
 }

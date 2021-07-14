@@ -1,40 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerInventory : MonoBehaviour
 {
     [Header("ItemScript")]
-    [SerializeField] List<ItemScript> items;
+    //[SerializeField] List<ItemScript> items;
     [SerializeField] int index = 0;
-    [SerializeField] ItemScript currentItem;
+    [SerializeField] Tools currentItem;
 
     [Header("Player")]
     [SerializeField] Transform handPostision;
     [Header("UI")]
     [SerializeField] UI_Inventory uI_Inventory;
 
-    public ItemScript CurrentItem { get => currentItem; }
-    public List<ItemScript> Items { get => items; set => items = value; }
+    private List<Tools> items;
+    private ToolHandler toolHandler;
+
+    public Tools CurrentItem { get => currentItem; }
+    public List<Tools> Items { get => items; set => items = value; }
     public UI_Inventory UI_Inventory { get => uI_Inventory; set => uI_Inventory = value; }
 
-    public void AddItem(ItemScript i)
+
+    void Start()
     {
-        if (!items.Contains(i))
+        items = new List<Tools>();
+        toolHandler = GetComponentInChildren<ToolHandler>();
+    }
+
+    public void AddItem(Tools tool)
+    {
+        if (!items.Contains(tool))
         {
-            items.Add(i);
-            i.OnPickUp();
-            i.transform.SetParent(handPostision);
-            i.transform.rotation = handPostision.rotation;
-            i.transform.position = handPostision.position;
-            index = items.Count - 1;
+            items.Add(tool);
+            if (uI_Inventory == null)
+            {
+                uI_Inventory = FindObjectOfType<UI_Inventory>();
+            }
             uI_Inventory.UpdateInventoryList();
             UpdateItem();
-
         }
         else
         {
-            Debug.LogError("found duplicate Item: " + i);
+            Debug.LogError("found duplicate Item: " + tool);
         }
     }
 
@@ -46,6 +56,7 @@ public class PlayerInventory : MonoBehaviour
         }else if (items.Count == 0)
         {
             index = 0;
+            toolHandler.SetToolEnabled(Tools.Stick,true);
         }
         else
         {
@@ -86,26 +97,27 @@ public class PlayerInventory : MonoBehaviour
 
     void UpdateItem()
     {
-        HosterItem();
+        //HosterItem();
         if (items.Count > 0)
         {
             currentItem = items[index];
             EquipItem();
         }
-        //UI_Inventory.SetEquip(currentItem);
+        UI_Inventory.SetEquip(toolHandler.GetItemFromEnum(currentItem));
     }
 
+    /*
     void HosterItem()
     {
         if (currentItem != null)
         {
-            currentItem.gameObject.SetActive(false);
+            GetComponentInChildren<ToolHandler>().SetToolEnabled(Tools.None);
         }
-    }
+    }*/
 
     void EquipItem()
     {
-        currentItem.gameObject.SetActive(true);
+        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
         try
         {
             uI_Inventory.UpdateEquip();
@@ -121,7 +133,7 @@ public class PlayerInventory : MonoBehaviour
         {
             items.Remove(currentItem);
         }
-        currentItem.OnUse();
+        toolHandler.GetItemFromEnum(currentItem).OnUse();
         PrevItem();
         uI_Inventory.UpdateInventoryList();
 
@@ -131,5 +143,5 @@ public class PlayerInventory : MonoBehaviour
     {
         uI_Inventory.HighlightUsable(tools);
     }
-
+    
 }

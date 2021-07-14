@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.EditorTools;
 
 
 public class UI_Inventory : MonoBehaviour
@@ -25,10 +26,11 @@ public class UI_Inventory : MonoBehaviour
     public void UpdateInventoryList()
     {
         ResetInventoryList();
-        foreach(ItemScript i in playerInventory.Items)
+        foreach(Tools i in playerInventory.Items)
         {
+            ItemScript itemScript = FindObjectOfType<ToolHandler>().GetItemFromEnum(i).GetComponent<ItemScript>();
             UI_ItemCard temp = Instantiate(baseItemCard, transform).GetComponent<UI_ItemCard>();
-            temp.UpdateCard(i);
+            temp.UpdateCard(itemScript);
             allItemCards.Add(temp);
         }
         //UpdateEquip();
@@ -36,7 +38,8 @@ public class UI_Inventory : MonoBehaviour
 
     public void UpdateEquip()
     {
-        SetEquip(playerInventory.CurrentItem);
+        ItemScript itemScript = FindObjectOfType<ToolHandler>().GetItemFromEnum(playerInventory.CurrentItem);
+        SetEquip(itemScript);
     }
 
     private void ResetInventoryList()
@@ -45,7 +48,7 @@ public class UI_Inventory : MonoBehaviour
         {
             if (!t.Equals(transform))
             {
-                Destroy(t.gameObject);
+                t.gameObject.SetActive(false);
             }
         }
         allItemCards = new List<UI_ItemCard>();
