@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class PlayerInventory : MonoBehaviour
     public ItemScript CurrentItem { get => currentItem; }
     public List<ItemScript> Items { get => items; set => items = value; }
     public UI_Inventory UI_Inventory { get => uI_Inventory; set => uI_Inventory = value; }
+
+    void Start()
+    {
+        items = new List<ItemScript>();
+    }
 
     public void AddItem(ItemScript i)
     {
@@ -131,5 +137,5 @@ public class PlayerInventory : MonoBehaviour
     {
         uI_Inventory.HighlightUsable(tools);
     }
-
+    
 }

@@ -20,12 +20,11 @@ public class ItemScript : MonoBehaviour
     }
     public void OnUse()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     public void OnDrop()
     {
         SetPhysics(true);
-
     }
 
     /// <summary>
