@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Tools {Stick, Gun, Hammer};
+public enum ToolType {None, Stick, Gun, Hammer, Fuse};
 
 public static class ToolEnumConvertor
 {
-    public static string ToName(Tools t)
+    public static string ToName(ToolType t)
     {
         switch (t)
         {
@@ -15,7 +15,7 @@ public static class ToolEnumConvertor
         }
     }
 
-    public static Sprite GetSprite(Tools t)
+    public static Sprite GetSprite(ToolType t)
     {
         return null;
     }

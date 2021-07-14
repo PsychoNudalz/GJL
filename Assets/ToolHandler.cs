@@ -10,18 +10,22 @@ public class ToolHandler : MonoBehaviour
     void Awake()
     {
         toolsOnPlayer = new List<GameObject>();
-        foreach (Tools tool in Enum.GetValues(typeof(Tools)))
+        foreach (ToolType tool in Enum.GetValues(typeof(ToolType)))
         {
             //print($"Resources/Tools/{tool.ToString()}");
+            if (!tool.Equals(ToolType.None))
+            {
+            
             GameObject toolPrefab = Instantiate(Resources.Load<GameObject>($"Tools/{tool.ToString()}"),transform.position,transform.rotation,transform);
             toolPrefab.name = tool.ToString();
             toolPrefab.GetComponent<ItemScript>().SetOnPlayer(false);
             toolPrefab.SetActive(false);
             toolsOnPlayer.Add(toolPrefab);
+            }
         }
     }
 
-    public void SetToolEnabled(Tools toolEnabled, bool none = false)
+    public void SetToolEnabled(ToolType toolEnabled, bool none = false)
     {
         foreach (GameObject tool in toolsOnPlayer)
         {
@@ -39,7 +43,7 @@ public class ToolHandler : MonoBehaviour
         }
     }
 
-    public ItemScript GetItemFromEnum(Tools tooltype)
+    public ItemScript GetItemFromEnum(ToolType tooltype)
     {
         foreach (GameObject tool in toolsOnPlayer)
         {

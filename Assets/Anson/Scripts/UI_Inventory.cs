@@ -26,7 +26,7 @@ public class UI_Inventory : MonoBehaviour
     public void UpdateInventoryList()
     {
         ResetInventoryList();
-        foreach(Tools i in playerInventory.Items)
+        foreach(ToolType i in playerInventory.Items)
         {
             ItemScript itemScript = FindObjectOfType<ToolHandler>().GetItemFromEnum(i).GetComponent<ItemScript>();
             UI_ItemCard temp = Instantiate(baseItemCard, transform).GetComponent<UI_ItemCard>();
@@ -87,7 +87,7 @@ public class UI_Inventory : MonoBehaviour
         }
         currentCard.SetEquipEffect(true);
     }
-    public void HighlightUsable(List<Tools> itemTools)
+    public void HighlightUsable(List<ToolType> itemTools)
     {
         foreach(UI_ItemCard ic in allItemCards)
         {

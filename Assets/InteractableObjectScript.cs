@@ -22,7 +22,7 @@ public class InteractableObjectScript : MonoBehaviour
             animator = GetComponent<Animator>();
         }
     }
-    public bool Interact(Tools t)
+    public bool Interact(ToolType t)
     {
         if (interactionLock)
         {
@@ -61,7 +61,7 @@ public class InteractableObjectScript : MonoBehaviour
         animator.Play(e.InteractAnimation);
     }
 
-    public void Preview(Tools t)
+    public void Preview(ToolType t)
     {
         if (interactionLock)
         {
@@ -83,7 +83,7 @@ public class InteractableObjectScript : MonoBehaviour
 
 
 
-    InteractableEvent GetEventByToolEnum(Tools t)
+    InteractableEvent GetEventByToolEnum(ToolType t)
     {
         foreach (InteractableEvent ie in interactEvents)
         {
@@ -95,9 +95,9 @@ public class InteractableObjectScript : MonoBehaviour
         return null;
     }
 
-    public List<Tools> GetTools()
+    public List<ToolType> GetTools()
     {
-        List<Tools> temp = new List<Tools>();
+        List<ToolType> temp = new List<ToolType>();
         foreach (InteractableEvent i in interactEvents)
         {
             temp.Add(i.Tool);

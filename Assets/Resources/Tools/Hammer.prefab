@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f27103f829a5b41aff6404d46c7e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolType: 2
+  toolType: 3
   uISprite: {fileID: 0}
   rb: {fileID: 9063297177262677935}
   colliders:

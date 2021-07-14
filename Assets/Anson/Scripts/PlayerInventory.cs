@@ -9,28 +9,28 @@ public class PlayerInventory : MonoBehaviour
     [Header("ItemScript")]
     //[SerializeField] List<ItemScript> items;
     [SerializeField] int index = 0;
-    [SerializeField] Tools currentItem;
+    [SerializeField] ToolType currentItem;
 
     [Header("Player")]
     [SerializeField] Transform handPostision;
     [Header("UI")]
     [SerializeField] UI_Inventory uI_Inventory;
 
-    private List<Tools> items;
+    private List<ToolType> items;
     private ToolHandler toolHandler;
 
-    public Tools CurrentItem { get => currentItem; }
-    public List<Tools> Items { get => items; set => items = value; }
+    public ToolType CurrentItem { get => currentItem; }
+    public List<ToolType> Items { get => items; set => items = value; }
     public UI_Inventory UI_Inventory { get => uI_Inventory; set => uI_Inventory = value; }
 
 
     void Start()
     {
-        items = new List<Tools>();
+        items = new List<ToolType>();
         toolHandler = GetComponentInChildren<ToolHandler>();
     }
 
-    public void AddItem(Tools tool)
+    public void AddItem(ToolType tool)
     {
         if (!items.Contains(tool))
         {
@@ -56,7 +56,7 @@ public class PlayerInventory : MonoBehaviour
         }else if (items.Count == 0)
         {
             index = 0;
-            toolHandler.SetToolEnabled(Tools.Stick,true);
+            toolHandler.SetToolEnabled(ToolType.Stick,true);
         }
         else
         {
@@ -139,7 +139,7 @@ public class PlayerInventory : MonoBehaviour
 
     }
 
-    public void ShowUsableTools(List<Tools> tools)
+    public void ShowUsableTools(List<ToolType> tools)
     {
         uI_Inventory.HighlightUsable(tools);
     }

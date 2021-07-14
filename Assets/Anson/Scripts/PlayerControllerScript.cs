@@ -131,14 +131,14 @@ public class PlayerControllerScript : MonoBehaviour
             else if (wasPreview)
             {
                 wasPreview = false;
-                playerInventory.ShowUsableTools(new List<Tools>());
+                playerInventory.ShowUsableTools(new List<ToolType>());
 
             }
         }
         else if (wasPreview)
         {
             wasPreview = false;
-            playerInventory.ShowUsableTools(new List<Tools>());
+            playerInventory.ShowUsableTools(new List<ToolType>());
 
         }
     }

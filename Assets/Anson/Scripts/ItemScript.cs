@@ -5,12 +5,12 @@ using UnityEngine;
 public class ItemScript : MonoBehaviour
 {
 
-    [SerializeField] Tools toolType;
+    [SerializeField] ToolType toolType;
     [SerializeField] Sprite uISprite;
     [SerializeField] Rigidbody rb;
     [SerializeField] List<Collider> colliders;
 
-    public Tools ToolType { get => toolType;}
+    public ToolType ToolType { get => toolType;}
     public Sprite UISprite { get => uISprite; set => uISprite = value; }
 
     private void Awake()
@@ -27,10 +27,12 @@ public class ItemScript : MonoBehaviour
     {
         if (transform.parent == null || !transform.parent.name.Equals("Tools"))
         {
+            /*
             if (PlayerHandler.PlayerInstance.GetComponent<PlayerInventory>().Items.Contains(toolType))
             {
                 Destroy(gameObject);
             }
+            */
         }
     }
     /*public void OnPickUp()
