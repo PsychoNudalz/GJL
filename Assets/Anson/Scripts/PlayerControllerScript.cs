@@ -28,7 +28,7 @@ public class PlayerControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - lastPreview >= previewRate && playerInventory.CurrentItem != null)
+        if (Time.time - lastPreview >= previewRate && playerInventory.CurrentItem.Equals(ToolType.None))
         {
             PreviewInteractable();
             lastPreview = Time.time;

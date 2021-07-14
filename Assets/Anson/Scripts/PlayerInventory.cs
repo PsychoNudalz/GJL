@@ -40,6 +40,7 @@ public class PlayerInventory : MonoBehaviour
                 uI_Inventory = FindObjectOfType<UI_Inventory>();
             }
             uI_Inventory.UpdateInventoryList();
+            SetIndex(Mathf.Clamp( items.Count - 1,0,items.Count));
             UpdateItem();
         }
         else
