@@ -208,8 +208,10 @@ public class LifeSystemScript : MonoBehaviour
         {
             isDead = true;
             health_Current = 0;
-
+            if (deathCoroutine == null)
+            {
             deathCoroutine = StartCoroutine(delayDeathRoutine());
+            }
         }
         return isDead;
     }

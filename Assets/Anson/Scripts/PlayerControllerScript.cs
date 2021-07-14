@@ -9,6 +9,7 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] float previewRate = 0.5f;
     [SerializeField] float lastPreview;
     [SerializeField] bool wasPreview;
+    [SerializeField] ItemScript focusedTool;
 
     [Header("Other Components")]
     [SerializeField] PlayerInventory playerInventory;
@@ -28,9 +29,13 @@ public class PlayerControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - lastPreview >= previewRate && playerInventory.CurrentItem.Equals(ToolType.None))
+        if (Time.time - lastPreview >= previewRate)
         {
-            PreviewInteractable();
+            if (!playerInventory.CurrentItem.Equals(ToolType.None))
+            {
+                PreviewInteractable();
+            }
+            HightlightTool();
             lastPreview = Time.time;
         }
     }
@@ -144,6 +149,42 @@ public class PlayerControllerScript : MonoBehaviour
             wasPreview = false;
             playerInventory.ShowUsableTools(new List<ToolType>());
 
+        }
+    }
+
+    private void HightlightTool()
+    {
+        RaycastHit HitInfo;
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out HitInfo, interactDistance))
+        {
+
+            if (HitInfo.collider.gameObject.CompareTag("Tool"))
+            {
+                if (HitInfo.collider.gameObject.TryGetComponent(out ItemScript itemScript))
+                {
+                    if (focusedTool &&!focusedTool.Equals(itemScript))
+                    {
+                        focusedTool.SetOutline(false);
+                    }
+                    if (itemScript != null)
+                    {
+                        focusedTool = itemScript;
+                        itemScript.SetOutline(true);
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Failed to get item script");
+                }
+            }
+        }
+        else
+        {
+            if (focusedTool)
+            {
+                focusedTool.SetOutline(false);
+                focusedTool = null;
+            }
         }
     }
 

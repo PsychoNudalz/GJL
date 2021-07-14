@@ -9,8 +9,9 @@ public class ItemScript : MonoBehaviour
     [SerializeField] Sprite uISprite;
     [SerializeField] Rigidbody rb;
     [SerializeField] List<Collider> colliders;
+    [SerializeField] Outline outline;
 
-    public ToolType ToolType { get => toolType;}
+    public ToolType ToolType { get => toolType; }
     public Sprite UISprite { get => uISprite; set => uISprite = value; }
 
     private void Awake()
@@ -26,13 +27,19 @@ public class ItemScript : MonoBehaviour
         }
         if (colliders.Count == 0)
         {
-            colliders = new List<Collider>( GetComponentsInChildren<Collider>());
+            colliders = new List<Collider>(GetComponentsInChildren<Collider>());
         }
     }
 
 
     void Start()
     {
+        if (!outline)
+        {
+            outline = GetComponent<Outline>();
+        }
+
+
         if (transform.parent == null || !transform.parent.name.Equals("Tools"))
         {
             /*
@@ -69,5 +76,10 @@ public class ItemScript : MonoBehaviour
         {
             c.enabled = b;
         }
+    }
+
+    public void SetOutline(bool b)
+    {
+        outline.enabled = b;
     }
 }
