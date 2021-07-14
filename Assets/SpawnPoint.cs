@@ -9,12 +9,19 @@ public class SpawnPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        PlayerHandler.PlayerInstance.transform.position = transform.position;
+        MovePlayerToSpawnPoint();
         if (SaveCheckpoint)
         {
             PlayerHandler.PlayerInstance.GetComponent<CheckpointScript>().SaveCheckpoint();
         }
     }
-    
+
+    private void MovePlayerToSpawnPoint()
+    {
+        GameObject player = PlayerHandler.PlayerInstance;
+        //print($"Moving {player.name}");
+        player.GetComponent<PlayerHandler>().SetPlayerPosition(transform.position);
+        
+        
+    }
 }

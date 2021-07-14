@@ -19,7 +19,7 @@ public class RoomLoaderScript : MonoBehaviour
                 if (isReload)
                 {
                     SceneManager.LoadScene(
-                        GameObject.FindGameObjectWithTag("Player").GetComponent<CheckpointScript>().ReloadCheckpoint()
+                        PlayerHandler.PlayerInstance.GetComponent<CheckpointScript>().ReloadCheckpoint()
                         );
                 }
                 else
@@ -32,5 +32,7 @@ public class RoomLoaderScript : MonoBehaviour
                 Debug.LogError(e);
             }
         }
+
+        GetComponent<Collider>().enabled = false;
     }
 }

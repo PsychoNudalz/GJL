@@ -66,7 +66,8 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (itemScript != null)
                 {
-                    playerInventory.AddItem(itemScript);
+                    playerInventory.AddItem(itemScript.ToolType);
+                    Destroy(itemScript.gameObject);
                 }
             }
             else
@@ -87,7 +88,7 @@ public class PlayerControllerScript : MonoBehaviour
 
                 if (interactableObjectScript != null)
                 {
-                    if (playerInventory.CurrentItem&& interactableObjectScript.Interact(playerInventory.CurrentItem.ToolType))
+                    if (interactableObjectScript.Interact(playerInventory.CurrentItem))
                     {
                         playerInventory.RemoveItem();
                         lastPreview = Time.time;
@@ -117,7 +118,7 @@ public class PlayerControllerScript : MonoBehaviour
 
                     if (interactableObjectScript != null)
                     {
-                        interactableObjectScript.Preview(playerInventory.CurrentItem.ToolType);
+                        interactableObjectScript.Preview(playerInventory.CurrentItem);
                         playerInventory.ShowUsableTools(interactableObjectScript.GetTools());
                         wasPreview = true;
                     }

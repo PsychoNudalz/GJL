@@ -22,6 +22,11 @@ public class PlayerHandler : MonoBehaviour
     {
         if(PlayerInstance != null)
         {
+            UI_Handler instanceUIHandler = PlayerInstance.GetComponent<UI_Handler>();
+            if (instanceUIHandler == null)
+            {
+                instanceUIHandler = FindObjectOfType<UI_Handler>();
+            }
             Destroy(gameObject);
         }
         else
@@ -40,11 +45,11 @@ public class PlayerHandler : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetPlayerPosition(Vector3 newPosition)
     {
-        
+        print($"Moving Player to {newPosition}");
+        PlayerInstance.transform.position = newPosition;
+        PlayerHandler.PlayerInstance.GetComponent<CharacterController>().enabled = true;
     }
-
-
+    
 }

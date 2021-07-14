@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CheckpointScript : MonoBehaviour
 {
-    private List<ItemScript> lastItemCheckpoint;
+    private List<Tools> lastItemCheckpoint;
     private int lastSceneIndexCheckpoint;
 
     private PlayerInventory inventoryScript;
@@ -13,18 +13,22 @@ public class CheckpointScript : MonoBehaviour
     void Start()
     {
         inventoryScript = GetComponent<PlayerInventory>();
-        lastItemCheckpoint = new List<ItemScript>();
+        lastItemCheckpoint = new List<Tools>();
     }
     
     private void SaveInventoryCheckpoint()
     {
         if(inventoryScript == null){return;}
-        lastItemCheckpoint = new List<ItemScript>(inventoryScript.Items);
+        lastItemCheckpoint = new List<Tools>(inventoryScript.Items);
     }
 
     private void ReloadInventoryCheckpoint()
     {
-        inventoryScript.Items = new List<ItemScript>(lastItemCheckpoint);
+        inventoryScript.Items = new List<Tools>();
+        foreach (Tools tool in lastItemCheckpoint)
+        {
+            inventoryScript.AddItem(tool);
+        }
     }
 
     public void SaveCheckpoint()
