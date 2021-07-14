@@ -105,6 +105,10 @@ public class PlayerControllerScript : MonoBehaviour
 
     private void PreviewInteractable()
     {
+        if (playerInventory.CurrentItem.Equals(ToolType.None))
+        {
+            return;
+        }
         RaycastHit HitInfo;
         if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out HitInfo, interactDistance))
         {
@@ -112,7 +116,7 @@ public class PlayerControllerScript : MonoBehaviour
             if (HitInfo.collider.gameObject.CompareTag("Interactable"))
             {
                 Debug.DrawLine(mainCamera.transform.position, HitInfo.point, Color.green, 1f);
-                print($"{HitInfo.collider.gameObject} is Preview");
+                //print($"{HitInfo.collider.gameObject} is Preview");
                 if (HitInfo.collider.gameObject.TryGetComponent(out InteractableObjectScript interactableObjectScript))
                 {
 

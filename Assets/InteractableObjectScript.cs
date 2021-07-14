@@ -76,7 +76,7 @@ public class InteractableObjectScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Invalid tool to use");
+            //Debug.Log("Invalid tool to use");
         }
         return;
     }

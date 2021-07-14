@@ -2,7 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ToolType {None, Stick, Gun, Hammer, Fuse};
+public enum ToolType {
+    None,
+    Stick,
+    GunEmpty,
+    Hammer,
+    Fuse,
+    HammerBig,
+    BlowTorch,
+    Spanner,
+    FingerOnStick,
+    Crowbar,
+    Potato,
+    PapperBagMask,
+    CoffeeMug,
+    Apple,
+    ApplePie,
+
+};
 
 public static class ToolEnumConvertor
 {
@@ -10,6 +27,18 @@ public static class ToolEnumConvertor
     {
         switch (t)
         {
+            case (ToolType.FingerOnStick):
+                return "Finger On Stick";
+            case (ToolType.HammerBig):
+                return "Hammer Big";
+            case (ToolType.BlowTorch):
+                return "Blow Torch";
+            case (ToolType.PapperBagMask):
+                return "Papper Bag Mask";
+            case (ToolType.CoffeeMug):
+                return "Coffee Mug";
+            case (ToolType.ApplePie):
+                return "Apple Pie";
             default:
                 return t.ToString();
         }

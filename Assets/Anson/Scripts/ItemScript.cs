@@ -20,6 +20,14 @@ public class ItemScript : MonoBehaviour
             gameObject.AddComponent<Outline>().enabled = false;
             gameObject.AddComponent<ObjectHighlighter>();
         }
+        if (!rb)
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+        if (colliders.Count == 0)
+        {
+            colliders = new List<Collider>( GetComponentsInChildren<Collider>());
+        }
     }
 
 

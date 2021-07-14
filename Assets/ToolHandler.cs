@@ -15,12 +15,18 @@ public class ToolHandler : MonoBehaviour
             //print($"Resources/Tools/{tool.ToString()}");
             if (!tool.Equals(ToolType.None))
             {
-            
-            GameObject toolPrefab = Instantiate(Resources.Load<GameObject>($"Tools/{tool.ToString()}"),transform.position,transform.rotation,transform);
-            toolPrefab.name = tool.ToString();
-            toolPrefab.GetComponent<ItemScript>().SetOnPlayer(false);
-            toolPrefab.SetActive(false);
-            toolsOnPlayer.Add(toolPrefab);
+                try
+                {
+                    GameObject toolPrefab = Instantiate(Resources.Load<GameObject>($"Tools/{tool.ToString()}"), transform.position, transform.rotation, transform);
+                    toolPrefab.name = tool.ToString();
+                    toolPrefab.GetComponent<ItemScript>().SetOnPlayer(false);
+                    toolPrefab.SetActive(false);
+                    toolsOnPlayer.Add(toolPrefab);
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogWarning("Failed to find " + tool.ToString());
+                }
             }
         }
     }
@@ -31,7 +37,7 @@ public class ToolHandler : MonoBehaviour
         {
             tool.SetActive(false);
         }
-        if(none){return;}
+        if (none) { return; }
 
         foreach (GameObject tool in toolsOnPlayer)
         {

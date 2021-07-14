@@ -102,6 +102,9 @@ public class PlayerInventory : MonoBehaviour
         {
             currentItem = items[index];
             EquipItem();
+        }else
+        {
+            currentItem = ToolType.None;
         }
         UI_Inventory.SetEquip(toolHandler.GetItemFromEnum(currentItem));
     }
