@@ -3,7 +3,17 @@ guid: 9ca61535a2ba6e244be90e59863f92d5
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: finger_hand_mat
+    second: {fileID: 2100000, guid: d6f07ed7e20b2c84287df2f99f413dc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: finger_stick_mat
+    second: {fileID: 2100000, guid: b6e40c7ca54bcff478e9d6bde17b277a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -85,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.03
+    globalScale: 3
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

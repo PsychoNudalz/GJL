@@ -134,6 +134,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4151586885604442499}
     m_Modifications:
+    - target: {fileID: 1376619938918157801, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829629893571419696, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2321617260357936896, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -193,6 +201,14 @@ PrefabInstance:
     - target: {fileID: 2321617260357936899, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
       propertyPath: m_Name
       value: HammerModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321617260357936899, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095906371389454077, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e122de74f79d9cd439fabc72aba716df, type: 3}

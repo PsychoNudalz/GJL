@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -2703542600476476531}
   - component: {fileID: -2632990447858253313}
   - component: {fileID: 7444717204832967569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Crowbar
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.20009178, y: 1.4860648, z: 0.4447412}
-  m_Center: {x: 0, y: 0.7880183, z: 0}
+  m_Center: {x: 0, y: 0.31, z: 0}
 --- !u!1001 &3567214787766119028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,6 +90,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrowbarModel
       objectReference: {fileID: 0}
+    - target: {fileID: 1001707480110785903, guid: e69f5ad493fe0ff4692d1e4b3730ed29, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4899848779991884329, guid: e69f5ad493fe0ff4692d1e4b3730ed29, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7098976001900808440, guid: e69f5ad493fe0ff4692d1e4b3730ed29, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -100,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7098976001900808440, guid: e69f5ad493fe0ff4692d1e4b3730ed29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.444
       objectReference: {fileID: 0}
     - target: {fileID: 7098976001900808440, guid: e69f5ad493fe0ff4692d1e4b3730ed29, type: 3}
       propertyPath: m_LocalPosition.z

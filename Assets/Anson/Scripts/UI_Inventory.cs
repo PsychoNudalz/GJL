@@ -14,9 +14,14 @@ public class UI_Inventory : MonoBehaviour
     [Header("UI")]
     [SerializeField] GameObject baseItemCard;
     [SerializeField] List<UI_ItemCard> allItemCards;
+    [SerializeField] Animator animator;
 
     void Start()
     {
+        if (!animator)
+        {
+            animator = GetComponent<Animator>();
+        }
         if (!playerInventory)
         {
             playerInventory = FindObjectOfType<PlayerHandler>().PlayerInventory;
@@ -33,6 +38,7 @@ public class UI_Inventory : MonoBehaviour
             temp.UpdateCard(itemScript);
             allItemCards.Add(temp);
         }
+        animator.SetTrigger("Up");
         //UpdateEquip();
     }
 
@@ -86,6 +92,8 @@ public class UI_Inventory : MonoBehaviour
             return;
         }
         currentCard.SetEquipEffect(true);
+        animator.SetTrigger("Up");
+
     }
     public void HighlightUsable(List<ToolType> itemTools)
     {

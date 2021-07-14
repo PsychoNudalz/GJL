@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class ToolHandler : MonoBehaviour
 {
-    private List<GameObject> toolsOnPlayer;
+    [SerializeField] private List<GameObject> toolsOnPlayer;
     void Awake()
     {
+
         toolsOnPlayer = new List<GameObject>();
         foreach (ToolType tool in Enum.GetValues(typeof(ToolType)))
         {
@@ -58,6 +59,7 @@ public class ToolHandler : MonoBehaviour
                 return tool.GetComponent<ItemScript>();
             }
         }
+        Debug.LogError("Error Getting " + tooltype);
         return null;
     }
 }

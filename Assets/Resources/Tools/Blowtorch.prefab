@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1799696693528159786}
   - component: {fileID: 918082332700211880}
   - component: {fileID: 708137130243981420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Blowtorch
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,8 +77,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.17253429, y: 0.78916353, z: 0.26844355}
-  m_Center: {x: 0, y: 0.3442097, z: 0}
+  m_Size: {x: 0.24125764, y: 0.69417775, z: 0.26844355}
+  m_Center: {x: 0, y: 0.1612397, z: 0}
 --- !u!1001 &8981511146649059628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,6 +86,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2761566558705429285}
     m_Modifications:
+    - target: {fileID: 150402658121459407, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1124823510815291921, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -96,7 +100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1124823510815291921, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.176
       objectReference: {fileID: 0}
     - target: {fileID: 1124823510815291921, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
       propertyPath: m_LocalPosition.z
@@ -130,9 +134,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1218566133243355635, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2287193139707587727, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
       propertyPath: m_Name
       value: BlowtorchModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287193139707587727, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316099340725577426, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5587236466683485760, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7431472453740036626, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053479021714824280, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3306579974838416646}
   - component: {fileID: 3306579974838416641}
   - component: {fileID: 3306579974838416640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fuse
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.05
+  m_Radius: 0.08
   m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -88,9 +88,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3306579974838416647}
     m_Modifications:
+    - target: {fileID: 2550548062506533, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 179243800526253918, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
       propertyPath: m_Name
       value: FuseModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 179243800526253918, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 179243800526253919, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
       propertyPath: m_RootOrder
@@ -135,6 +143,18 @@ PrefabInstance:
     - target: {fileID: 179243800526253919, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062186063261643698, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742359314533552952, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812206617630929344, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91561a892e648424fa545c980a23bbe3, type: 3}

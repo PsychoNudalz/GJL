@@ -17,6 +17,11 @@ public class InteractableObjectScript : MonoBehaviour
 
     private void Awake()
     {
+        if (!TryGetComponent(out ObjectHighlighter o))
+        {
+            gameObject.AddComponent<Outline>().enabled = false;
+            gameObject.AddComponent<ObjectHighlighter>();
+        }
         if (!animator)
         {
             animator = GetComponent<Animator>();

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1917748323170515099}
   - component: {fileID: -4824125375831855277}
   - component: {fileID: 5267579815531387719}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spanner
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,9 +87,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7291571320887972873}
     m_Modifications:
+    - target: {fileID: 36706253278987610, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 635557131664242386, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2583516105292233242, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198930633551434744, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7700645369987638313, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
       propertyPath: m_Name
       value: SpannerModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700645369987638313, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974889632364011668, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
       propertyPath: m_RootOrder

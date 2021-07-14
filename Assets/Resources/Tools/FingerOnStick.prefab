@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -8221402026393574235}
   - component: {fileID: -7742351913004693711}
   - component: {fileID: -8264762424964186405}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FingerOnStick
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ CapsuleCollider:
   m_Radius: 0.15
   m_Height: 1.41
   m_Direction: 1
-  m_Center: {x: 0, y: 0.69, z: 0}
+  m_Center: {x: 0, y: 0.12, z: 0}
 --- !u!1001 &5566492034442234356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2860258655863461287, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.595
       objectReference: {fileID: 0}
     - target: {fileID: 2860258655863461287, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_LocalPosition.z
@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2860258655863461287, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2860258655863461287, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_LocalRotation.x
@@ -113,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2860258655863461287, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2860258655863461287, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_LocalRotation.z
@@ -125,15 +125,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2860258655863461287, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 2860258655863461287, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4668861111904142603, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819524875444398664, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6105063642546887296, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
       propertyPath: m_Name
       value: FingerOnStickModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105063642546887296, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677637230097043170, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7e7de42d4e80d542bb5443d70648f69, type: 3}

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8234194801141634631}
   - component: {fileID: 2928141677972356931}
   - component: {fileID: 5219857635792062458}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Potato
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,6 +91,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotatoModel
       objectReference: {fileID: 0}
+    - target: {fileID: 212000958866834653, guid: 6461c104eaf73e44ea003506db5f5e93, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1050649248227719775, guid: 6461c104eaf73e44ea003506db5f5e93, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -134,6 +138,10 @@ PrefabInstance:
     - target: {fileID: 1050649248227719775, guid: 6461c104eaf73e44ea003506db5f5e93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887528500349022202, guid: 6461c104eaf73e44ea003506db5f5e93, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6461c104eaf73e44ea003506db5f5e93, type: 3}
