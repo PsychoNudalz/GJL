@@ -13,6 +13,16 @@ public class ItemScript : MonoBehaviour
     public Tools ToolType { get => toolType;}
     public Sprite UISprite { get => uISprite; set => uISprite = value; }
 
+    private void Awake()
+    {
+        if (!TryGetComponent(out ObjectHighlighter o))
+        {
+            gameObject.AddComponent<Outline>().enabled = false;
+            gameObject.AddComponent<ObjectHighlighter>();
+        }
+    }
+
+
     public void OnPickUp()
     {
         SetPhysics(false);

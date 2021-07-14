@@ -17,6 +17,7 @@ public class OnCollisionDamageScript : DamageScript
     public float tickIntervals = 0.5f;
     float lastDamageTick;
     public float damage;
+    [SerializeField] DamageType damageType = DamageType.None;
 
     //public bool onExit;
     //public bool addToTargetsOnEnter = true;
@@ -101,9 +102,22 @@ public class OnCollisionDamageScript : DamageScript
         while (attackedTargets.Contains(null))
         {
 
-        attackedTargets.Remove(null);
+            attackedTargets.Remove(null);
         }
         lastDamageTick = Time.time;
+    }
+
+    public override void dealDamageToTarget(LifeSystemScript ls, float dmg)
+    {
+        if (damageType.Equals(DamageType.None))
+        {
+            base.dealDamageToTarget(ls, dmg);
+
+        }
+        else
+        {
+            base.dealDamageToTarget(ls, dmg, damageType);
+        }
     }
 
 

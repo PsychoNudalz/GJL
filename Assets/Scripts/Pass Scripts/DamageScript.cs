@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum DamageType
+{
+    None,
+    Toxic
+}
+
 
 /// <summary>
 /// Anson:
@@ -9,7 +15,6 @@ using UnityEngine;
 /// </summary>
 public class DamageScript : MonoBehaviour
 {
-
     [Header("Target")]
     [SerializeField] protected LayerMask layerMask;
     [SerializeField] protected List<string> tagList;
@@ -25,11 +30,12 @@ public class DamageScript : MonoBehaviour
     {
         try
         {
-        ls.takeDamage(dmg);
+            ls.takeDamage(dmg);
 
-        }catch(System.NullReferenceException e)
+        }
+        catch (System.NullReferenceException e)
         {
-            Debug.LogError( e.StackTrace);
+            Debug.LogError(e.StackTrace);
         }
     }
 
@@ -37,7 +43,31 @@ public class DamageScript : MonoBehaviour
     /// deals damage to a single target that has a LifeSystemScript
     /// </summary>
     /// <param name="ls"></param>
-    public virtual void dealCriticalDamageToTarget(LifeSystemScript ls, float dmg,  float multiplier)
+    public virtual void dealDamageToTarget(LifeSystemScript ls, float dmg, DamageType damageType)
+    {
+        try
+        {
+            if (!ls.DamageImmunity.Contains(damageType))
+            {
+                ls.takeDamage(dmg);
+            }
+            else
+            {
+                Debug.Log("Damage to " + ls.name + " Immune");
+            }
+
+        }
+        catch (System.NullReferenceException e)
+        {
+            Debug.LogError(e.StackTrace);
+        }
+    }
+
+    /// <summary>
+    /// deals damage to a single target that has a LifeSystemScript
+    /// </summary>
+    /// <param name="ls"></param>
+    public virtual void dealCriticalDamageToTarget(LifeSystemScript ls, float dmg, float multiplier)
     {
         ls.takeDamageCritical(dmg, multiplier);
     }

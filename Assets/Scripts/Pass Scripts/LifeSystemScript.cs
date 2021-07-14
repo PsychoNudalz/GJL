@@ -17,6 +17,7 @@ public class LifeSystemScript : MonoBehaviour
     [SerializeField] protected int health_Max = 100;
     [SerializeField] bool isDead = false;
     [SerializeField] protected Transform centreOfMass;
+    [SerializeField] List<DamageType> damageImmunity;
 
     [Header("On Death")]
     public GameObject deathGameObject;
@@ -36,6 +37,7 @@ public class LifeSystemScript : MonoBehaviour
     public int Health_Current { get => health_Current; }
     public int Health_Max { get => health_Max; }
     public bool IsDead { get => isDead; }
+    public List<DamageType> DamageImmunity { get => damageImmunity; set => damageImmunity = value; }
 
     public static LifeSystemScript GetLifeSystemScript(GameObject go)
     {
@@ -97,7 +99,7 @@ public class LifeSystemScript : MonoBehaviour
         health_Current -= Mathf.RoundToInt(dmg);
         if (!isDead)
         {
-// print(name + " take damage: " + dmg);
+            // print(name + " take damage: " + dmg);
             //updateHealthBar();
             if (displayTakeDamageEffect)
             {
@@ -118,7 +120,7 @@ public class LifeSystemScript : MonoBehaviour
     /// </summary>
     /// <param name="dmg"></param>
     /// <returns> health remaining </returns>
-    public virtual int takeDamageCritical(float dmg,  float multiplier = 1, bool displayTakeDamageEffect = true)
+    public virtual int takeDamageCritical(float dmg, float multiplier = 1, bool displayTakeDamageEffect = true)
     {
 
         health_Current -= Mathf.RoundToInt(dmg * multiplier);
@@ -244,12 +246,12 @@ public class LifeSystemScript : MonoBehaviour
 
         if (disableOnDeath)
         {
-            
+
             gameObject.SetActive(false);
         }
         else if (destroyOnDeath)
         {
-            
+
             Destroy(gameObject);
         }
 
@@ -328,4 +330,20 @@ public class LifeSystemScript : MonoBehaviour
 
     }
 
+
+    public void AddImmunity(DamageType damageType)
+    {
+        if (!damageImmunity.Contains(damageType))
+        {
+            damageImmunity.Add(damageType);
+        }
+    }
+
+    public void RemoveImmunity(DamageType damageType)
+    {
+        if (damageImmunity.Contains(damageType))
+        {
+            damageImmunity.Remove(damageType);
+        }
+    }
 }
