@@ -48,7 +48,6 @@ public class ToolHandler : MonoBehaviour
                 return tool.GetComponent<ItemScript>();
             }
         }
-
         return null;
     }
 }

@@ -31,6 +31,7 @@ public class PlayerHandler : MonoBehaviour
         }
         else
         {
+            gameObject.name = "Player instance";
             PlayerInstance = gameObject;
             DontDestroyOnLoad(gameObject);
             playerControllerScript = GetComponent<PlayerControllerScript>();
@@ -48,8 +49,9 @@ public class PlayerHandler : MonoBehaviour
     public void SetPlayerPosition(Vector3 newPosition)
     {
         print($"Moving Player to {newPosition}");
+        GetComponent<CharacterController>().enabled = false;
         PlayerInstance.transform.position = newPosition;
-        PlayerHandler.PlayerInstance.GetComponent<CharacterController>().enabled = true;
+        GetComponent<CharacterController>().enabled = true;
     }
     
 }

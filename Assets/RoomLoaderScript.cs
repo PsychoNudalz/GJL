@@ -13,7 +13,6 @@ public class RoomLoaderScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
             try
             {
                 if (isReload)
