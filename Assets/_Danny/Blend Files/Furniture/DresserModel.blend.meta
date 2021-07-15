@@ -3,7 +3,22 @@ guid: 65d4c430898d6e44d81574842d354740
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DresserColour_1
+    second: {fileID: 2100000, guid: f31eaeff266089645902ebcf40486de8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DresserColour_2
+    second: {fileID: 2100000, guid: bb87848e3ed61314ea7fa4651c45d452, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DresserHandle
+    second: {fileID: 2100000, guid: 3c03282c310e8374abbe3126c79753a5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
