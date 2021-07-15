@@ -27,6 +27,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: RoundDoor
+    second: {fileID: 2100000, guid: 146a8eea3f127a2499c6164ed0b8cfc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoundDoorTexture
+    second: {fileID: 2100000, guid: 1d7656d2d60d50348b30a0b4338a51dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: TrapDoor
     second: {fileID: 2100000, guid: acce3e29789787b409396e9a5fae66eb, type: 2}
   - first:
