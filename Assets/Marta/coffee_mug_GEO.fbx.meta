@@ -3,7 +3,22 @@ guid: 9f9d4e508ff52354b977012d8568aca1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coffeMug_liquid_mat
+    second: {fileID: 2100000, guid: 34f69e6a8b11ea248b2f7ed2a7566f67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coffeeMug_handle_mat
+    second: {fileID: 2100000, guid: a0427cf339e5891468d5f2b433b2d44a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coffeeMug_main_mat
+    second: {fileID: 2100000, guid: 08312a4a9c3a84f42a584862b3a971e2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -85,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.03
+    globalScale: 3
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
