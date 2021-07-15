@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WaterFountainMetal
-    second: {fileID: 2100000, guid: 059c47a93577b334cb593256a92a53ad, type: 2}
+    second: {fileID: 2100000, guid: 383415146071d2b4b9f5aac247440061, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,7 +46,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

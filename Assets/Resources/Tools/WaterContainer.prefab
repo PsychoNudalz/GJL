@@ -46,10 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f27103f829a5b41aff6404d46c7e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolType: 0
+  toolType: 19
   uISprite: {fileID: 0}
-  rb: {fileID: 0}
-  colliders: []
+  rb: {fileID: 2292926396668624417}
+  colliders:
+  - {fileID: 2292926396668624416}
   outline: {fileID: 0}
 --- !u!54 &2292926396668624417
 Rigidbody:
@@ -78,8 +79,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 1.1, z: 0.8}
-  m_Center: {x: 0, y: 0.57, z: 0}
+  m_Size: {x: 0.4, y: 0.55, z: 0.4}
+  m_Center: {x: 0, y: 0.27, z: 0}
 --- !u!1001 &2443708027423154069
 PrefabInstance:
   m_ObjectHideFlags: 0
