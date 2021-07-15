@@ -24,9 +24,9 @@ public class ToolHandler : MonoBehaviour
                     toolPrefab.SetActive(false);
                     toolsOnPlayer.Add(toolPrefab);
                     toolPrefab.layer = LayerMask.NameToLayer("HandTool");
-                    foreach(GameObject g in toolPrefab.transform.GetComponentInChildren<Transform>())
+                    foreach(Transform t in toolPrefab.transform.GetComponentsInChildren<Transform>())
                     {
-                        g.layer = LayerMask.NameToLayer("HandTool");
+                        t.gameObject.layer = LayerMask.NameToLayer("HandTool");
                     }
                 }
                 catch (System.Exception e)
