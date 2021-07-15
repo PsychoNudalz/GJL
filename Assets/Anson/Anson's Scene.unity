@@ -1896,16 +1896,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2321617260357936896, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
   m_PrefabInstance: {fileID: 935038684}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &988648475 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3951826402918436238, guid: cdb22fa1ca970a245ad83569f2a1ebdb, type: 3}
-  m_PrefabInstance: {fileID: 149163393}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &988648476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3951826402918436237, guid: cdb22fa1ca970a245ad83569f2a1ebdb, type: 3}
   m_PrefabInstance: {fileID: 149163393}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &988648477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3951826402918436236, guid: cdb22fa1ca970a245ad83569f2a1ebdb, type: 3}
+  m_PrefabInstance: {fileID: 149163393}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae7cd2d5aab637428c7bc5289786fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &992862351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3359,8 +3365,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.11006057, z: 0.3}
-  m_Center: {x: 0, y: 0.05, z: 0}
+  m_Size: {x: 0.4, y: 0.18437453, z: 0.4}
+  m_Center: {x: 0, y: 0.087156974, z: 0}
 --- !u!114 &1991480704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3397,10 +3403,10 @@ MonoBehaviour:
     interactEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 988648475}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 988648477}
+          m_TargetAssemblyTypeName: ExplosiveKillZone, Assembly-CSharp
+          m_MethodName: Activate
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
