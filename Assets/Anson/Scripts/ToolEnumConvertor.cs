@@ -22,7 +22,8 @@ public enum ToolType {
     Mug,
     Gun,
     Button,
-    WaterContainer
+    WaterContainer,
+    Body
 
 };
 
