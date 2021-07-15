@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.VFX;
 
 public class EffectPlayer : MonoBehaviour
 {
     [SerializeField] ParticleSystem[] particleSystems;
     [SerializeField] VisualEffect[] visualEffects;
+    [SerializeField] UnityEvent[] unityEvents;
 
     public void PlayPS(int index)
     {
@@ -39,6 +41,14 @@ public class EffectPlayer : MonoBehaviour
         if (index < visualEffects.Length)
         {
             visualEffects[index].Stop();
+        }
+    }
+
+    public void PlayUE(int index)
+    {
+        if (index < unityEvents.Length)
+        {
+            unityEvents[index].Invoke();
         }
     }
 }

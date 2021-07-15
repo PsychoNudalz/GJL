@@ -11,6 +11,7 @@ public class ShatterScript : MonoBehaviour
     [SerializeField] float explodeForce;
     [SerializeField] AnimationCurve forceApplyCurve;
     [SerializeField] float maxObjectSize;
+    bool explodeFlag = false;
 
     private void Awake()
     {
@@ -21,6 +22,10 @@ public class ShatterScript : MonoBehaviour
 
     public void Explode()
     {
+        if (explodeFlag)
+        {
+            return;
+        }
         originalGO.SetActive(false);
         shatterGO.SetActive(true);
         foreach (Rigidbody rb in shatterPieces)
