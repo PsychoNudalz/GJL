@@ -142,6 +142,10 @@ public class PlayerInventory : MonoBehaviour
         {
         PrevItem();
         }
+        else
+        {
+            currentItem = ToolType.None;
+        }
         uI_Inventory.UpdateInventoryList();
 
     }
