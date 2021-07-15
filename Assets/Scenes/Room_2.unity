@@ -428,6 +428,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377168620, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_Range
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_Intensity
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_SpotAngle
+      value: 74.67126
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 20.748472
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 619
+      objectReference: {fileID: 0}
+    - target: {fileID: 377168621, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0.000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934084637794822446, guid: e6af69e875e41f2409b89987382bb673, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acce3e29789787b409396e9a5fae66eb, type: 2}
     - target: {fileID: 7704869332684683501, guid: e6af69e875e41f2409b89987382bb673, type: 3}
       propertyPath: m_Name
       value: Room_2
