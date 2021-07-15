@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door
-    second: {fileID: 2100000, guid: 9811a786000fa9d4dac7ea22732667b2, type: 2}
+    second: {fileID: 2100000, guid: acce3e29789787b409396e9a5fae66eb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -18,22 +18,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ExitTube
-    second: {fileID: 2100000, guid: a0f0e65fd3d518640a0d72dd19524028, type: 2}
+    second: {fileID: 2100000, guid: acce3e29789787b409396e9a5fae66eb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Floor
-    second: {fileID: 2100000, guid: 315a84e9bd0d7784487bd32b065dd19e, type: 2}
+    second: {fileID: 2100000, guid: acce3e29789787b409396e9a5fae66eb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TrapDoor
-    second: {fileID: 2100000, guid: a2031b3e519b6ab49b683d148ff56519, type: 2}
+    second: {fileID: 2100000, guid: acce3e29789787b409396e9a5fae66eb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Walls
-    second: {fileID: 2100000, guid: 9524986a6410e614e9a885e571880b99, type: 2}
+    second: {fileID: 2100000, guid: acce3e29789787b409396e9a5fae66eb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
