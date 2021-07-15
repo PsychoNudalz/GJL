@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: CompactorRoom
+    second: {fileID: 2100000, guid: ca05a9913a1d7d14dbe8bc5c82fc6373, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Elevator
     second: {fileID: 2100000, guid: 8459038f3bc101747a73a36cdcaee339, type: 2}
   - first:
@@ -34,6 +39,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: RoundTrapDoor
     second: {fileID: 2100000, guid: 0d48036371a5b7d48a9acf2b04d4db16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RubbishChute
+    second: {fileID: 2100000, guid: b365e3c2a4bdac44194de2a8e121d5d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Squasher
+    second: {fileID: 2100000, guid: b8acbca4d2194b44e99410ff4a3476a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SquasherPiston
+    second: {fileID: 2100000, guid: 8913664c474a9d0459836e2071747c77, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
