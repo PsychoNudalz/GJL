@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Animator))]
 public class InteractableObjectScript : MonoBehaviour
 {
     [SerializeField] private List<InteractableEvent> interactEvents;
@@ -63,7 +65,10 @@ public class InteractableObjectScript : MonoBehaviour
         {
             StartCoroutine(DelayPlayEvent(e));
         }
-        animator.Play(e.InteractAnimation);
+        if (animator)
+        {
+            animator.Play(e.InteractAnimation);
+        }
     }
 
     public void Preview(ToolType t)

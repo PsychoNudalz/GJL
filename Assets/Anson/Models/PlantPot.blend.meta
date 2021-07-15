@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5c440523c1f6e014fb1e081212fb368e
+guid: cd32c47cec9363644aeb2b062aabcd3c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,18 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CoffeeMachine
-    second: {fileID: 2100000, guid: e2c1449e81ddcff499a2068a743b6228, type: 2}
+      name: Pot
+    second: {fileID: 2100000, guid: 549bb221efe66474590a749d7f76fae1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CoffeeMachineMetal
-    second: {fileID: 2100000, guid: bed5131763979ff46a06de07c8a5fc76, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CoffeeMachineWaterContainer
-    second: {fileID: 2100000, guid: 08312a4a9c3a84f42a584862b3a971e2, type: 2}
+      name: Soil.001
+    second: {fileID: 2100000, guid: 3fcba1340eda5a949a95fa8755d5da1b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -51,7 +46,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -88,7 +83,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -107,7 +102,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
