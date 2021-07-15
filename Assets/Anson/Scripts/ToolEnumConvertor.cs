@@ -18,7 +18,8 @@ public enum ToolType {
     CoffeeMug,
     Apple,
     ApplePie,
-    MoonRock
+    MoonRock,
+    Mug
 
 };
 
