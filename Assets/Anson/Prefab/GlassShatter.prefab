@@ -316,8 +316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalGO: {fileID: 4479411288581494288}
-  glassShatterGO: {fileID: 3669159380883579083}
-  glassShatterPieces: []
+  shatterGO: {fileID: 3669159380883579083}
+  shatterPieces: []
   explodePoint: {fileID: 4479411288953103165}
   explodeForce: 200
   forceApplyCurve:

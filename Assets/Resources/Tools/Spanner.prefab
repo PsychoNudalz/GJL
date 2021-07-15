@@ -50,6 +50,7 @@ MonoBehaviour:
   uISprite: {fileID: 0}
   rb: {fileID: 0}
   colliders: []
+  outline: {fileID: 0}
 --- !u!54 &-4824125375831855277
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8974889632364011668, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.038208574
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8974889632364011668, guid: c3cf1c850c04f6345bfc1e67b4c7d130, type: 3}
       propertyPath: m_LocalRotation.w
