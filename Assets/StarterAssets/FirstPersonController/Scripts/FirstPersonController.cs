@@ -14,6 +14,7 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
+		CharacterController controller;
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
@@ -35,6 +36,10 @@ namespace StarterAssets
 		public float JumpTimeout = 0.1f;
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float FallTimeout = 0.15f;
+
+		[Header("Jump Detection")]
+		[SerializeField] float jumpHeadDetection = 0.2f;
+		[SerializeField] LayerMask jumpLayerMask;
 
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
@@ -75,6 +80,10 @@ namespace StarterAssets
 
 		private void Awake()
 		{
+			if (!controller)
+            {
+				controller = GetComponent<CharacterController>();
+            }
 			// get a reference to our main camera
 			if (_mainCamera == null)
 			{
@@ -97,6 +106,11 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			if (Physics.Raycast(transform.position + controller.center + new Vector3(0, controller.height / 2f, 0), transform.up, jumpHeadDetection, jumpLayerMask))
+			{
+				print("Playuer hit head");
+				_verticalVelocity = Mathf.Clamp(.1f, 0, _verticalVelocity);
+			}
 		}
 
 		private void LateUpdate()

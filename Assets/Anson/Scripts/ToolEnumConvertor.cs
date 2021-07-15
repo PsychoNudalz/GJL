@@ -18,6 +18,7 @@ public enum ToolType {
     CoffeeMug,
     Apple,
     ApplePie,
+    MoonRock
 
 };
 
@@ -39,6 +40,8 @@ public static class ToolEnumConvertor
                 return "Coffee Mug";
             case (ToolType.ApplePie):
                 return "Apple Pie";
+            case (ToolType.MoonRock):
+                return "Moon Rock";
             default:
                 return t.ToString();
         }

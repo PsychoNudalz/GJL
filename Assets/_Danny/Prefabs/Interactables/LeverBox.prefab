@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8704635040708937937}
   - component: {fileID: 1071463710756602721}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeverBox
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,6 +102,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 39631807f5e27a044ac89070e023496c, type: 3}
       propertyPath: m_Name
       value: LeverBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 39631807f5e27a044ac89070e023496c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39631807f5e27a044ac89070e023496c, type: 3}

@@ -138,7 +138,10 @@ public class PlayerInventory : MonoBehaviour
             items.Remove(currentItem);
         }
         toolHandler.GetItemFromEnum(currentItem).OnUse();
+        if (items.Count > 0)
+        {
         PrevItem();
+        }
         uI_Inventory.UpdateInventoryList();
 
     }

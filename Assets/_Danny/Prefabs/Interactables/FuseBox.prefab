@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2688121775973843036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FuseBox
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,6 +88,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FuseBoxModel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0048d1655c904764fae0e93127a7d7b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778296990959326376, guid: 0048d1655c904764fae0e93127a7d7b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360538690872367603, guid: 0048d1655c904764fae0e93127a7d7b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0048d1655c904764fae0e93127a7d7b7, type: 3}
 --- !u!4 &3790141396511377466 stripped
@@ -102,9 +114,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2688121775973843036}
     m_Modifications:
+    - target: {fileID: 2550548062506533, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 179243800526253918, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
       propertyPath: m_Name
       value: FuseModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 179243800526253918, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 179243800526253919, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
       propertyPath: m_RootOrder
@@ -150,6 +170,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1062186063261643698, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742359314533552952, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812206617630929344, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
 --- !u!4 &3979777340680086812 stripped
@@ -164,9 +196,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2688121775973843036}
     m_Modifications:
+    - target: {fileID: 2550548062506533, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 179243800526253918, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
       propertyPath: m_Name
       value: FuseModel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 179243800526253918, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 179243800526253919, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
       propertyPath: m_RootOrder
@@ -211,6 +251,18 @@ PrefabInstance:
     - target: {fileID: 179243800526253919, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062186063261643698, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742359314533552952, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812206617630929344, guid: 91561a892e648424fa545c980a23bbe3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91561a892e648424fa545c980a23bbe3, type: 3}

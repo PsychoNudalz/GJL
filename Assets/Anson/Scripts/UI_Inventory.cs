@@ -81,7 +81,8 @@ public class UI_Inventory : MonoBehaviour
         }
         if (!i)
         {
-            Debug.LogError("passed card i null");
+            Debug.LogError("passed card "+ i +" null");
+            animator.SetTrigger("Up");
 
             return;
         }

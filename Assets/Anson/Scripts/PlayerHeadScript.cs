@@ -5,10 +5,12 @@ using UnityEngine.Events;
 
 public class PlayerHeadScript : MonoBehaviour
 {
-    private const float defaultLaunchForce = 500f;
+    private const float defaultLaunchForce = 300f;
     [SerializeField] Rigidbody rb;
     [SerializeField] Collider headCollider;
+    [SerializeField] float explodeDelay = 0.05f;
     [SerializeField] UnityEvent onExplode;
+
 
     private void Awake()
     {
@@ -26,14 +28,20 @@ public class PlayerHeadScript : MonoBehaviour
 
     public void Explode(Vector3 force)
     {
+        StartCoroutine( DelayExplode(force));
+    }
+
+    private void ExplodeBehaviour(Vector3 force)
+    {
         if (force.magnitude.Equals(0))
         {
-            force = (Vector3.up- transform.forward)* defaultLaunchForce;
+            force = (- transform.forward).normalized * defaultLaunchForce;
         }
         UnlockHead();
         rb.AddForce(force * rb.mass);
-        rb.AddTorque(Vector3.up * defaultLaunchForce / 2f);
+        rb.AddTorque(Vector3.right * defaultLaunchForce / 3f);
         onExplode.Invoke();
+        return ;
     }
 
     public void Explode()
@@ -46,5 +54,11 @@ public class PlayerHeadScript : MonoBehaviour
         rb.isKinematic = false;
         headCollider.enabled = true;
         transform.parent = null;
+    }
+    IEnumerator DelayExplode(Vector3 force)
+    {
+        yield return new WaitForSeconds(explodeDelay);
+        ExplodeBehaviour(force);
+
     }
 }
