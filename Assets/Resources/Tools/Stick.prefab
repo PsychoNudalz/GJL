@@ -53,6 +53,7 @@ MonoBehaviour:
   rb: {fileID: 7072338582437658576}
   colliders:
   - {fileID: 7072338582437658579}
+  outline: {fileID: 0}
 --- !u!54 &7072338582437658576
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80,8 +81,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.7275858, z: 0.1}
-  m_Center: {x: 0, y: 0.26331925, z: 0}
+  m_Size: {x: 0.1, y: 0.99090445, z: 0.1}
+  m_Center: {x: 0, y: 0.46, z: 0}
 --- !u!114 &1192128079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6619288586462045797, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.165
       objectReference: {fileID: 0}
     - target: {fileID: 6619288586462045797, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_LocalPosition.z

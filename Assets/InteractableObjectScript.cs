@@ -45,6 +45,7 @@ public class InteractableObjectScript : MonoBehaviour
             {
                 interactionLock = true;
             }
+            Debug.Log(name + " interact with " + t.ToString());
             return true;
         }
         else
@@ -115,10 +116,20 @@ public class InteractableObjectScript : MonoBehaviour
         return temp;
     }
 
+    public void FreeLock(float t)
+    {
+        StartCoroutine(DelayFreeLock(t));
+    }
+
     IEnumerator DelayPlayEvent(InteractableEvent e)
     {
         yield return new WaitForSeconds(e.InteractDelay);
         e.InteractEvent.Invoke();
 
+    }
+    IEnumerator DelayFreeLock(float t)
+    {
+        yield return new WaitForSeconds(t);
+        interactionLock = false;
     }
 }

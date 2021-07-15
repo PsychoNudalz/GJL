@@ -20,6 +20,10 @@ public class ToolHandler : MonoBehaviour
                 {
                     GameObject toolPrefab = Instantiate(Resources.Load<GameObject>($"Tools/{tool.ToString()}"), transform.position, transform.rotation, transform);
                     toolPrefab.name = tool.ToString();
+                    //if (tool.Equals(ToolType.Apple))
+                    //{
+                    //    print("Apple");
+                    //}
                     toolPrefab.GetComponent<ItemScript>().SetOnPlayer(false);
                     toolPrefab.SetActive(false);
                     toolsOnPlayer.Add(toolPrefab);

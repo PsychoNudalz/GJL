@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: f73baff88f08ddc48b5285bef34de053
+guid: 7cba0f3816479434ca4f59b76da1d15f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple_fruit_mat
+    second: {fileID: 2100000, guid: 4309a5f50a361634b95f736899997ffe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple_leaf_mat
+    second: {fileID: 2100000, guid: 5357492dce0945e449780edbefa07ff7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple_tail_mat
+    second: {fileID: 2100000, guid: b6e40c7ca54bcff478e9d6bde17b277a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -85,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.03
+    globalScale: 3
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

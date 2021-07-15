@@ -72,9 +72,13 @@ public class ItemScript : MonoBehaviour
     internal void SetOnPlayer(bool b)
     {
         rb.isKinematic = !false;
-        foreach (Collider c in colliders)
+        if (colliders.Count > 0)
         {
-            c.enabled = b;
+
+            foreach (Collider c in colliders)
+            {
+                c.enabled = b;
+            }
         }
     }
 
