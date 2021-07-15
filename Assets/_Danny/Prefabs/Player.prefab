@@ -488,13 +488,13 @@ MonoBehaviour:
   jumpHeadDetection: 0.05
   jumpLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1025
   Grounded: 1
   GroundedOffset: -0.14
   GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 1025
+    m_Bits: 1225
   CinemachineCameraTarget: {fileID: 3009744721695695889}
   TopClamp: 90
   BottomClamp: -90

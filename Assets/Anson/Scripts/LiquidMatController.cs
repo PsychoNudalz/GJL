@@ -10,6 +10,11 @@ public class LiquidMatController : MonoBehaviour
     // Start is called before the first frame update
 
     // Update is called once per frame
+    private void Start()
+    {
+        liquid.gameObject.SetActive(true);
+    }
+
     void Update()
     {
         liquid.material.SetFloat("_Fill", fill);

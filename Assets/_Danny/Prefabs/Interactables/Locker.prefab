@@ -47,7 +47,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e2212b4836b7b541b969364e15f57e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactEvents: []
+  interactEvents:
+  - tool: 3
+    interactEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 272236014296189929}
+          m_TargetAssemblyTypeName: ShatterScript, Assembly-CSharp
+          m_MethodName: Explode
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: AnimationObject, Assembly-CSharp
+          m_MethodName: Play_Trigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Fall
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2652341826999041274}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    interactDelay: 0
+    interactAnimation: 
+    previewAnimation: 
   lockAfterInteract: 1
   interactionLock: 0
   animator: {fileID: 2652341826999041277}
@@ -263,3 +306,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2812550610089557507, guid: 7908f0f3a97f4d04eaff744db70027c1, type: 3}
   m_PrefabInstance: {fileID: 2652341826710894061}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &272236014296189929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2812550610089557508, guid: 7908f0f3a97f4d04eaff744db70027c1, type: 3}
+  m_PrefabInstance: {fileID: 2652341826710894061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56be955f301043f4fa5435577c091e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
