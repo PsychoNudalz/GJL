@@ -5,39 +5,85 @@ using UnityEngine;
 public class ItemScript : MonoBehaviour
 {
 
-    [SerializeField] Tools toolType;
+    [SerializeField] ToolType toolType;
     [SerializeField] Sprite uISprite;
     [SerializeField] Rigidbody rb;
     [SerializeField] List<Collider> colliders;
+    [SerializeField] Outline outline;
 
-    public Tools ToolType { get => toolType;}
+    public ToolType ToolType { get => toolType; }
     public Sprite UISprite { get => uISprite; set => uISprite = value; }
 
-    public void OnPickUp()
+    private void Awake()
     {
-        SetPhysics(false);
-        Debug.Log("Picked Up: " + ToolEnumConvertor.ToName(toolType));
+        if (!TryGetComponent(out ObjectHighlighter o))
+        {
+            gameObject.AddComponent<Outline>().enabled = false;
+            gameObject.AddComponent<ObjectHighlighter>();
+        }
+        if (!rb)
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+        if (colliders.Count == 0)
+        {
+            colliders = new List<Collider>(GetComponentsInChildren<Collider>());
+        }
     }
+
+
+    void Start()
+    {
+        if (!outline)
+        {
+            outline = GetComponent<Outline>();
+        }
+
+
+        if (transform.parent == null || !transform.parent.name.Equals("Tools"))
+        {
+            /*
+            if (PlayerHandler.PlayerInstance.GetComponent<PlayerInventory>().Items.Contains(toolType))
+            {
+                Destroy(gameObject);
+            }
+            */
+        }
+    }
+    /*public void OnPickUp()
+    {
+        SetOnPlayer(false);
+        Debug.Log("Picked Up: " + ToolEnumConvertor.ToName(toolType));
+    }*/
     public void OnUse()
     {
         gameObject.SetActive(false);
     }
-    public void OnDrop()
+    /*public void OnDrop()
     {
-        SetPhysics(true);
-    }
+        SetOnPlayer(true);
+    }*/
 
     /// <summary>
     /// set the physics of the item
     /// True means activating phycis
     /// </summary>
     /// <param name="b"></param>
-    void SetPhysics(bool b)
+    internal void SetOnPlayer(bool b)
     {
         rb.isKinematic = !false;
-        foreach (Collider c in colliders)
+        if (colliders.Count > 0)
         {
-            c.enabled = b;
+
+            foreach (Collider c in colliders)
+            {
+                c.enabled = b;
+            }
         }
+    }
+
+    public void SetOutline(bool b)
+    {
+        outline.enabled = b;
     }
 }

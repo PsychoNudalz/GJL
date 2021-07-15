@@ -28,7 +28,7 @@ public class PlayerInteractionScript : MonoBehaviour
 
                     if (interactableObjectScript != null)
                     {
-                        interactableObjectScript.Interact(Tools.Stick);
+                        interactableObjectScript.Interact(ToolType.Stick);
                     }
                 }
                 else

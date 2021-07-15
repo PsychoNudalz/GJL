@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 20b901117e8aa87468c8ca158420dbc6
+guid: 6c82b425f61e82a4994e5bbc80a68345
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blowtorch_bar_mat
+    second: {fileID: 2100000, guid: 383415146071d2b4b9f5aac247440061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blowtorch_bottle_mat
+    second: {fileID: 2100000, guid: d6f07ed7e20b2c84287df2f99f413dc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blowtorch_knob_mat
+    second: {fileID: 2100000, guid: 383415146071d2b4b9f5aac247440061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blowtorch_screw_mat
+    second: {fileID: 2100000, guid: d6f07ed7e20b2c84287df2f99f413dc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blowtorch_upperPart_mat
+    second: {fileID: 2100000, guid: 76149327ce235004aaee5bde6e399ef9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -34,7 +59,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 3
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -85,7 +110,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 3
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

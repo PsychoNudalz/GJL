@@ -13,6 +13,7 @@ public class ObjectHighlighter : MonoBehaviour
         highlightToggler = FindObjectOfType<ToggleObjectHighlights>();
         outline = GetComponent<Outline>();
         outline.OutlineWidth = highlightToggler.OutlineWidth;
+        outline.enabled = false;
     }
 
     void Start()

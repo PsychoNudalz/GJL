@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.EditorTools;
 
 
 public class UI_Inventory : MonoBehaviour
@@ -13,9 +14,14 @@ public class UI_Inventory : MonoBehaviour
     [Header("UI")]
     [SerializeField] GameObject baseItemCard;
     [SerializeField] List<UI_ItemCard> allItemCards;
+    [SerializeField] Animator animator;
 
     void Start()
     {
+        if (!animator)
+        {
+            animator = GetComponent<Animator>();
+        }
         if (!playerInventory)
         {
             playerInventory = FindObjectOfType<PlayerHandler>().PlayerInventory;
@@ -25,18 +31,21 @@ public class UI_Inventory : MonoBehaviour
     public void UpdateInventoryList()
     {
         ResetInventoryList();
-        foreach(ItemScript i in playerInventory.Items)
+        foreach(ToolType i in playerInventory.Items)
         {
+            ItemScript itemScript = FindObjectOfType<ToolHandler>().GetItemFromEnum(i).GetComponent<ItemScript>();
             UI_ItemCard temp = Instantiate(baseItemCard, transform).GetComponent<UI_ItemCard>();
-            temp.UpdateCard(i);
+            temp.UpdateCard(itemScript);
             allItemCards.Add(temp);
         }
+        animator.SetTrigger("Up");
         //UpdateEquip();
     }
 
     public void UpdateEquip()
     {
-        SetEquip(playerInventory.CurrentItem);
+        ItemScript itemScript = FindObjectOfType<ToolHandler>().GetItemFromEnum(playerInventory.CurrentItem);
+        SetEquip(itemScript);
     }
 
     private void ResetInventoryList()
@@ -45,7 +54,7 @@ public class UI_Inventory : MonoBehaviour
         {
             if (!t.Equals(transform))
             {
-                Destroy(t.gameObject);
+                t.gameObject.SetActive(false);
             }
         }
         allItemCards = new List<UI_ItemCard>();
@@ -72,7 +81,8 @@ public class UI_Inventory : MonoBehaviour
         }
         if (!i)
         {
-            Debug.LogError("passed card i null");
+            Debug.LogError("passed card "+ i +" null");
+            animator.SetTrigger("Up");
 
             return;
         }
@@ -83,8 +93,10 @@ public class UI_Inventory : MonoBehaviour
             return;
         }
         currentCard.SetEquipEffect(true);
+        animator.SetTrigger("Up");
+
     }
-    public void HighlightUsable(List<Tools> itemTools)
+    public void HighlightUsable(List<ToolType> itemTools)
     {
         foreach(UI_ItemCard ic in allItemCards)
         {

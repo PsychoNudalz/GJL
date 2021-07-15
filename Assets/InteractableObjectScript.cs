@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Animator))]
 public class InteractableObjectScript : MonoBehaviour
 {
     [SerializeField] private List<InteractableEvent> interactEvents;
@@ -17,12 +19,17 @@ public class InteractableObjectScript : MonoBehaviour
 
     private void Awake()
     {
+        if (!TryGetComponent(out ObjectHighlighter o))
+        {
+            gameObject.AddComponent<Outline>().enabled = false;
+            gameObject.AddComponent<ObjectHighlighter>();
+        }
         if (!animator)
         {
             animator = GetComponent<Animator>();
         }
     }
-    public bool Interact(Tools t)
+    public bool Interact(ToolType t)
     {
         if (interactionLock)
         {
@@ -38,6 +45,7 @@ public class InteractableObjectScript : MonoBehaviour
             {
                 interactionLock = true;
             }
+            Debug.Log(name + " interact with " + t.ToString());
             return true;
         }
         else
@@ -58,10 +66,13 @@ public class InteractableObjectScript : MonoBehaviour
         {
             StartCoroutine(DelayPlayEvent(e));
         }
-        animator.Play(e.InteractAnimation);
+        if (animator)
+        {
+            animator.Play(e.InteractAnimation);
+        }
     }
 
-    public void Preview(Tools t)
+    public void Preview(ToolType t)
     {
         if (interactionLock)
         {
@@ -76,14 +87,14 @@ public class InteractableObjectScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Invalid tool to use");
+            //Debug.Log("Invalid tool to use");
         }
         return;
     }
 
 
 
-    InteractableEvent GetEventByToolEnum(Tools t)
+    InteractableEvent GetEventByToolEnum(ToolType t)
     {
         foreach (InteractableEvent ie in interactEvents)
         {
@@ -95,9 +106,9 @@ public class InteractableObjectScript : MonoBehaviour
         return null;
     }
 
-    public List<Tools> GetTools()
+    public List<ToolType> GetTools()
     {
-        List<Tools> temp = new List<Tools>();
+        List<ToolType> temp = new List<ToolType>();
         foreach (InteractableEvent i in interactEvents)
         {
             temp.Add(i.Tool);
@@ -105,10 +116,20 @@ public class InteractableObjectScript : MonoBehaviour
         return temp;
     }
 
+    public void FreeLock(float t)
+    {
+        StartCoroutine(DelayFreeLock(t));
+    }
+
     IEnumerator DelayPlayEvent(InteractableEvent e)
     {
         yield return new WaitForSeconds(e.InteractDelay);
         e.InteractEvent.Invoke();
 
+    }
+    IEnumerator DelayFreeLock(float t)
+    {
+        yield return new WaitForSeconds(t);
+        interactionLock = false;
     }
 }

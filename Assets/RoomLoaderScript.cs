@@ -6,25 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class RoomLoaderScript : MonoBehaviour
 {
-    [SerializeField] private int sceneIndexToLoad = 0;
+    
     [SerializeField] private bool isReload;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
             try
             {
                 if (isReload)
                 {
                     SceneManager.LoadScene(
-                        GameObject.FindGameObjectWithTag("Player").GetComponent<CheckpointScript>().ReloadCheckpoint()
+                        PlayerHandler.PlayerInstance.GetComponent<CheckpointScript>().ReloadCheckpoint()
                         );
                 }
                 else
                 {
-                    SceneManager.LoadScene(sceneIndexToLoad);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             }
             catch (Exception e)
@@ -32,5 +31,7 @@ public class RoomLoaderScript : MonoBehaviour
                 Debug.LogError(e);
             }
         }
+
+        GetComponent<Collider>().enabled = false;
     }
 }

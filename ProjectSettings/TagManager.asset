@@ -17,9 +17,9 @@ TagManager:
   - Interactable
   - Tools
   - Player
-  - 
-  - 
-  - 
+  - HandTool
+  - Enviorment
+  - DebugVisuals
   - 
   - 
   - 

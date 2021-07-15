@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactEvents:
-  - tool: 1
+  - tool: 3
     interactEvent:
       m_PersistentCalls:
         m_Calls:

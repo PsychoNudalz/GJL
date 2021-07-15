@@ -8,6 +8,8 @@ public class PlayerHandler : MonoBehaviour
     [Header("Player")]
     [SerializeField] PlayerControllerScript playerControllerScript;
     [SerializeField] PlayerInventory playerInventory;
+    [SerializeField] PlayerVolumnController playerVolumnController;
+    [SerializeField] PlayerLifeSystemScript lifeSystemScript;
 
     [Header("UI")]
     [SerializeField] UI_Handler uI_Handler;
@@ -22,29 +24,50 @@ public class PlayerHandler : MonoBehaviour
     {
         if(PlayerInstance != null)
         {
+            UI_Handler instanceUIHandler = PlayerInstance.GetComponent<UI_Handler>();
+            if (instanceUIHandler == null)
+            {
+                instanceUIHandler = FindObjectOfType<UI_Handler>();
+            }
             Destroy(gameObject);
         }
         else
         {
+            gameObject.name = "Player instance";
             PlayerInstance = gameObject;
             DontDestroyOnLoad(gameObject);
-            playerControllerScript = GetComponent<PlayerControllerScript>();
-            playerInventory = GetComponent<PlayerInventory>();
-            playerControllerScript.PlayerInventory = playerInventory;
-
-            if (!uI_Handler)
-            {
-                uI_Handler = FindObjectOfType<UI_Handler>();
-            }
-            playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
+            Initialise();
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Initialise()
     {
-        
+        playerControllerScript = GetComponent<PlayerControllerScript>();
+        playerInventory = GetComponent<PlayerInventory>();
+        playerControllerScript.PlayerInventory = playerInventory;
+
+        if (!uI_Handler)
+        {
+            uI_Handler = FindObjectOfType<UI_Handler>();
+        }
+        if (!playerVolumnController)
+        {
+            playerVolumnController = GetComponent<PlayerVolumnController>();
+        }
+        if (!lifeSystemScript)
+        {
+            lifeSystemScript = GetComponent<PlayerLifeSystemScript>();
+        }
+        lifeSystemScript.PlayerVolumnController = playerVolumnController;
+        playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
     }
 
-
+    public void SetPlayerPosition(Vector3 newPosition)
+    {
+        print($"Moving Player to {newPosition}");
+        GetComponent<CharacterController>().enabled = false;
+        PlayerInstance.transform.position = newPosition;
+        GetComponent<CharacterController>().enabled = true;
+    }
+    
 }
