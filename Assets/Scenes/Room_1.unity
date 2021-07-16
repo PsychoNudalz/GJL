@@ -1492,6 +1492,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4917391483997275701, guid: bca413068bef5c040828e09ef07f9afe, type: 3}
+      propertyPath: interactEvents.Array.data[1].interactDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917391483997275701, guid: bca413068bef5c040828e09ef07f9afe, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2116501615}

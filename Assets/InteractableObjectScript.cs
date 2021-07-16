@@ -132,4 +132,9 @@ public class InteractableObjectScript : MonoBehaviour
         yield return new WaitForSeconds(t);
         interactionLock = false;
     }
+
+    public void GivePlayerImmunity(DamageType damageType)
+    {
+        FindObjectOfType<PlayerLifeSystemScript>().AddImmunity(damageType);
+    }
 }
