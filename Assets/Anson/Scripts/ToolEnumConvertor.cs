@@ -24,7 +24,12 @@ public enum ToolType {
     Gun,
     Button,
     WaterContainer,
-    Body
+    Body,
+    GasMask,
+    Fertiliser,
+    LargeStick
+
+
 
 };
 
