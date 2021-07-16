@@ -9,6 +9,7 @@ public class ObjectCard : MonoBehaviour
 
     public void SetCardDetails(ToolType toolType)
     {
-
+        cardImage.sprite = ToolEnumConvertor.GetSprite(toolType);
+        cardText.text = ToolEnumConvertor.ToName(toolType);
     }
 }

@@ -57,6 +57,10 @@ public static class ToolEnumConvertor
                 return "Water Container";
             case (ToolType.GunEmpty):
                 return "Empty Gun";
+            case ToolType.GasMask:
+                return "Gas Mask";
+            case ToolType.LargeStick:
+                return "Large Stick";
             default:
                 return t.ToString();
         }

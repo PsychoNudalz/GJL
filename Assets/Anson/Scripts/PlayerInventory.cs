@@ -32,6 +32,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddItem(ToolType tool)
     {
+        PlayerPrefs.SetInt(tool.ToString(),1);
         if (!items.Contains(tool))
         {
             items.Add(tool);
