@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class ObjectCard : MonoBehaviour
 {
-    [SerializeField] private Image cardImage;
+    [SerializeField] private Image cardImage; 
     [SerializeField] private TMP_Text cardText;
 
     public void SetCardDetails(ToolType toolType)
