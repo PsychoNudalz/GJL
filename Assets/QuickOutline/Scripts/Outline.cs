@@ -167,12 +167,17 @@ public class Outline : MonoBehaviour
         {
 
             // Remove outline shaders
+            try { 
             var materials = renderer.sharedMaterials.ToList();
 
             materials.Remove(outlineMaskMaterial);
             materials.Remove(outlineFillMaterial);
 
             renderer.materials = materials.ToArray();
+            }catch(MissingReferenceException e)
+            {
+                Debug.LogWarning("MissingReferenceException");
+            }
         }
     }
 

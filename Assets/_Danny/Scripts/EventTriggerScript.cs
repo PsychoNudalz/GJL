@@ -15,7 +15,7 @@ public class EventTriggerScript : MonoBehaviour
         {
             if (other.gameObject.CompareTag(tag))
             {
-                print($"Collision with - {other.gameObject}");
+                //print($"Collision with - {other.gameObject}");
                 foreach (UnityEvent unityEvent in eventsToTrigger)
                 {
                     unityEvent.Invoke();

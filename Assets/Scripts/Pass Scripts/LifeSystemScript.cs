@@ -39,10 +39,10 @@ public class LifeSystemScript : MonoBehaviour
     public bool IsDead { get => isDead; }
     public List<DamageType> DamageImmunity { get => damageImmunity; set => damageImmunity = value; }
 
-    public static LifeSystemScript GetLifeSystemScript(GameObject go)
+    public static LifeSystemScript GetLifeSystemScript(GameObject go, bool tryParent = false)
     {
         LifeSystemScript ls = go.GetComponentInChildren<LifeSystemScript>();
-        if (ls == null)
+        if (ls == null && tryParent)
         {
             ls = go.GetComponentInParent<LifeSystemScript>();
         }

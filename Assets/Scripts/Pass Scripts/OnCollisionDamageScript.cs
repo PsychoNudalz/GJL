@@ -45,11 +45,15 @@ public class OnCollisionDamageScript : DamageScript
 
     private void OnCollisionEnter(Collision collision)
     {
-        LifeSystemScript ls = LifeSystemScript.GetLifeSystemScript(collision.gameObject);
-        print("Collision: " + ls);
-        if (!onTrigger && onEnter && tagList.Contains(collision.gameObject.tag) && LifeSystemScript.GetLifeSystemScript(collision.gameObject) != null)
+        if (onEnter && tagList.Contains(collision.gameObject.tag))
         {
-            AddTargetToList(collision.gameObject.GetComponentInParent<LifeSystemScript>());
+            LifeSystemScript ls = LifeSystemScript.GetLifeSystemScript(collision.gameObject);
+            if (!ls)
+            {
+                return;
+            }
+            print("Collision: " + ls.name);
+            AddTargetToList(ls);
         }
     }
 

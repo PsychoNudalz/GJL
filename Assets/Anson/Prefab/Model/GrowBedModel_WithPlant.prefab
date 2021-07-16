@@ -5025,6 +5025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blowtorch
       objectReference: {fileID: 0}
+    - target: {fileID: 52618925020214133, guid: 90f2eaf851b404746ba872839a1a07f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2761566558705429285, guid: 90f2eaf851b404746ba872839a1a07f9, type: 3}
       propertyPath: m_RootOrder
       value: 4

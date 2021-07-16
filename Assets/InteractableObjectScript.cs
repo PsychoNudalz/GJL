@@ -133,8 +133,8 @@ public class InteractableObjectScript : MonoBehaviour
         interactionLock = false;
     }
 
-    public void GivePlayerImmunity(DamageType damageType)
+    public void GivePlayerImmunity(int damageType)
     {
-        FindObjectOfType<PlayerLifeSystemScript>().AddImmunity(damageType);
+        FindObjectOfType<PlayerLifeSystemScript>().AddImmunity((DamageType) damageType);
     }
 }
