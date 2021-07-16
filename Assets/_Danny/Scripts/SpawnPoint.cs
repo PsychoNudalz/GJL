@@ -20,7 +20,7 @@ public class SpawnPoint : MonoBehaviour
     {
         GameObject player = PlayerHandler.PlayerInstance;
         //print($"Moving {player.name}");
-        player.GetComponent<PlayerHandler>().SetPlayerPosition(transform.position);
+        player.GetComponent<PlayerHandler>().SetPlayerPosition(transform.position,transform.rotation);
         
         
     }

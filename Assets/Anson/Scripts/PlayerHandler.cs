@@ -62,11 +62,12 @@ public class PlayerHandler : MonoBehaviour
         playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
     }
 
-    public void SetPlayerPosition(Vector3 newPosition)
+    public void SetPlayerPosition(Vector3 newPosition, Quaternion newRotation)
     {
         print($"Moving Player to {newPosition}");
         GetComponent<CharacterController>().enabled = false;
         PlayerInstance.transform.position = newPosition;
+        PlayerInstance.transform.rotation = newRotation;
         GetComponent<CharacterController>().enabled = true;
     }
     
