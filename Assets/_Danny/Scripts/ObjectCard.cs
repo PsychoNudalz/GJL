@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
-using TMPro.EditorUtilities;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectCard : MonoBehaviour
 {
@@ -13,5 +9,6 @@ public class ObjectCard : MonoBehaviour
 
     public void SetCardDetails(ToolType toolType)
     {
+
     }
 }

@@ -41,7 +41,7 @@ public static class ToolEnumConvertor
             case (ToolType.BlowTorch):
                 return "Blow Torch";
             case (ToolType.PaperBagMask):
-                return "Papper Bag Mask";
+                return "Paper Bag Mask";
             case (ToolType.CoffeeMug):
                 return "Coffee Mug";
             case (ToolType.ApplePie):
@@ -50,7 +50,8 @@ public static class ToolEnumConvertor
                 return "Moon Rock";
             case (ToolType.WaterContainer):
                 return "Water Container";
-
+            case (ToolType.GunEmpty):
+                return "Empty Gun";
             default:
                 return t.ToString();
         }
