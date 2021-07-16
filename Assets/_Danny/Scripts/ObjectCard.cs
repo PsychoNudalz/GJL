@@ -13,6 +13,5 @@ public class ObjectCard : MonoBehaviour
 
     public void SetCardDetails(ToolType toolType)
     {
-        Sprite cardSprite = 
     }
 }
