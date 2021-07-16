@@ -50,6 +50,7 @@ MonoBehaviour:
   uISprite: {fileID: 0}
   rb: {fileID: 0}
   colliders: []
+  outline: {fileID: 0}
 --- !u!54 &-7742351913004693711
 Rigidbody:
   m_ObjectHideFlags: 0

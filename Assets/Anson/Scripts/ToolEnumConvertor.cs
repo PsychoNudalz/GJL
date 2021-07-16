@@ -27,7 +27,12 @@ public enum ToolType {
     Body,
     GasMask,
     Fertiliser,
-    LargeStick
+    LargeStick,
+    CookingKnife,
+    CookingSword,
+    Screwdriver,
+    WaterBucket
+
 
 
 

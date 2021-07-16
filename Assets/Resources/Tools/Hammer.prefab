@@ -55,6 +55,7 @@ MonoBehaviour:
   colliders:
   - {fileID: 9063297177262677932}
   - {fileID: 181033902486777667}
+  outline: {fileID: 0}
 --- !u!54 &9063297177262677935
 Rigidbody:
   m_ObjectHideFlags: 0

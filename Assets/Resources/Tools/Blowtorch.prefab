@@ -50,6 +50,7 @@ MonoBehaviour:
   uISprite: {fileID: 0}
   rb: {fileID: 0}
   colliders: []
+  outline: {fileID: 0}
 --- !u!54 &918082332700211880
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -87,6 +88,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2761566558705429285}
     m_Modifications:
     - target: {fileID: 150402658121459407, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 779349230548587437, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
@@ -151,6 +156,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5587236466683485760, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257137411664479665, guid: 7d2b216e004c06b42b0cf53fb61d7415, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}

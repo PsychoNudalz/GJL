@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb5f629e40944864bb9e41e3f6a16c02
+guid: 7699949d7ee937447bc37d00befd85ca
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: cookingKnife_blade_mat
-    second: {fileID: 2100000, guid: 383415146071d2b4b9f5aac247440061, type: 2}
+      name: Glass
+    second: {fileID: 2100000, guid: 08312a4a9c3a84f42a584862b3a971e2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: cookingKnife_hand_mat
-    second: {fileID: 2100000, guid: b6e40c7ca54bcff478e9d6bde17b277a, type: 2}
+      name: Metal
+    second: {fileID: 2100000, guid: 383415146071d2b4b9f5aac247440061, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -44,7 +44,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 3
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -95,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.03
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
