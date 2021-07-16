@@ -176,6 +176,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GunEmptyModel
       objectReference: {fileID: 0}
+    - target: {fileID: 6952967185848572944, guid: e91557e0a951eae44b4f36c0c7f30018, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673131129904428515, guid: e91557e0a951eae44b4f36c0c7f30018, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9210021621592860444, guid: e91557e0a951eae44b4f36c0c7f30018, type: 3}
       propertyPath: m_RootOrder
       value: 0

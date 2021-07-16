@@ -33,11 +33,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_439270f729324af99267e64d4c5a6397: 0.5
-    - _Fill: 0.765
+    - _Fill: 0.85
     - _WobbleX: 0
     - _WobbleZ: 0
     m_Colors:
     - Color_dcd229da0b0a413f8d8f9a047fe618c1: {r: 0, g: 2, b: 0.57394594, a: 0}
     - Color_df982c8154a14df0b026d0ff6e0ab83b: {r: 0, g: 3.9999995, b: 3.9999995, a: 1}
-    - Vector2_e4cd880936b84720a900d26699d06ded: {r: -0.1, g: 0.1, b: 0, a: 0}
+    - Vector2_e4cd880936b84720a900d26699d06ded: {r: -0.2, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
