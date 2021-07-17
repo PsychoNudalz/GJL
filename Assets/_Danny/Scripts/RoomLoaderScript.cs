@@ -15,6 +15,7 @@ public class RoomLoaderScript : MonoBehaviour
         {
             try
             {
+                PlayerHandler.PlayerInstance.GetComponent<PlayerHandler>().ResetPlayer();
                 if (isReload)
                 {
                     SceneManager.LoadScene(

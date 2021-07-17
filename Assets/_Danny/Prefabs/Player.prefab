@@ -506,7 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   canPush: 1
   strength: 1.1
 --- !u!114 &6601299561315320118
@@ -811,6 +811,7 @@ MonoBehaviour:
         m_CallState: 2
   playerVolumnController: {fileID: 0}
   playerHeadScript: {fileID: 6957208611922901971}
+  deathString: 
 --- !u!136 &2016822895
 CapsuleCollider:
   m_ObjectHideFlags: 0

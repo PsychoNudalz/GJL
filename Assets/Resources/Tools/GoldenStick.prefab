@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3870296417018203125}
   - component: {fileID: 7903164109534668963}
   m_Layer: 7
-  m_Name: LargeStick
+  m_Name: GoldenStick
   m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,8 +62,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4012349, y: 2.825337, z: 0.21628907}
-  m_Center: {x: -0.05893527, y: 0.91266847, z: 0}
+  m_Size: {x: 0.15914387, y: 1.0410843, z: 0.07741465}
+  m_Center: {x: -0.017517852, y: 0.2972294, z: 0}
 --- !u!54 &7903164109534668963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -91,6 +91,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1402678848106097274, guid: edd30a107ee9073478c86319009965fd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd2d742ee2ce7a740ae0cf992a38be74, type: 2}
     - target: {fileID: 5694043123390540679, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_Name
       value: StickModel
@@ -102,18 +106,6 @@ PrefabInstance:
     - target: {fileID: 6619288586462045797, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6619288586462045797, guid: edd30a107ee9073478c86319009965fd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6619288586462045797, guid: edd30a107ee9073478c86319009965fd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6619288586462045797, guid: edd30a107ee9073478c86319009965fd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6619288586462045797, guid: edd30a107ee9073478c86319009965fd, type: 3}
       propertyPath: m_LocalPosition.x
