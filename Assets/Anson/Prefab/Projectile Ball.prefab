@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6135626018e9e1b4caa7a2df7dc3c861, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -132,7 +132,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 2100000, guid: 6135626018e9e1b4caa7a2df7dc3c861, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 3363009508488646556}
   - component: {fileID: 9120385144931905974}
   - component: {fileID: 145006743407452353}
+  - component: {fileID: 2778949585400549057}
   m_Layer: 0
   m_Name: Projectile Ball
   m_TagString: Untagged
@@ -282,3 +283,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.025
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2778949585400549057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363009508488646557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0596e0c9669d26f4dbefb125ec7b43dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
