@@ -84,6 +84,7 @@ public class LifeSystemScript : MonoBehaviour
     {
         health_Current = health_Max;
         isDead = false;
+        deathCoroutine = null;
     }
 
     /// <summary>
