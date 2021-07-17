@@ -23,11 +23,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3533835603152771145, guid: 69bad46b354b037408eed253a443051b, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 39.5
       objectReference: {fileID: 0}
     - target: {fileID: 3533835603152771145, guid: 69bad46b354b037408eed253a443051b, type: 3}
       propertyPath: m_fontSizeMax
-      value: 50
+      value: 39.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533835603152771145, guid: 69bad46b354b037408eed253a443051b, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3992740860180910608, guid: 69bad46b354b037408eed253a443051b, type: 3}
       propertyPath: m_Pivot.x
