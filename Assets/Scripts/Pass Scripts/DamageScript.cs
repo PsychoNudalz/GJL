@@ -53,7 +53,7 @@ public class DamageScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("Damage to " + ls.name + " Immune");
+                //Debug.Log("Damage to " + ls.name + " Immune");
             }
 
         }
