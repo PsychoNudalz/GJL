@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileObject: {fileID: 3363009508488646557, guid: dcf76772d9f939743b1c5778d476e4d8, type: 3}
-  projectileForce: 500
+  projectileForce: 200
   destroyTime: 5
   rpm: 600
   ammo: 2147483647
