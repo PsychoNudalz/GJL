@@ -31,10 +31,8 @@ public enum ToolType {
     CookingKnife,
     CookingSword,
     Screwdriver,
-    WaterBucket
-
-
-
+    WaterBucket,
+    DogTag
 
 };
 
