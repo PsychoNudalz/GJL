@@ -10,6 +10,7 @@ public class PlayerHeadScript : MonoBehaviour
     [SerializeField] Collider headCollider;
     [SerializeField] float explodeDelay = 0.05f;
     [SerializeField] UnityEvent onExplode;
+    [SerializeField] Transform parent;
 
 
     private void Awake()
@@ -22,8 +23,17 @@ public class PlayerHeadScript : MonoBehaviour
         {
             headCollider = GetComponent<Collider>();
         }
+        parent = transform.parent;
+        Reset();
+    }
+
+    public void Reset()
+    {
         rb.isKinematic = true;
         headCollider.enabled = false;
+        transform.SetParent(parent);
+        transform.position = parent.position;
+        transform.rotation = parent.rotation;
     }
 
     public void Explode(Vector3 force)

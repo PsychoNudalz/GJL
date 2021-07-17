@@ -70,5 +70,10 @@ public class PlayerHandler : MonoBehaviour
         PlayerInstance.transform.rotation = newRotation;
         GetComponent<CharacterController>().enabled = true;
     }
+
+    public void ResetPlayer()
+    {
+        lifeSystemScript.ResetSystem();
+    }
     
 }

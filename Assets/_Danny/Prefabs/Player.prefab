@@ -820,6 +820,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   playerVolumnController: {fileID: 0}
+  playerHeadScript: {fileID: 6957208611922901971}
 --- !u!136 &2016822895
 CapsuleCollider:
   m_ObjectHideFlags: 0
