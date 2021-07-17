@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 657801127074064131}
   - component: {fileID: 657801127074064130}
   - component: {fileID: 657801127074064129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PepperGrinder
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,6 +87,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 657801127074064156}
     m_Modifications:
+    - target: {fileID: 1141301233760975031, guid: 0e00c2695331f6a4389e4230ff7f160b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571774047119405483, guid: 0e00c2695331f6a4389e4230ff7f160b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779571399727365975, guid: 0e00c2695331f6a4389e4230ff7f160b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4928830232161891122, guid: 0e00c2695331f6a4389e4230ff7f160b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -134,6 +146,14 @@ PrefabInstance:
     - target: {fileID: 4928830232161891123, guid: 0e00c2695331f6a4389e4230ff7f160b, type: 3}
       propertyPath: m_Name
       value: PepperGrinderModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928830232161891123, guid: 0e00c2695331f6a4389e4230ff7f160b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235383074424399472, guid: 0e00c2695331f6a4389e4230ff7f160b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e00c2695331f6a4389e4230ff7f160b, type: 3}

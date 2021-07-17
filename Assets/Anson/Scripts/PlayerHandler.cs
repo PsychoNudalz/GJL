@@ -75,5 +75,15 @@ public class PlayerHandler : MonoBehaviour
     {
         lifeSystemScript.ResetSystem();
     }
-    
+    public string SetDeathString(string s)
+    {
+        Debug.Log("set death string to: " + s);
+        lifeSystemScript.DeathString = s;
+        return s;
+    }
+    public string GetDeathString()
+    {
+        return lifeSystemScript.DeathString ;
+    }
+
 }

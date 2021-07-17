@@ -3,7 +3,12 @@ guid: 6e4dfb03cff4c614e9934f448738f8d8
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keycard
+    second: {fileID: 2100000, guid: add9818c18a0b4e4086c9b8b7efcd1f5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

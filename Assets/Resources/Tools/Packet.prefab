@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8570895087417735146}
   - component: {fileID: 8570895087417735157}
   - component: {fileID: 8570895087417735156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Packet
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,6 +91,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PacketModel
       objectReference: {fileID: 0}
+    - target: {fileID: 206670768101194718, guid: 57031b36c94c4ff4a8f875825290dfdb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 206670768101194719, guid: 57031b36c94c4ff4a8f875825290dfdb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -134,6 +138,18 @@ PrefabInstance:
     - target: {fileID: 206670768101194719, guid: 57031b36c94c4ff4a8f875825290dfdb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388214068343712752, guid: 57031b36c94c4ff4a8f875825290dfdb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017624563559285408, guid: 57031b36c94c4ff4a8f875825290dfdb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061974037259264227, guid: 57031b36c94c4ff4a8f875825290dfdb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57031b36c94c4ff4a8f875825290dfdb, type: 3}

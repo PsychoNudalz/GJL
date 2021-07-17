@@ -72,7 +72,10 @@ public class DamageScript : MonoBehaviour
         ls.takeDamageCritical(dmg, multiplier);
     }
 
-
+    public string SetPlayerDeathString(string s)
+    {
+        return PlayerHandler.PlayerInstance.GetComponent<PlayerHandler>().SetDeathString(s);
+    }
 
 
 }
