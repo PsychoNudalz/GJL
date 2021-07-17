@@ -2544,6 +2544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EvilRobot
       objectReference: {fileID: 0}
+    - target: {fileID: 1424011140868847554, guid: 04e514bda3cf53842aeafcca63469055, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1424011140868847557, guid: 04e514bda3cf53842aeafcca63469055, type: 3}
       propertyPath: m_RootOrder
       value: 2
