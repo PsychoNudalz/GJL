@@ -7,8 +7,9 @@ public class PlayerLifeSystemScript : LifeSystemScript
     [Header("Player")]
     [SerializeField] PlayerVolumnController playerVolumnController;
     [SerializeField] PlayerHeadScript playerHeadScript;
-
+    [SerializeField] string deathString;
     public PlayerVolumnController PlayerVolumnController { get => playerVolumnController; set => playerVolumnController = value; }
+    public string DeathString { get => deathString; set => deathString = value; }
 
     public override void PlayTakeDamageEffect()
     {
