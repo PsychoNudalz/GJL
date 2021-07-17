@@ -35,7 +35,11 @@ public enum ToolType {
     DogTag,
     Pizza,
     FrozenPizza,
-    PepperGrinder
+    PepperGrinder,
+    KeycardBlue,
+    BakedPotato,
+    RobotCore
+
 
 };
 

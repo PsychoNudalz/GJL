@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 599c5c7d3e1f21141a0b4046808dc38c
+guid: 884c25d2f6d349a4ab797280a2247f11
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: toaster_button_mat
+      name: JunkPile
     second: {fileID: 2100000, guid: 383415146071d2b4b9f5aac247440061, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: toaster_handle_mat
-    second: {fileID: 2100000, guid: d8abca799ad99624dbecf8d8a3abcfa3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: toaster_main_mat
-    second: {fileID: 2100000, guid: 76149327ce235004aaee5bde6e399ef9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,10 +36,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 3
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -100,7 +90,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 3
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
