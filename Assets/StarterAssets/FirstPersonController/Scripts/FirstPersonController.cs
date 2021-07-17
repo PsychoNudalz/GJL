@@ -29,7 +29,9 @@ namespace StarterAssets
         [Tooltip("The height the player can jump")]
         public float JumpHeight = 1.2f;
         [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
+        public float Gravity_DEFAULT = -15.0f;
         public float Gravity = -15.0f;
+        [SerializeField] float gravityResetTime;
 
         [Space(10)]
         [Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
@@ -111,6 +113,10 @@ namespace StarterAssets
             {
                 print("Playuer hit head");
                 _verticalVelocity = Mathf.Clamp(.1f, 0, _verticalVelocity);
+            }
+            if (Gravity != Gravity_DEFAULT && Time.time >= gravityResetTime)
+            {
+                ResetGravity();
             }
         }
 
@@ -271,6 +277,17 @@ namespace StarterAssets
                 Cursor.visible = false;
             }
         }
+        public void SetGravity(float value, float duration = 10f)
+        {
+            gravityResetTime = Time.time + duration;
+            Gravity = value;
+            JumpAndGravity();
+        }
+        public void ResetGravity()
+        {
+            Gravity = Gravity_DEFAULT;
+        }
     }
+
 
 }

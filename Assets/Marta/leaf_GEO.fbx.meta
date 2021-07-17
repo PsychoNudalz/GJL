@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69ab64092c0195f4bb7077c889bdd00c
+guid: e29335a06d212e94a9e279f29a3f2a81
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: potatoPlant_plant_mat
+      name: leaf_mat
     second: {fileID: 2100000, guid: 5357492dce0945e449780edbefa07ff7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: potatoPlant_root_mat
-    second: {fileID: 2100000, guid: 0935d3185cf0e82479970c4e38eabb86, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: potato_mat
-    second: {fileID: 2100000, guid: 0935d3185cf0e82479970c4e38eabb86, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

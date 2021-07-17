@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 69ab64092c0195f4bb7077c889bdd00c
+guid: b102f440605e96b449909c4863f60f82
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: potatoPlant_plant_mat
-    second: {fileID: 2100000, guid: 5357492dce0945e449780edbefa07ff7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: potatoPlant_root_mat
-    second: {fileID: 2100000, guid: 0935d3185cf0e82479970c4e38eabb86, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: potato_mat
-    second: {fileID: 2100000, guid: 0935d3185cf0e82479970c4e38eabb86, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -49,9 +34,9 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 3
+    globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -100,7 +85,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 3
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
