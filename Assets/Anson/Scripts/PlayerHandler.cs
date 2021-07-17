@@ -66,8 +66,7 @@ public class PlayerHandler : MonoBehaviour
     {
         print($"Moving Player to {newPosition}");
         GetComponent<CharacterController>().enabled = false;
-        PlayerInstance.transform.position = newPosition;
-        PlayerInstance.transform.rotation = newRotation;
+        PlayerInstance.transform.SetPositionAndRotation(newPosition, newRotation);
         GetComponent<CharacterController>().enabled = true;
     }
 

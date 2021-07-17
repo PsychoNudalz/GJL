@@ -35,7 +35,7 @@ public class ToolHandler : MonoBehaviour
                 }
                 catch (System.Exception e)
                 {
-                    Debug.LogWarning("Failed to find " + tool.ToString());
+                    Debug.LogWarning($"Failed to find {tool.ToString()} - {e}");
                 }
             }
         }
