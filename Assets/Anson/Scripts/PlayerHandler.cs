@@ -60,6 +60,10 @@ public class PlayerHandler : MonoBehaviour
         }
         lifeSystemScript.PlayerVolumnController = playerVolumnController;
         playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
+        if (GetDeathString().Equals(""))
+        {
+            SetDeathString("You died!");
+        }
     }
 
     public void SetPlayerPosition(Vector3 newPosition, Quaternion newRotation)
