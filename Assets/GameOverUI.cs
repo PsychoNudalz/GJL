@@ -12,12 +12,12 @@ public class GameOverUI : MonoBehaviour
 
     public void ShowGameOverScreen(int delay)
     {
-        print($"Game over - delay {delay}");
         Invoke(nameof(ShowGameOverAfterDelay),delay);
     }
 
     void ShowGameOverAfterDelay()
     {
+        deathText.text = PlayerHandler.PlayerInstance.GetComponent<PlayerHandler>().GetDeathString();
         gameOverPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -40,6 +40,8 @@ public class GameOverUI : MonoBehaviour
     public void MainMenuButton()
     {
         gameOverPanel.SetActive(false);
+        PlayerHandler.PlayerInstance.GetComponent<PlayerHandler>().ResetPlayer();
+        Destroy(PlayerHandler.PlayerInstance.gameObject);
         SceneManager.LoadScene(0);
     }
 }

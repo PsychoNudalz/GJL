@@ -60,14 +60,17 @@ public class PlayerHandler : MonoBehaviour
         }
         lifeSystemScript.PlayerVolumnController = playerVolumnController;
         playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
+        if (GetDeathString().Equals(""))
+        {
+            SetDeathString("You died!");
+        }
     }
 
     public void SetPlayerPosition(Vector3 newPosition, Quaternion newRotation)
     {
         print($"Moving Player to {newPosition}");
         GetComponent<CharacterController>().enabled = false;
-        PlayerInstance.transform.position = newPosition;
-        PlayerInstance.transform.rotation = newRotation;
+        PlayerInstance.transform.SetPositionAndRotation(newPosition, newRotation);
         GetComponent<CharacterController>().enabled = true;
     }
 
