@@ -18,12 +18,12 @@ public class ProgressScreen : MonoBehaviour
         /*for (int i = 1; i < Enum.GetValues(typeof(ToolType)).Length; i+=2)
         {
             PlayerPrefs.SetInt(Enum.GetValues(typeof(ToolType)).GetValue(i).ToString(),1);
-        }*/
+        }
 
         foreach (ToolType tool in Enum.GetValues(typeof(ToolType)))
         {
             PlayerPrefs.SetInt(tool.ToString(),1);
-        }
+        }*/
 
         RefreshCards();
     }
