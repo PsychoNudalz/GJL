@@ -32,7 +32,7 @@ public class EndingsScreen : MonoBehaviour
         {
             GameObject endingText = Instantiate(endingTextPrefab, Vector3.zero, Quaternion.identity, textsParent);
             TMP_Text tmpText = endingText.GetComponent<TMP_Text>();
-            tmpText.text = $"Ending {EndingEnum.GetStringFromEnding(ending)} - {EndingEnum.GetEndingNameFromEnding(ending)}";
+            tmpText.text = $"{EndingEnum.GetStringFromEnding(ending)} - {EndingEnum.GetEndingNameFromEnding(ending)}";
             if (PlayerPrefs.GetInt(ending.ToString(), 0).Equals(0))
             {
                 tmpText.color = Color.grey;

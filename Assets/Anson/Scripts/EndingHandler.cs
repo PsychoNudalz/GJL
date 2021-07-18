@@ -27,7 +27,7 @@ public class EndingHandler : MonoBehaviour
             FindObjectOfType<EndingPlayer>().PlayEnding(e.endingName);
             Debug.Log($"Play ending {e}");
             PlayerHandler.handler.InputLock(true);
-            PlayerPrefs.SetInt($"Ending{e}",1);
+            PlayerPrefs.SetInt($"Ending{index}",1);
         }
         
     }
