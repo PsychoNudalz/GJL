@@ -19651,10 +19651,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 851943998678988730, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
-      propertyPath: pushLayers.m_Bits
-      value: 137
-      objectReference: {fileID: 0}
     - target: {fileID: 7436245444037090634, guid: 650b33d473085a34e9cecedc54d886db, type: 3}
       propertyPath: m_Name
       value: Player
