@@ -1060,7 +1060,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -1081,7 +1081,7 @@ PrefabInstance:
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1007928768}
+      objectReference: {fileID: 8243339460883638851}
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -1096,7 +1096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: PlayF
+      value: ShakeCamera
       objectReference: {fileID: 0}
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
@@ -1104,12 +1104,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: Sound, Assembly-CSharp
+      value: InteractableObjectScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
       value: "Haha we got you didn\u2019t we.  Never expected a falling locker didn\u2019t
         you?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName

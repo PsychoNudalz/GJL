@@ -891,6 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168954392}
   - component: {fileID: 168954393}
+  - component: {fileID: 168954394}
   m_Layer: 6
   m_Name: CentreGrowBed
   m_TagString: Untagged
@@ -936,6 +937,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &168954394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168954391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2976ca745a6b2484a88cbd88ade68329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystems: []
+  visualEffects: []
+  unityEvents:
+  - m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &172969921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2321617260357936896, guid: e122de74f79d9cd439fabc72aba716df, type: 3}
@@ -7819,6 +7837,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 660686161}
+          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
+          m_MethodName: ShakeCamera
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 3.2
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     interactDelay: 0
     interactAnimation: PlantWater_WaterBucket_Use
     previewAnimation: PlantWater_WaterBucket_Preview
@@ -7847,6 +7877,18 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 660686161}
+          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
+          m_MethodName: ShakeCamera
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 3.2
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -12980,6 +13022,158 @@ Transform:
   m_Father: {fileID: 395703292}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &764568731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764568732}
+  - component: {fileID: 764568734}
+  - component: {fileID: 764568733}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &764568732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764568731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1109900998}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &764568733
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764568731}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &764568734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764568731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d5f09f39d815f429ed3678e0e39993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: 
+  clip: {fileID: 8300000, guid: b5c89038f6d77d443ba5d333e055a982, type: 3}
+  volume: 0.75
+  volumeVariance: 0.1
+  pitch: 1
+  pitchVariance: 0.1
+  audioMixer: {fileID: 0}
+  soundManager: {fileID: 0}
+  isOld: 0
+  isLoop: 1
+  isPlayOnAwake: 1
+  source: {fileID: 0}
 --- !u!114 &768070037 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
@@ -13444,7 +13638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &972933402
 Transform:
   m_ObjectHideFlags: 0
@@ -21777,6 +21971,18 @@ MonoBehaviour:
               massive flaming potato.  Maybe try not to steal next time?
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2028206902}
+          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
+          m_MethodName: ShakeCamera
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 2.5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     interactDelay: 0.5
     interactAnimation: CentreAlter_Crowbar_Use
     previewAnimation: CentreAlter_Crowbar_Preview
@@ -21845,6 +22051,18 @@ MonoBehaviour:
               massive flaming potato.  Maybe try not to steal next time?
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2028206902}
+          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
+          m_MethodName: ShakeCamera
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 2.5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     interactDelay: 0.5
     interactAnimation: CentreAlter_Hammer_Use
     previewAnimation: CentreAlter_Hammer_Preview
@@ -21911,6 +22129,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: Oooooo that must hurt being crushed and burnt by a
               massive flaming potato.  Maybe try not to steal next time?
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2028206902}
+          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
+          m_MethodName: ShakeCamera
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 2.5
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
     interactDelay: 0.5
@@ -22086,6 +22316,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1911047548895769100, guid: b835a1c510959ee4e9e91ccdbcb3716e, type: 3}
   m_PrefabInstance: {fileID: 2045770384}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2045999229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 428710742634825810, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_Name
+      value: SignPost (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.582
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.987
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.526
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7997415
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5236531
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.22990099
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.1826103
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -48.904
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -58.253
+      objectReference: {fileID: 0}
+    - target: {fileID: 428710742634825813, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 54.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2179177110153241659, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+      propertyPath: m_text
+      value: Plant Here
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
 --- !u!1 &2048068562
 GameObject:
   m_ObjectHideFlags: 0

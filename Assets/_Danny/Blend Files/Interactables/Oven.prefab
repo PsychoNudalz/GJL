@@ -5617,6 +5617,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bonfire
       objectReference: {fileID: 0}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 6602613939020276420}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ShakeCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: InteractableObjectScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7612865806467079406, guid: 7ec73c57792023044b4d68934768597f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5663,14 +5699,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec73c57792023044b4d68934768597f, type: 3}
---- !u!4 &6602613939020276417 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7612865806467079406, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+--- !u!114 &6602613939020276420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7612865806467079403, guid: 7ec73c57792023044b4d68934768597f, type: 3}
   m_PrefabInstance: {fileID: 3604963796078607919}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6602613939020276421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2212b4836b7b541b969364e15f57e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6602613939020276421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7612865806467079402, guid: 7ec73c57792023044b4d68934768597f, type: 3}
+  m_PrefabInstance: {fileID: 3604963796078607919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6602613939020276417 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7612865806467079406, guid: 7ec73c57792023044b4d68934768597f, type: 3}
   m_PrefabInstance: {fileID: 3604963796078607919}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3723713429512105348

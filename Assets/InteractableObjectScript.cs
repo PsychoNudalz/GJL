@@ -17,6 +17,7 @@ public class InteractableObjectScript : MonoBehaviour
     [Header("Animation")]
     [SerializeField] Animator animator;
 
+
     private void Awake()
     {
         if (!TryGetComponent(out ObjectHighlighter o))
@@ -153,6 +154,10 @@ public class InteractableObjectScript : MonoBehaviour
 
     public void ShakeCamera()
     {
-        PlayerHandler.handler.ShakeCamera(0.2f);
+        PlayerHandler.handler.ShakeCamera(0.1f);
+    }
+    public void ShakeCamera(float duration)
+    {
+        PlayerHandler.handler.ShakeCamera(duration);
     }
 }
