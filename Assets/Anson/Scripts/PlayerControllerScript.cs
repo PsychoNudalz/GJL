@@ -14,6 +14,8 @@ public class PlayerControllerScript : MonoBehaviour
     [Header("Other Components")]
     [SerializeField] PlayerInventory playerInventory;
 
+    [SerializeField] private Sound pickupSound;
+
     private Camera mainCamera;
     private bool highlightObjects = false;
 
@@ -71,9 +73,11 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (itemScript != null)
                 {
+                    pickupSound.PlayF();
                     itemScript.OnPickUp();
                     playerInventory.AddItem(itemScript.ToolType);
                     Destroy(itemScript.gameObject);
+
                 }
             }
             else

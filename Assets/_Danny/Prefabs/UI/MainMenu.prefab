@@ -5716,10 +5716,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Credits
       objectReference: {fileID: 0}
-    - target: {fileID: 2891080985965799759, guid: 7f5b35d00cd6f25469d64cb5711b80ef, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2891080985965799760, guid: 7f5b35d00cd6f25469d64cb5711b80ef, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5803,18 +5799,6 @@ PrefabInstance:
     - target: {fileID: 2891080985965799760, guid: 7f5b35d00cd6f25469d64cb5711b80ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891080986397587409, guid: 7f5b35d00cd6f25469d64cb5711b80ef, type: 3}
-      propertyPath: m_fontStyle
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891080986516743287, guid: 7f5b35d00cd6f25469d64cb5711b80ef, type: 3}
-      propertyPath: m_fontStyle
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891080986516743287, guid: 7f5b35d00cd6f25469d64cb5711b80ef, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f5b35d00cd6f25469d64cb5711b80ef, type: 3}

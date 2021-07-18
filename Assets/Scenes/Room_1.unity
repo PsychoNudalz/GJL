@@ -1139,7 +1139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7374423000781464104, guid: bca413068bef5c040828e09ef07f9afe, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7374423000781464104, guid: bca413068bef5c040828e09ef07f9afe, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
