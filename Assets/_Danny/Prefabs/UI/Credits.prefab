@@ -653,71 +653,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium
-    lacinia nulla, nec viverra velit suscipit sed. Quisque eu lectus in nulla convallis
-    malesuada. Duis vitae quam id urna rhoncus porta. Sed non felis purus. Proin
-    accumsan mauris risus, non vulputate eros sollicitudin vel. Proin ex lectus,
-    accumsan sodales condimentum vel, aliquet sit amet ante. Morbi fermentum, augue
-    at pellentesque accumsan, nibh ex porta lorem, ac sagittis eros elit nec est.
-    Sed pulvinar sollicitudin elit, quis semper arcu vehicula at. Fusce ac faucibus
-    sapien. Phasellus sed ante vitae nibh tristique mattis in id ipsum. Fusce sem
-    velit, lacinia quis elementum ac, dictum a sem. Morbi eleifend gravida dui et
-    aliquet. Maecenas tortor diam, efficitur ut massa nec, laoreet dapibus augue.
-
-
-
-    Cras
-    et sem sit amet nisl feugiat mattis. Duis ut interdum turpis. Aliquam consectetur
-    massa elit, sed varius tellus rutrum finibus. Quisque non mauris id lorem suscipit
-    lacinia. Nulla consequat sollicitudin tellus rhoncus hendrerit. Maecenas accumsan
-    aliquet felis, a cursus ipsum efficitur eu. Duis a nulla nulla. Ut imperdiet
-    arcu in lorem congue venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Aenean scelerisque lorem ut orci dapibus dignissim. Suspendisse nec nunc
-    tellus. Quisque vel nulla ac elit porttitor facilisis.
-
-
-
-    Mauris ut ex et
-    nisi maximus blandit. Donec lobortis nibh ut nisi imperdiet, non aliquam lorem
-    volutpat. Quisque eleifend semper vulputate. Suspendisse potenti. Nullam pulvinar
-    neque nec mauris fringilla, sit amet tristique nisi posuere. Donec cursus felis
-    dolor, non vestibulum velit feugiat quis. Nullam maximus fringilla massa, vitae
-    consequat mauris dictum nec. Duis fermentum eu lacus vitae ultricies. Nam turpis
-    sapien, viverra et ipsum ut, porttitor pretium erat. Nam lobortis in ex non tempor.
-    Integer ornare, ante sit amet tincidunt varius, est mi congue nunc, vel luctus
-    tellus enim sed justo. Proin quis placerat nisl. Quisque et sapien interdum,
-    fermentum nunc ac, ornare metus. Aliquam pretium nulla consequat, sodales neque
-    vel, porttitor elit. Fusce ut ante nec nunc venenatis aliquet et at sapien.
-
-
-
-    Mauris
-    nec dignissim justo. Nulla fringilla massa at iaculis placerat. Etiam eget odio
-    id libero commodo malesuada quis sit amet odio. Integer scelerisque arcu erat,
-    semper laoreet est pellentesque dapibus. Proin in commodo lectus. Aliquam efficitur
-    auctor augue, ac faucibus metus finibus vitae. Nullam dapibus feugiat ante, sed
-    aliquet orci facilisis quis. Duis est lectus, facilisis at dolor eget, efficitur
-    vehicula magna. Maecenas congue sit amet dui eget congue. Donec enim libero,
-    venenatis ut consequat quis, ultricies vel magna. Maecenas a hendrerit nunc.
-
-
-
-    Maecenas
-    nec leo id felis laoreet euismod eget id mi. Curabitur auctor tellus urna, sed
-    egestas elit imperdiet sed. Cras elit felis, convallis vel mauris sed, tempor
-    malesuada quam. Nulla blandit, turpis eget ultricies auctor, elit ligula fermentum
-    dui, porta convallis metus dolor non dui. Praesent interdum turpis metus, in
-    iaculis quam malesuada nec. Nam in enim at purus ullamcorper elementum congue
-    a ante. Praesent sit amet felis non tellus tincidunt cursus. Etiam eu mauris
-    placerat nibh pulvinar laoreet at ac lorem. Nulla porta orci urna. Fusce mollis,
-    neque sed laoreet gravida, eros tellus cursus purus, vitae feugiat massa purus
-    ac risus. Aliquam vitae tincidunt dui. Phasellus quis rhoncus velit. Etiam id
-    interdum elit, et egestas metus.
-
-
-
-    Generated 5 paragraphs, 523 words, 3452
-    bytes of Lorem Ipsum'
+  m_text: "<b>THANKS FOR PLAYING!</b>\n \n \n<b>PROGRAMMERS</b>\n \nAnson Wong\nDaniel
+    Newsom\n \n \n<b>3D MODELLING ARTISTS</b>\n \nAnson Wong\nAbdullah Al-Hiyarat\nDaniel
+    Newsom\nMarta Smaczny\n \n\n<b>LEVEL DESIGN</b>\n \nAbdullah Al-Hiyarat\n \n
+    \n<b>REFERENCES</b>\n \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3834021152788c4183902403b6ede88, type: 2}
   m_sharedMaterial: {fileID: -8666715056269638879, guid: c3834021152788c4183902403b6ede88, type: 2}
@@ -751,12 +690,12 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -851,7 +790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Credits
+  m_text: 'CREDITS
 
 '
   m_isRightToLeft: 0

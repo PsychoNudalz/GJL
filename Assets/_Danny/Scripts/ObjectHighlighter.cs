@@ -42,6 +42,7 @@ public class ObjectHighlighter : MonoBehaviour
 
     public void SetHighlighted(bool isHighlighted)
     {
+        if(transform.parent.name.Equals("Tools")){return;}
         outline.enabled = isHighlighted;
     }
 }
