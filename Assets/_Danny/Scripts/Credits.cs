@@ -21,6 +21,7 @@ public class Credits : MonoBehaviour
         {
             PlayerHandler.PlayerInstance.GetComponent<PlayerHandler>().ResetPlayer();
             Destroy(PlayerHandler.PlayerInstance.gameObject);
+            print("Press to main menu");
             SceneManager.LoadScene(0);
         }
         else
