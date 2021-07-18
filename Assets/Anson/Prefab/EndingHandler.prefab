@@ -56,3 +56,6 @@ MonoBehaviour:
   - endingName: NoChoice
     counter: 0
     capacity: 1
+  - endingName: Secret
+    counter: 0
+    capacity: 1

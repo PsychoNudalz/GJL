@@ -895,19 +895,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 104689436}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: PlayF
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1007928768}
         m_TargetAssemblyTypeName: Sound, Assembly-CSharp
         m_MethodName: PlayF
         m_Mode: 1
@@ -1070,7 +1060,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2652341826999041275, guid: 4e59155b271ad8641ba84b8a6e36f490, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode

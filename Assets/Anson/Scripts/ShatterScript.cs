@@ -11,6 +11,7 @@ public class ShatterScript : MonoBehaviour
     [SerializeField] float explodeForce;
     [SerializeField] AnimationCurve forceApplyCurve;
     [SerializeField] float maxObjectSize;
+    [SerializeField] Sound sound;
     bool explodeFlag = false;
 
     private void Awake()
@@ -32,6 +33,10 @@ public class ShatterScript : MonoBehaviour
         {
             float strength = forceApplyCurve.Evaluate(Vector3.Distance(rb.position, explodePoint.position) / maxObjectSize);
             rb.AddForce(explodePoint.forward * strength * explodeForce);
+        }
+        if (sound)
+        {
+            sound.Play();
         }
     }
 
