@@ -11,6 +11,9 @@ public class MainMenuScript : MonoBehaviour
         {
             //Destroy(PlayerHandler.PlayerInstance.gameObject);
         }
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void PlayButton()
