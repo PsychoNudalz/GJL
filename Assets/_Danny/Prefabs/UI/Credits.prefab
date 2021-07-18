@@ -728,15 +728,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b>THANKS FOR PLAYING!</b>\n\nThis game was made for the \nGJL  Game Parade
-    Summer 2021\nGame Jam\nWith the them \n\"One time use\"\n\n There are multiple
-    endings\nSee if you can find them all!\n \n\n<b>PROGRAMMERS</b>\n \nAnson Wong\nDaniel
-    Newsom\n\n\n<b>3D MODELLING ARTISTS</b>\n \nAnson Wong\nAbdullah Al-Hiyarat\nDaniel
-    Newsom\nMarta Smaczny\n \n\n<b>LEVEL DESIGN</b>\n\nAnson Wong\nAbdullah Al-Hiyarat\n\n\n<b>REFERENCES</b>\n\n<b>UNITY
-    ASSET STORE</b>\n \nDead body - Distant Lands Free Characters\nChicken - Free
-    Chicken Mega Toon Series\nObject outlines - QuickOutline\nWall / floor textures
-    - Sci-Fi Texture Pack 1\nSkybox - SpaceSkies Free\nKitchen Appliances - TMI -
-    Kitchen\n \n<b> Sound Effects</b>\nhttps://www.zapsplat.com\nhttps://freesound.org\nhttps://assetstore.unity.com\nLast
+  m_text: "<b>THANKS FOR PLAYING!</b>\n\nThis game was made for the \nGJL - Game
+    Parade Summer 2021\nGame Jam\nWith the them \n\"One time use\"\n\n There are
+    multiple endings\nSee if you can find them all!\n \n\n<b>PROGRAMMERS</b>\n \nAnson
+    Wong\nDaniel Newsom\n\n\n<b>3D MODELLING ARTISTS</b>\n \nAnson Wong\nAbdullah
+    Al-Hiyarat\nDaniel Newsom\nMarta Smaczny\n \n\n<b>LEVEL DESIGN</b>\n\nAnson Wong\nAbdullah
+    Al-Hiyarat\n\n\n<b>REFERENCES</b>\n\n<b>UNITY ASSET STORE</b>\n \nDead body -
+    Distant Lands Free Characters\nChicken - Free Chicken Mega Toon Series\nObject
+    outlines - QuickOutline\nWall / floor textures - Sci-Fi Texture Pack 1\nSkybox
+    - SpaceSkies Free\nKitchen Appliances - TMI - Kitchen\n \n<b> Sound Effects</b>\nhttps://www.zapsplat.com\nhttps://freesound.org\nhttps://assetstore.unity.com\nLast
     Stand by JDBArtist\n\nDon't forget to hunt down all the items. \nYou can see
     your progress from the main menu.\n"
   m_isRightToLeft: 0
