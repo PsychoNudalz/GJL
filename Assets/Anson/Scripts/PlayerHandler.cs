@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerHandler : MonoBehaviour
 {
@@ -10,11 +11,14 @@ public class PlayerHandler : MonoBehaviour
     [SerializeField] PlayerInventory playerInventory;
     [SerializeField] PlayerVolumnController playerVolumnController;
     [SerializeField] PlayerLifeSystemScript lifeSystemScript;
+    [SerializeField] StarterAssets.FirstPersonController firstPersonController;
+    [SerializeField] PlayerInput playerInput;
 
     [Header("UI")]
     [SerializeField] UI_Handler uI_Handler;
 
     public static GameObject PlayerInstance;
+    public static PlayerHandler handler;
 
     public PlayerControllerScript PlayerControllerScript { get => playerControllerScript;}
     public PlayerInventory PlayerInventory { get => playerInventory;}
@@ -35,6 +39,7 @@ public class PlayerHandler : MonoBehaviour
         {
             gameObject.name = "Player instance";
             PlayerInstance = gameObject;
+            handler = this;
             DontDestroyOnLoad(gameObject);
             Initialise();
         }
@@ -58,6 +63,14 @@ public class PlayerHandler : MonoBehaviour
         {
             lifeSystemScript = GetComponent<PlayerLifeSystemScript>();
         }
+        if (!firstPersonController)
+        {
+            firstPersonController = GetComponent<StarterAssets.FirstPersonController>();
+        }
+        if (!playerInput)
+        {
+            playerInput = GetComponent<PlayerInput>();
+        }
         lifeSystemScript.PlayerVolumnController = playerVolumnController;
         playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
         if (GetDeathString().Equals(""))
@@ -77,6 +90,7 @@ public class PlayerHandler : MonoBehaviour
     public void ResetPlayer()
     {
         lifeSystemScript.ResetSystem();
+        InputLock(false);
     }
     public string SetDeathString(string s)
     {
@@ -87,6 +101,11 @@ public class PlayerHandler : MonoBehaviour
     public string GetDeathString()
     {
         return lifeSystemScript.DeathString ;
+    }
+
+    public void InputLock(bool b)
+    {
+        playerInput.enabled = !b;
     }
 
 }
