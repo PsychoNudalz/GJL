@@ -288,11 +288,16 @@ public class SoundManager : MonoBehaviour
         soundsCache = new List<Sound>();
         foreach (Sound s in sounds)
         {
-            if (s.IsPlaying())
+            if (s!= null && s.IsPlaying())
             {
                 soundsCache.Add(s);
                 s.Stop();
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        StopAllSounds();
     }
 }

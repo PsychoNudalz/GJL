@@ -6,6 +6,7 @@ public class ExplosiveKillZone : MonoBehaviour
 {
     [SerializeField] GameObject[] damageZones;
     [SerializeField] ParticleSystem[] particleEffects;
+    [SerializeField] Sound[] sounds;
 
     public void Activate()
     {
@@ -17,6 +18,10 @@ public class ExplosiveKillZone : MonoBehaviour
         foreach(ParticleSystem ps in particleEffects)
         {
             ps.Play();
+        }
+        foreach(Sound s in sounds)
+        {
+            s.Play();
         }
     }
 }
