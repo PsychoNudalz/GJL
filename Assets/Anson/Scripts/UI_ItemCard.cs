@@ -37,6 +37,10 @@ public class UI_ItemCard : MonoBehaviour
         {
             image.sprite = item.UISprite;
         }
+        else
+        {
+            image.sprite = ToolEnumConvertor.GetSprite(item.ToolType);
+        }
         nameField.text = ToolEnumConvertor.ToName(item.ToolType);
         this.item = item;
         this.toolType = item.ToolType;

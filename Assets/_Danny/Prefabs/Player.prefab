@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 3
+  MoveSpeed: 4
   SprintSpeed: 6
   RotationSpeed: 0.25
   SpeedChangeRate: 10
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 137
   canPush: 1
   strength: 1.1
 --- !u!114 &6601299561315320118
@@ -997,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660400117698732074, guid: cafc53b4f2f1c9940b7a455a6f7b5658, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4886429645454375778, guid: cafc53b4f2f1c9940b7a455a6f7b5658, type: 3}
       propertyPath: m_Layer
