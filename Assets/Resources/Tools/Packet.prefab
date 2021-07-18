@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f27103f829a5b41aff6404d46c7e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolType: 31
+  toolType: 22
   uISprite: {fileID: 0}
   rb: {fileID: 0}
   colliders: []

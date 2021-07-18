@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bonfire_CookingKnife_Preview
+  m_Name: KeycardReader_KeyCard_Preview
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -33,7 +33,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Animation/KnifeModel (1)
+    path: KeycardModel (1)
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -45,7 +45,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4069913526
+      path: 2626020636
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -89,7 +89,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Animation/KnifeModel (1)
+    path: KeycardModel (1)
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []
