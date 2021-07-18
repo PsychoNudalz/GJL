@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4059868727537226612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4528029875148663579}
+  - component: {fileID: 6101483988240081870}
+  m_Layer: 6
+  m_Name: Fertiliser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4528029875148663579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059868727537226612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.43, z: -1.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3440366748225420742}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6101483988240081870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059868727537226612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc62f6f5410efab44a339ac70414860f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObject: {fileID: 5595200898688516845, guid: 8f734746485969b4fb9af3116f699da9, type: 3}
+  position: {fileID: 4528029875148663579}
+--- !u!1 &5738762768408216214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261562049395872939}
+  - component: {fileID: 5001233110802244559}
+  m_Layer: 6
+  m_Name: BlowTorch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1261562049395872939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5738762768408216214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.43, z: -1.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3440366748225420742}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5001233110802244559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5738762768408216214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc62f6f5410efab44a339ac70414860f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObject: {fileID: 52618925020214133, guid: 90f2eaf851b404746ba872839a1a07f9, type: 3}
+  position: {fileID: 1261562049395872939}
 --- !u!1 &7283160853946993737
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +102,7 @@ GameObject:
   - component: {fileID: 1923987666100668647}
   - component: {fileID: 4226782126010033874}
   - component: {fileID: 7841386574229241658}
+  - component: {fileID: 2612919514301999166}
   m_Layer: 6
   m_Name: PlantedGrowBed
   m_TagString: Interactable
@@ -31,6 +122,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1584373659411480059}
+  - {fileID: 1261562049395872939}
+  - {fileID: 4528029875148663579}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
@@ -95,12 +188,57 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2612919514301999166}
+          m_TargetAssemblyTypeName: TreeHandler, Assembly-CSharp
+          m_MethodName: NextGas
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     interactDelay: 1
     interactAnimation: PlantGrowBed_BlowTorch_Use
     previewAnimation: PlantGrowBed_BlowTorch_Preview
+  - tool: 22
+    interactEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2612919514301999166}
+          m_TargetAssemblyTypeName: TreeHandler, Assembly-CSharp
+          m_MethodName: NextGas
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    interactDelay: 1
+    interactAnimation: PlantGrowBed_Fertiliser_Use
+    previewAnimation: PlantGrowBed_Fertiliser_Preview
   lockAfterInteract: 1
   interactionLock: 0
   animator: {fileID: 0}
+--- !u!114 &2612919514301999166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283160853946993737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccbf42420704f64aa152ddfa75263a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blowTorch: {fileID: 5001233110802244559}
+  fertiliser: {fileID: 6101483988240081870}
 --- !u!1001 &2714804606662272681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,6 +474,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5973097882087551541, guid: e26e67fbc295fd74a9b3e21dc11d66a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6093034267071025122, guid: e26e67fbc295fd74a9b3e21dc11d66a3, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -385,6 +527,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7627087667022339801, guid: e26e67fbc295fd74a9b3e21dc11d66a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085786003363490612, guid: e26e67fbc295fd74a9b3e21dc11d66a3, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

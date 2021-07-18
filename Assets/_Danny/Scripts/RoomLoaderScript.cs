@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class RoomLoaderScript : MonoBehaviour
 {
-    
+
     [SerializeField] private bool isReload;
 
     private void OnTriggerEnter(Collider other)
@@ -31,8 +31,8 @@ public class RoomLoaderScript : MonoBehaviour
             {
                 Debug.LogError(e);
             }
+            GetComponent<Collider>().enabled = false;
         }
 
-        GetComponent<Collider>().enabled = false;
     }
 }

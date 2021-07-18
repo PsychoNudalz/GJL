@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ItemScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ItemScript : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] List<Collider> colliders;
     [SerializeField] Outline outline;
+    [SerializeField] UnityEvent pickUpEvent;
 
     public ToolType ToolType { get => toolType; }
     public Sprite UISprite { get => uISprite; set => uISprite = value; }
@@ -50,11 +52,10 @@ public class ItemScript : MonoBehaviour
             */
         }
     }
-    /*public void OnPickUp()
+    public void OnPickUp()
     {
-        SetOnPlayer(false);
-        Debug.Log("Picked Up: " + ToolEnumConvertor.ToName(toolType));
-    }*/
+        pickUpEvent.Invoke();
+    }
     public void OnUse()
     {
         gameObject.SetActive(false);
@@ -85,5 +86,15 @@ public class ItemScript : MonoBehaviour
     public void SetOutline(bool b)
     {
         outline.enabled = b;
+    }
+
+    public void GivePlayerImmunity(int damageType)
+    {
+        FindObjectOfType<PlayerLifeSystemScript>().AddImmunity((DamageType)damageType);
+    }
+
+    public void GivePlayerMask(int i)
+    {
+        PlayerHandler.handler.SetMask(i);
     }
 }

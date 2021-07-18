@@ -9,6 +9,16 @@ public class ItemSpawn : MonoBehaviour
 
     public void Spawn()
     {
+        if (position == null)
+        {
+            Instantiate(spawnObject, transform.position, transform.rotation);
+
+        }
+        else
+        {
         Instantiate(spawnObject, position.position, position.rotation);
+        }
     }
+
+
 }

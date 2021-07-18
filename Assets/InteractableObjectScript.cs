@@ -137,6 +137,11 @@ public class InteractableObjectScript : MonoBehaviour
     {
         FindObjectOfType<PlayerLifeSystemScript>().AddImmunity((DamageType)damageType);
     }
+
+    public void GivePlayerMask(int i)
+    {
+        PlayerHandler.handler.SetMask(i);
+    }
     public void SetPlayerDeathString(string s)
     {
         PlayerHandler.handler.SetDeathString(s);

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 964f5c8c8bc4a08459db74802564d343, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: d9a752d8c64f8b74bb60a5d3fc3270a3, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -20300,22 +20300,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantedGrowBed (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
-      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 823739947}
-    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
-      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ActivateNextGas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
-      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ToxicGasController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
-      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
 --- !u!4 &1841974229 stripped
@@ -20388,6 +20372,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa1b1cff3f1679b4a8bfe4c9478d07e8, type: 3}
+--- !u!114 &1856642654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2612919514301999166, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
+  m_PrefabInstance: {fileID: 7642512225857818170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccbf42420704f64aa152ddfa75263a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1868917093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7195889250755333562, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
@@ -20608,10 +20603,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
@@ -20619,7 +20618,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 768070037}
     - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 768070037}
+    - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
@@ -20627,7 +20634,15 @@ PrefabInstance:
       value: GivePlayerImmunity
       objectReference: {fileID: 0}
     - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: GivePlayerMask
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: InteractableObjectScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: InteractableObjectScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
@@ -20635,7 +20650,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768454933939651284, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8768454933939651287, guid: 8bad17e0a9c466343ad6014588fcc85e, type: 3}
@@ -20734,6 +20757,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5926571856557192096, guid: a41424d945b639746bdc648525744a35, type: 3}
   m_PrefabInstance: {fileID: 1629620199}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1943783845 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+  m_PrefabInstance: {fileID: 5012840928574779252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1943783847 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 161508296749435044, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+  m_PrefabInstance: {fileID: 5012840928574779252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1998897192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1108482472241848988, guid: 8e1364e549f52a94bbaea8f46d901dc9, type: 3}
@@ -20799,22 +20832,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantedGrowBed (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
-      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 823739947}
-    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
-      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ActivateNextGas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
-      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ToxicGasController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
-      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
 --- !u!4 &2020317870 stripped
@@ -20852,6 +20869,10 @@ PrefabInstance:
     - target: {fileID: 6718155898283783242, guid: cd4e3781a387bb3419b3c70be38e8bf6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718155898283783242, guid: cd4e3781a387bb3419b3c70be38e8bf6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6718155898283783243, guid: cd4e3781a387bb3419b3c70be38e8bf6, type: 3}
       propertyPath: m_RootOrder
@@ -20936,6 +20957,7 @@ Transform:
   - {fileID: 1557754510}
   - {fileID: 690657065}
   - {fileID: 1444719628}
+  - {fileID: 1943783845}
   m_Father: {fileID: 208375682}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20992,17 +21014,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 2028206902}
-          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
-          m_MethodName: GivePlayerImmunity
-          m_Mode: 3
+        - m_Target: {fileID: 1943783847}
+          m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+          m_MethodName: set_isKinematic
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
+            m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
     interactDelay: 0.5
     interactAnimation: CentreAlter_Crowbar_Use
@@ -21047,17 +21069,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 2028206902}
-          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
-          m_MethodName: GivePlayerImmunity
-          m_Mode: 3
+        - m_Target: {fileID: 1943783847}
+          m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+          m_MethodName: set_isKinematic
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
+            m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
     interactDelay: 0.5
     interactAnimation: CentreAlter_Hammer_Use
@@ -21102,17 +21124,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 2028206902}
-          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
-          m_MethodName: GivePlayerImmunity
-          m_Mode: 3
+        - m_Target: {fileID: 1943783847}
+          m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+          m_MethodName: set_isKinematic
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
+            m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
     interactDelay: 0.5
     interactAnimation: CentreAlter_HammerBig_Use
@@ -27244,6 +27266,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1001 &5012840928574779252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2028206901}
+    m_Modifications:
+    - target: {fileID: 161508296749435044, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 161508296749435044, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663133926679508596, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_Name
+      value: GasMask
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.577
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9867875
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.16048165
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.021984754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0035754587
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 18.455
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -87.309
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077848044140806681, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.852
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7505fab496633244bab9ee546a69f2ad, type: 3}
 --- !u!1 &5331133572439160140
 GameObject:
   m_ObjectHideFlags: 0
@@ -27347,16 +27434,28 @@ PrefabInstance:
       value: PlantedGrowBed
       objectReference: {fileID: 0}
     - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
+      propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 823739947}
+      objectReference: {fileID: 1856642654}
     - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ActivateNextGas
+      value: NextGas
       objectReference: {fileID: 0}
     - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ToxicGasController, Assembly-CSharp
+      value: TreeHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
+      propertyPath: interactEvents.Array.data[1].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7841386574229241658, guid: 2c38d584d57e93a49ba5c3d610b1fd28, type: 3}
       propertyPath: interactEvents.Array.data[0].interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -27531,7 +27630,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5843772622728859804, guid: 1e166d57c1bc9594bbbc5742bb7b43f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.06
+      value: 23.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843772622728859805, guid: 1e166d57c1bc9594bbbc5742bb7b43f1, type: 3}
+      propertyPath: m_Size.y
+      value: 5.862646
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843772622728859805, guid: 1e166d57c1bc9594bbbc5742bb7b43f1, type: 3}
+      propertyPath: m_Center.y
+      value: 2.431323
       objectReference: {fileID: 0}
     - target: {fileID: 9219534646149076850, guid: 1e166d57c1bc9594bbbc5742bb7b43f1, type: 3}
       propertyPath: m_Name

@@ -71,6 +71,7 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (itemScript != null)
                 {
+                    itemScript.OnPickUp();
                     playerInventory.AddItem(itemScript.ToolType);
                     Destroy(itemScript.gameObject);
                 }

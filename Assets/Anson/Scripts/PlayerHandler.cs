@@ -13,6 +13,7 @@ public class PlayerHandler : MonoBehaviour
     [SerializeField] PlayerLifeSystemScript lifeSystemScript;
     [SerializeField] StarterAssets.FirstPersonController firstPersonController;
     [SerializeField] PlayerInput playerInput;
+    [SerializeField] PlayerHeadScript playerHead;
 
     [Header("UI")]
     [SerializeField] UI_Handler uI_Handler;
@@ -71,6 +72,10 @@ public class PlayerHandler : MonoBehaviour
         {
             playerInput = GetComponent<PlayerInput>();
         }
+        if (!playerHead)
+        {
+            playerHead = GetComponentInChildren<PlayerHeadScript>();
+        }
         lifeSystemScript.PlayerVolumnController = playerVolumnController;
         playerInventory.UI_Inventory = UI_Handler.UI_Inventory;
         if (GetDeathString().Equals(""))
@@ -106,6 +111,11 @@ public class PlayerHandler : MonoBehaviour
     public void InputLock(bool b)
     {
         playerInput.enabled = !b;
+    }
+
+    public void SetMask(int i)
+    {
+        playerHead.SetMask(i);
     }
 
 }

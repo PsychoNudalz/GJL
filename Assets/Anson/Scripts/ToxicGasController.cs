@@ -12,19 +12,20 @@ public class ToxicGasController : MonoBehaviour
     [SerializeField] int threshold;
     [SerializeField] UnityEvent unityEvent;
 
-    public void ActivateNextGas()
+    public bool ActivateNextGas()
     {
         if (count >= killZones.Length)
         {
             Debug.LogWarning("Max count reached");
-            return;
+            return true;
         }
         killZones[count].Activate();
         count++;
         if (count == threshold)
         {
             unityEvent.Invoke();
+            return false;
         }
-        return;
+        return true;
     }
 }

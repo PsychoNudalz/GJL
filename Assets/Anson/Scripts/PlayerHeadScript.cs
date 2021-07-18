@@ -12,6 +12,9 @@ public class PlayerHeadScript : MonoBehaviour
     [SerializeField] UnityEvent onExplode;
     [SerializeField] Transform parent;
     [SerializeField] GameObject toolGO;
+    [Header("Gas Mask")]
+    [SerializeField] GameObject paparMask;
+    [SerializeField] GameObject gasMask;
 
 
     private void Awake()
@@ -36,6 +39,8 @@ public class PlayerHeadScript : MonoBehaviour
         transform.position = parent.position;
         transform.rotation = parent.rotation;
         toolGO.SetActive(true);
+        gasMask.SetActive(false);
+        paparMask.SetActive(false);
     }
 
     public void Explode(Vector3 force)
@@ -74,6 +79,22 @@ public class PlayerHeadScript : MonoBehaviour
         yield return new WaitForSeconds(explodeDelay);
         ExplodeBehaviour(force);
 
+    }
+
+    public void SetMask(int i)
+    {
+        if (i == 0)
+        {
+            paparMask.gameObject.SetActive(true);
+            gasMask.gameObject.SetActive(false);
+
+        }
+        if (i == 1)
+        {
+            paparMask.gameObject.SetActive(false);
+            gasMask.gameObject.SetActive(true);
+
+        }
     }
 
 }
