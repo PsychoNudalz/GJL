@@ -24,12 +24,8 @@ public class CheckpointScript : MonoBehaviour
 
     private void ReloadInventoryCheckpoint()
     {
-        inventoryScript.SetIndex(0);
-        inventoryScript.Items = new List<ToolType>();
-        foreach (ToolType tool in lastItemCheckpoint)
-        {
-            inventoryScript.AddItem(tool);
-        }
+        
+        inventoryScript.ResetInvUI(lastItemCheckpoint.ToArray());
     }
 
     public void SaveCheckpoint()

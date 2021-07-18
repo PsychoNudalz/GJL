@@ -95,6 +95,7 @@ public class PlayerHandler : MonoBehaviour
     public void ResetPlayer()
     {
         lifeSystemScript.ResetSystem();
+        //playerInventory.ResetInvUI();
         InputLock(false);
     }
     public string SetDeathString(string s)

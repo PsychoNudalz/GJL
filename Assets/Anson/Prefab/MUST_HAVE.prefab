@@ -76,6 +76,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds: []
   soundsCache: []
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: f902f56526d43824abe8f5aa8ed20e31, type: 2}
   playBGM: 0
   bgm: {fileID: 0}

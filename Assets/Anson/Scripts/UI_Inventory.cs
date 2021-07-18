@@ -47,7 +47,7 @@ public class UI_Inventory : MonoBehaviour
         SetEquip(itemScript);
     }
 
-    private void ResetInventoryList()
+    public void ResetInventoryList()
     {
         foreach (Transform t in GetComponentsInChildren<Transform>())
         {

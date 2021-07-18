@@ -85,6 +85,7 @@ public class LifeSystemScript : MonoBehaviour
         health_Current = health_Max;
         isDead = false;
         deathCoroutine = null;
+        damageImmunity = new List<DamageType>();
     }
 
     /// <summary>

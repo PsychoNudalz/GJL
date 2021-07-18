@@ -241,8 +241,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Have your only hint in the game, allow the regulations
-              and get a mask one :)
+            m_StringArgument: Have your only hint in the game, follow the regulations
+              and put a mask on :)mask one :)
             m_BoolArgument: 0
           m_CallState: 2
     interactDelay: 1

@@ -155,5 +155,25 @@ public class PlayerInventory : MonoBehaviour
     {
         uI_Inventory.HighlightUsable(tools);
     }
-    
+
+    public void ResetInvUI( ToolType[] lastItemCheckpoint)
+    {
+        items = new List<ToolType>();
+
+        RemoveItem();
+        foreach (ToolType tool in lastItemCheckpoint)
+        {
+            AddItem(tool);
+        }
+        SetIndex(0);
+        if (items.Count== 0)
+        {
+        currentItem = ToolType.None;
+        }
+        else
+        {
+            currentItem = items[index];
+        }
+        uI_Inventory.UpdateInventoryList();
+    }
 }
