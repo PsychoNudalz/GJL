@@ -24,6 +24,7 @@ public class ToxicGasController : MonoBehaviour
         if (count == threshold)
         {
             unityEvent.Invoke();
+            PlayerHandler.handler.ShakeCamera(10f);
             return false;
         }
         return true;
