@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 2293864248856205515}
   - component: {fileID: 2293864248856205512}
   - component: {fileID: 2293864248856205513}
+  - component: {fileID: 7611213440788647057}
   m_Layer: 6
   m_Name: Toaster
   m_TagString: Interactable
@@ -97,6 +98,7 @@ Transform:
   - {fileID: 6128803920462692343}
   - {fileID: 8880646133372911154}
   - {fileID: 3826507373673002972}
+  - {fileID: 2087027217661912206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -161,6 +163,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 2293864248856205513}
+          m_TargetAssemblyTypeName: InteractableObjectScript, Assembly-CSharp
+          m_MethodName: SetPlayerDeathString
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "Didn\u2019t your parents tell you NOT to put a knife
+              in a toaster? No? Just me?"
+            m_BoolArgument: 1
+          m_CallState: 2
     interactDelay: 1
     interactAnimation: Toaster_Knife_Use
     previewAnimation: Toaster_Knife_Preview
@@ -174,6 +189,47 @@ MonoBehaviour:
   lockAfterInteract: 1
   interactionLock: 0
   animator: {fileID: 0}
+--- !u!114 &7611213440788647057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293864248856205510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2976ca745a6b2484a88cbd88ade68329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystems: []
+  visualEffects: []
+  unityEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1959336910065662598}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1959336910065662598}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2444917515598098190
 GameObject:
   m_ObjectHideFlags: 0
@@ -4987,6 +5043,61 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &5834915780418776056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087027217661912206}
+  - component: {fileID: 1959336910065662598}
+  m_Layer: 6
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087027217661912206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834915780418776056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2293864248856205514}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1959336910065662598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834915780418776056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d5f09f39d815f429ed3678e0e39993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: 
+  clip: {fileID: 8300000, guid: ec589863e0b4e6741b076c9bc4d785a7, type: 3}
+  volume: 0.75
+  volumeVariance: 0.1
+  pitch: 1
+  pitchVariance: 0.1
+  audioMixer: {fileID: 0}
+  soundManager: {fileID: 0}
+  isOld: 0
+  isLoop: 0
+  isPlayOnAwake: 0
+  source: {fileID: 0}
 --- !u!1 &8336816316097763763
 GameObject:
   m_ObjectHideFlags: 0

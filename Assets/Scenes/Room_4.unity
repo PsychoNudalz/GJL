@@ -768,11 +768,23 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
       propertyPath: interactEvents.Array.data[3].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
       propertyPath: interactEvents.Array.data[3].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 367873930}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 367873930}
     - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
@@ -780,11 +792,23 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
       propertyPath: interactEvents.Array.data[3].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ProgressEnding
       objectReference: {fileID: 0}
     - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetPlayerDeathString
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
       propertyPath: interactEvents.Array.data[3].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: InteractableObjectScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: InteractableObjectScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
@@ -796,7 +820,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: "Ha! You expected to bake the pizza didn\u2019t you? But it was me,
+        Di- I mean DEATH!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
       propertyPath: interactEvents.Array.data[3].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932971530884549235, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}
+      propertyPath: interactEvents.Array.data[4].interactEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7932971532030872453, guid: 5a7968c18f4ea034bb53d4df4848c7d7, type: 3}

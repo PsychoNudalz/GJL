@@ -42,7 +42,15 @@ public class ObjectHighlighter : MonoBehaviour
 
     public void SetHighlighted(bool isHighlighted)
     {
-        if(transform.parent.name.Equals("Tools")){return;}
+        try
+        {
+
+        if(transform.parent != null && transform.parent.name.Equals("Tools")){return;}
         outline.enabled = isHighlighted;
+        }catch(System.NullReferenceException e)
+        {
+            Debug.Log("Null Reference");
+            Debug.LogError(e);
+        }
     }
 }
