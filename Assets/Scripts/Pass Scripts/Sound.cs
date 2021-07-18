@@ -140,4 +140,12 @@ public class Sound : MonoBehaviour
     {
 
     }
+
+    private void OnDisable()
+    {
+        if (isPlayOnAwake)
+        {
+            source.Stop();
+        }
+    }
 }
