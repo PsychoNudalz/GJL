@@ -32,7 +32,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddItem(ToolType tool)
     {
-        PlayerPrefs.SetInt(tool.ToString(),1);
+        PlayerPrefs.SetInt(tool.ToString(), 1);
         if (!items.Contains(tool))
         {
             items.Add(tool);
@@ -41,7 +41,7 @@ public class PlayerInventory : MonoBehaviour
                 uI_Inventory = FindObjectOfType<UI_Inventory>();
             }
             uI_Inventory.UpdateInventoryList();
-            SetIndex(Mathf.Clamp( items.Count - 1,0,items.Count));
+            SetIndex(Mathf.Clamp(items.Count - 1, 0, items.Count));
             UpdateItem();
         }
         else
@@ -55,10 +55,11 @@ public class PlayerInventory : MonoBehaviour
         if (i < items.Count && i >= 0)
         {
             index = i;
-        }else if (items.Count == 0)
+        }
+        else if (items.Count == 0)
         {
             index = 0;
-            toolHandler.SetToolEnabled(ToolType.Stick,true);
+            toolHandler.SetToolEnabled(ToolType.Stick, true);
         }
         else
         {
@@ -82,7 +83,7 @@ public class PlayerInventory : MonoBehaviour
             SetIndex(0);
             return;
         }
-        SetIndex((index - 1+items.Count) % items.Count);
+        SetIndex((index - 1 + items.Count) % items.Count);
     }
 
     public void NextItem()
@@ -104,7 +105,8 @@ public class PlayerInventory : MonoBehaviour
         {
             currentItem = items[index];
             EquipItem();
-        }else
+        }
+        else
         {
             currentItem = ToolType.None;
         }
@@ -126,7 +128,8 @@ public class PlayerInventory : MonoBehaviour
         try
         {
             uI_Inventory.UpdateEquip();
-        }catch(System.Exception e)
+        }
+        catch (System.Exception e)
         {
             Debug.LogWarning(e.StackTrace);
         }
@@ -141,7 +144,7 @@ public class PlayerInventory : MonoBehaviour
         toolHandler.GetItemFromEnum(currentItem).OnUse();
         if (items.Count > 0)
         {
-        PrevItem();
+            PrevItem();
         }
         else
         {
@@ -156,19 +159,21 @@ public class PlayerInventory : MonoBehaviour
         uI_Inventory.HighlightUsable(tools);
     }
 
-    public void ResetInvUI( ToolType[] lastItemCheckpoint)
+    public void ResetInvUI(ToolType[] lastItemCheckpoint)
     {
         items = new List<ToolType>();
-
-        RemoveItem();
+        if (items.Count > 0)
+        {
+            RemoveItem();
+        }
         foreach (ToolType tool in lastItemCheckpoint)
         {
             AddItem(tool);
         }
         SetIndex(0);
-        if (items.Count== 0)
+        if (items.Count == 0)
         {
-        currentItem = ToolType.None;
+            currentItem = ToolType.None;
         }
         else
         {

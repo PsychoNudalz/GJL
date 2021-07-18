@@ -281,8 +281,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     interactDelay: 0
-    interactAnimation: 
-    previewAnimation: 
+    interactAnimation: KeycardReader_KeyCard_Use
+    previewAnimation: KeycardReader_KeyCard_Preview
   lockAfterInteract: 1
   interactionLock: 0
   animator: {fileID: 1484105191477064232}

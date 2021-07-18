@@ -32,6 +32,7 @@ namespace StarterAssets
         public float Gravity_DEFAULT = -15.0f;
         public float Gravity = -15.0f;
         [SerializeField] float gravityResetTime;
+        [SerializeField] bool gravityOverride;
 
         [Space(10)]
         [Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
@@ -120,7 +121,7 @@ namespace StarterAssets
                 ResetGravity();
             }
 
-            if (_speed > 0.5)
+            if (_speed > 0.5 && Grounded)
             {
                 footsteps.Play();
             }
@@ -139,6 +140,7 @@ namespace StarterAssets
         {
             // set sphere position, with offset
             Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
+            //Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore) && !gravityOverride;
             Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
         }
 
@@ -291,11 +293,16 @@ namespace StarterAssets
         {
             gravityResetTime = Time.time + duration;
             Gravity = value;
+            Grounded = false;
+            _input.JumpInput(true);
+            gravityOverride = true;
             JumpAndGravity();
         }
         public void ResetGravity()
         {
             Gravity = Gravity_DEFAULT;
+            gravityOverride = false;
+
         }
     }
 

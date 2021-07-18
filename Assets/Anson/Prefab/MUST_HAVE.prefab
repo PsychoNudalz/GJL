@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundName: 
   clip: {fileID: 8300000, guid: 5003dff103858a243a3c34cdce337fe9, type: 3}
-  volume: 0.1
+  volume: 0.05
   volumeVariance: 0
   pitch: 1
   pitchVariance: 0
@@ -162,7 +162,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5003dff103858a243a3c34cdce337fe9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0

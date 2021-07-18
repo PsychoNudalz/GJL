@@ -71,6 +71,22 @@ public static class ToolEnumConvertor
                 return "Gas Mask";
             case ToolType.GoldenStick:
                 return "Golden Stick";
+            case ToolType.CookingKnife:
+                return "Cooking Knife";
+            case ToolType.CookingSword:
+                return "Cooking Sword";
+            case ToolType.DogTag:
+                return "Bob's Dog Tag";
+            case ToolType.FrozenPizza:
+                return "Frozen Pizza";
+            case ToolType.KeycardBlue:
+                return "Keycard Blue";
+            case ToolType.PepperGrinder:
+                return "Pepper Grinder";
+            case ToolType.RobotCore:
+                return "Robot Core";
+            case ToolType.WaterBucket:
+                return "Water Bucket";
             default:
                 return t.ToString();
         }

@@ -12,6 +12,8 @@ public class GameOverUI : MonoBehaviour
 
     public void ShowGameOverScreen(int delay)
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         Invoke(nameof(ShowGameOverAfterDelay),delay);
     }
 
