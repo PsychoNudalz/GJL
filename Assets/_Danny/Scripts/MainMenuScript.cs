@@ -18,6 +18,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void PlayButton()
     {
+        PlayerPrefs.SetInt("AlreadyPlayed",1);
         SceneManager.LoadScene(1);
     }
 

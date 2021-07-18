@@ -58,7 +58,7 @@ public class InstructionsMenu : MonoBehaviour
     {
         previousButton.GetComponent<Button>().interactable = (!(imageIndex <= 0));
         nextButton.GetComponent<Button>().interactable = (!(imageIndex >= InstructionImages.Length - 1));
-        startGameButton.SetActive((imageIndex >= InstructionImages.Length - 1));
+        startGameButton.SetActive((imageIndex >= InstructionImages.Length - 1) || PlayerPrefs.GetInt("AlreadyPlayed",0).Equals(1));
 
         SetButtonFontColour(previousButton);
         SetButtonFontColour(nextButton);
