@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6838178191818065494}
   - component: {fileID: 6838178191818065495}
   - component: {fileID: 6838178191818065492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Screwdriver
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,9 +88,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6838178191818065497}
     m_Modifications:
+    - target: {fileID: 172508734803620440, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4269684173228864025, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}
       propertyPath: m_Name
       value: ScrewdriverModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4269684173228864025, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6081508771113277733, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}
       propertyPath: m_RootOrder
@@ -135,6 +143,18 @@ PrefabInstance:
     - target: {fileID: 6081508771113277733, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329455490140601353, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605410743752514214, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917176855321938403, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76fc48adad8ef284ea56b1da2807c9d1, type: 3}

@@ -9,12 +9,17 @@ public class MainMenuScript : MonoBehaviour
     {
         if (PlayerHandler.PlayerInstance != null)
         {
-            Destroy(PlayerHandler.PlayerInstance.gameObject);
+            //Destroy(PlayerHandler.PlayerInstance.gameObject);
         }
     }
 
     public void PlayButton()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit(0);
     }
 }

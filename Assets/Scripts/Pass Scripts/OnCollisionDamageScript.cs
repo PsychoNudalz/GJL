@@ -25,11 +25,11 @@ public class OnCollisionDamageScript : DamageScript
 
     private void FixedUpdate()
     {
-        if (Time.time - lastDamageTick > tickIntervals)
-        {
-            DealDamageToTargets();
-        }
         if (tickIntervals == 0)
+        {
+            return;
+        }
+        else if (Time.time - lastDamageTick > tickIntervals)
         {
             DealDamageToTargets();
         }

@@ -18,7 +18,7 @@ public class ToolHandler : MonoBehaviour
             {
                 try
                 {
-                    GameObject toolPrefab = Instantiate(Resources.Load<GameObject>($"Tools/{tool.ToString()}"), transform.position, transform.rotation, transform);
+                    GameObject toolPrefab = Instantiate(Resources.Load<GameObject>($"Tools/{tool}"), transform.position, transform.rotation, transform);
                     toolPrefab.name = tool.ToString();
                     //if (tool.Equals(ToolType.Apple))
                     //{
@@ -35,7 +35,7 @@ public class ToolHandler : MonoBehaviour
                 }
                 catch (System.Exception e)
                 {
-                    Debug.LogWarning("Failed to find " + tool.ToString());
+                    Debug.LogWarning($"Failed to find {tool} - {e}");
                 }
             }
         }

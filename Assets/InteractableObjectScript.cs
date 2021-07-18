@@ -135,6 +135,14 @@ public class InteractableObjectScript : MonoBehaviour
 
     public void GivePlayerImmunity(int damageType)
     {
-        FindObjectOfType<PlayerLifeSystemScript>().AddImmunity((DamageType) damageType);
+        FindObjectOfType<PlayerLifeSystemScript>().AddImmunity((DamageType)damageType);
+    }
+    public void SetPlayerDeathString(string s)
+    {
+        PlayerHandler.handler.SetDeathString(s);
+    }
+    public void ProgressEnding(int ending)
+    {
+        FindObjectOfType<EndingHandler>().IncrementEnding(ending);
     }
 }

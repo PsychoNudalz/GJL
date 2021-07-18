@@ -15,7 +15,7 @@ public enum ToolType {
     FingerOnStick,
     Crowbar,
     Potato,
-    PaperBagMask,
+    ItsATrap,
     CoffeeMug,
     Apple,
     ApplePie,
@@ -27,13 +27,18 @@ public enum ToolType {
     Body,
     GasMask,
     Fertiliser,
-    LargeStick,
+    GoldenStick,
     CookingKnife,
     CookingSword,
     Screwdriver,
-    WaterBucket
-
-
+    WaterBucket,
+    DogTag,
+    Pizza,
+    FrozenPizza,
+    PepperGrinder,
+    KeycardBlue,
+    BakedPotato,
+    RobotCore
 
 
 };
@@ -50,8 +55,8 @@ public static class ToolEnumConvertor
                 return "Hammer Big";
             case (ToolType.BlowTorch):
                 return "Blow Torch";
-            case (ToolType.PaperBagMask):
-                return "Paper Bag Mask";
+            case (ToolType.ItsATrap):
+                return "It's A Trap";
             case (ToolType.CoffeeMug):
                 return "Coffee Mug";
             case (ToolType.ApplePie):
@@ -64,8 +69,8 @@ public static class ToolEnumConvertor
                 return "Empty Gun";
             case ToolType.GasMask:
                 return "Gas Mask";
-            case ToolType.LargeStick:
-                return "Large Stick";
+            case ToolType.GoldenStick:
+                return "Golden Stick";
             default:
                 return t.ToString();
         }

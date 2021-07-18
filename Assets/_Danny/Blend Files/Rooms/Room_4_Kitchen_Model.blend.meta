@@ -32,6 +32,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: TrapDoor
+    second: {fileID: 2100000, guid: 9a53f12ae4ad69f4fa9208fafe10fa99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Walls
     second: {fileID: 2100000, guid: acce3e29789787b409396e9a5fae66eb, type: 2}
   materials:
