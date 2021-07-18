@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4237879971005066165}
   - component: {fileID: 4237879971005066164}
+  - component: {fileID: 4376938898643450063}
   m_Layer: 0
   m_Name: SoundSystem
   m_TagString: Untagged
@@ -78,4 +79,28 @@ MonoBehaviour:
   soundsCache: []
   audioMixer: {fileID: 24100000, guid: f902f56526d43824abe8f5aa8ed20e31, type: 2}
   playBGM: 0
-  bgm: {fileID: 0}
+  bgm: {fileID: 4376938898643450063}
+--- !u!114 &4376938898643450063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237879971005066167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d5f09f39d815f429ed3678e0e39993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: 
+  clip: {fileID: 8300000, guid: 5003dff103858a243a3c34cdce337fe9, type: 3}
+  volume: 0.75
+  volumeVariance: 0
+  pitch: 1
+  pitchVariance: 0
+  audioMixer: {fileID: 0}
+  soundManager: {fileID: 0}
+  isOld: 0
+  isLoop: 0
+  isPlayOnAwake: 0
+  source: {fileID: 0}
