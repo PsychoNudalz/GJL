@@ -20,6 +20,11 @@ public class ProgressScreen : MonoBehaviour
             PlayerPrefs.SetInt(Enum.GetValues(typeof(ToolType)).GetValue(i).ToString(),1);
         }*/
 
+        foreach (ToolType tool in Enum.GetValues(typeof(ToolType)))
+        {
+            PlayerPrefs.SetInt(tool.ToString(),1);
+        }
+
         RefreshCards();
     }
 

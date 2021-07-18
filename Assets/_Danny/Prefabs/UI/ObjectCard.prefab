@@ -65,9 +65,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
+  m_text: 'dsdsv
 
-'
+    dsvds'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3834021152788c4183902403b6ede88, type: 2}
   m_sharedMaterial: {fileID: -8666715056269638879, guid: c3834021152788c4183902403b6ede88, type: 2}
@@ -94,19 +94,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 15
   m_fontSizeBase: 37.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 30
+  m_fontSizeMax: 15
   m_fontStyle: 0
   m_HorizontalAlignment: 32
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
