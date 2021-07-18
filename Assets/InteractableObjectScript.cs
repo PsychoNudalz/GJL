@@ -150,4 +150,9 @@ public class InteractableObjectScript : MonoBehaviour
     {
         FindObjectOfType<EndingHandler>().IncrementEnding(ending);
     }
+
+    public void ShakeCamera()
+    {
+        PlayerHandler.handler.ShakeCamera(0.2f);
+    }
 }
