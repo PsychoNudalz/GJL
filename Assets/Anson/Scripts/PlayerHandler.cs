@@ -119,4 +119,9 @@ public class PlayerHandler : MonoBehaviour
         playerHead.SetMask(i);
     }
 
+    public void ShakeCamera(float duration)
+    {
+        StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(duration));
+    }
+
 }
