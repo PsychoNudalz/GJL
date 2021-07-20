@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ProgressScreen : MonoBehaviour
 {
-    [SerializeField] private Transform displayPanel;
+    /*[SerializeField] private Transform displayPanel;
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private GameObject emptyCardPrefab;
     [SerializeField] private TMP_Text collectedAmountText;
@@ -23,8 +24,8 @@ public class ProgressScreen : MonoBehaviour
         foreach (ToolType tool in Enum.GetValues(typeof(ToolType)))
         {
             PlayerPrefs.SetInt(tool.ToString(),1);
-        }*/
-
+        }#1#
+        
         RefreshCards();
     }
 
@@ -63,5 +64,5 @@ public class ProgressScreen : MonoBehaviour
             PlayerPrefs.SetInt(tool.ToString(),0);
         }
         RefreshCards();
-    }
+    }*/
 }

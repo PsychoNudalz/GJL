@@ -1,32 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Credits : MonoBehaviour
 {
-    [SerializeField] private bool exitToMenu;
 
     private void OnEnable()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(GetComponentInChildren<Button>().gameObject);
     }
 
 
     public void StopButton()
     {
-        print("Close credits");
-        if(exitToMenu)
+        if (PlayerHandler.handler != null)
         {
-            PlayerHandler.PlayerInstance.GetComponent<PlayerHandler>().ResetPlayer();
+            PlayerHandler.handler.ResetPlayer();
             Destroy(PlayerHandler.PlayerInstance.gameObject);
-            print("Press to main menu");
-            SceneManager.LoadScene(0);
         }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+        SceneManager.LoadScene(0);
     }
 }

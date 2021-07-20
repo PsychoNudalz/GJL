@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class EndingsScreen : MonoBehaviour
 {
-    [SerializeField] private Transform textsParent;
+    /*[SerializeField] private Transform textsParent;
     [SerializeField] private GameObject endingTextPrefab;
 
 
@@ -14,10 +14,10 @@ public class EndingsScreen : MonoBehaviour
     {
         /*
          * For testing
-         */
+         #1#
         /*PlayerPrefs.SetInt(Ending.Ending0.ToString(),1);
         PlayerPrefs.SetInt(Ending.Ending2.ToString(),1);
-        PlayerPrefs.SetInt(Ending.Ending4.ToString(),1);*/
+        PlayerPrefs.SetInt(Ending.Ending4.ToString(),1);#1#
 
         RefreshEndings();
     }
@@ -51,5 +51,5 @@ public class EndingsScreen : MonoBehaviour
             PlayerPrefs.SetInt(ending.ToString(),0);
         }
         RefreshEndings();
-    }
+    }*/
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InstructionsMenu : MonoBehaviour
 {
-    [SerializeField] private InstructionImage[] InstructionImages;
+    /*[SerializeField] private InstructionImage[] InstructionImages;
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private GameObject nextButton;
     [SerializeField] private GameObject previousButton;
@@ -75,5 +75,5 @@ public class InstructionsMenu : MonoBehaviour
         {
             button.GetComponentInChildren<TMP_Text>().color = Color.grey;
         }
-    }
+    }*/
 }
