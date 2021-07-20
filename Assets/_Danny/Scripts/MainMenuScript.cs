@@ -122,7 +122,7 @@ public class MainMenuScript : MonoBehaviour
         startGameButton.SetActive((imageIndex >= InstructionImages.Length - 1) || PlayerPrefs.GetInt("AlreadyPlayed",0).Equals(1));
         if (!nextButton.activeInHierarchy)
         {
-            SetActiveButton(previousButton);
+            SetActiveButton(startGameButton);
         }
 
         if (!previousButton.activeInHierarchy)
