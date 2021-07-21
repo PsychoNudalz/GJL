@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerControllerScript : MonoBehaviour
 {
@@ -18,16 +20,17 @@ public class PlayerControllerScript : MonoBehaviour
 
     private Camera mainCamera;
     private bool highlightObjects = false;
+    
 
     public PlayerInventory PlayerInventory { get => playerInventory; set => playerInventory = value; }
+
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-
     }
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -45,6 +48,12 @@ public class PlayerControllerScript : MonoBehaviour
     {
         Interact();
     }
+
+    public void OnPause()
+    {
+        FindObjectOfType<PauseMenu>().TogglePause();
+    }
+
     public void OnNextItem()
     {
         playerInventory.NextItem();

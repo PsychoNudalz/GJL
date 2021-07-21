@@ -1,31 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class GameOverUI : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private TMP_Text deathText;
-    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject firstButton;
+    private bool isPaused;
 
-    public void ShowGameOverScreen(int delay)
+    public void TogglePause()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        Invoke(nameof(ShowGameOverAfterDelay),delay);
-    }
-
-    void ShowGameOverAfterDelay()
-    {
-        deathText.text = PlayerHandler.PlayerInstance.GetComponent<PlayerHandler>().GetDeathString();
-        PlayerHandler.handler.InputLock(true);
-        gameOverPanel.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(firstButton);
+        isPaused = !isPaused;
+        if (isPaused)
+        {
+            pausePanel.SetActive(true);
+            PlayerHandler.handler.InputLock(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(firstButton);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            pausePanel.SetActive(false);
+            PlayerHandler.handler.InputLock(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 
     public void ReloadButton()
@@ -33,7 +37,7 @@ public class GameOverUI : MonoBehaviour
         CheckpointScript checkpoint = PlayerHandler.PlayerInstance.GetComponent<CheckpointScript>();
         if (checkpoint != null)
         {
-            gameOverPanel.SetActive(false);
+            pausePanel.SetActive(false);
             PlayerHandler.handler.ResetPlayer();
             int sceneId = checkpoint.ReloadCheckpoint();
             Cursor.lockState = CursorLockMode.Locked;
@@ -43,7 +47,7 @@ public class GameOverUI : MonoBehaviour
 
     public void MainMenuButton()
     {
-        gameOverPanel.SetActive(false);
+        pausePanel.SetActive(false);
         PlayerHandler.PlayerInstance.GetComponent<PlayerHandler>().ResetPlayer();
         Destroy(PlayerHandler.PlayerInstance.gameObject);
         SceneManager.LoadScene(0);
