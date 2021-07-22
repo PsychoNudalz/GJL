@@ -10,7 +10,8 @@ public class ToxicGasController : MonoBehaviour
     [SerializeField] int count = 0;
     [Header("Fan")]
     [SerializeField] int threshold;
-    [SerializeField] UnityEvent unityEvent;
+    [SerializeField] UnityEvent onBurn;
+    [SerializeField] UnityEvent onThresshold;
 
     public bool ActivateNextGas()
     {
@@ -20,10 +21,11 @@ public class ToxicGasController : MonoBehaviour
             return true;
         }
         killZones[count].Activate();
+        onBurn.Invoke();
         count++;
         if (count == threshold)
         {
-            unityEvent.Invoke();
+            onThresshold.Invoke();
             PlayerHandler.handler.ShakeCamera(10f);
             return false;
         }

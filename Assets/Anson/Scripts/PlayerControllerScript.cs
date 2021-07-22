@@ -13,6 +13,10 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] bool wasPreview;
     [SerializeField] ItemScript focusedTool;
 
+    [Header("Item Scroll")]
+    [SerializeField] float scrollWaitTime = 0.5f;
+    [SerializeField] float scrollTime;
+
     [Header("Other Components")]
     [SerializeField] PlayerInventory playerInventory;
 
@@ -62,6 +66,24 @@ public class PlayerControllerScript : MonoBehaviour
     {
         playerInventory.PrevItem();
     }
+
+    public void OnScrollItem(InputValue value)
+    {
+        //print(value.Get<Vector2>());
+        if (scrollWaitTime + scrollTime < Time.time)
+        {
+            scrollTime = Time.time;
+            if (value.Get<Vector2>().y > 0)
+            {
+                OnNextItem();
+            }else if (value.Get<Vector2>().y < 0)
+            {
+                OnPrevItem();
+            }
+        }
+    }
+
+
 
 
     public void Interact()

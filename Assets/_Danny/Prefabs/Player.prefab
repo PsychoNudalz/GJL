@@ -1294,6 +1294,8 @@ MonoBehaviour:
   lastPreview: 0
   wasPreview: 0
   focusedTool: {fileID: 0}
+  scrollWaitTime: 0.2
+  scrollTime: 0
   playerInventory: {fileID: 0}
   pickupSound: {fileID: 7834630432152031432}
 --- !u!114 &2421703166155355815

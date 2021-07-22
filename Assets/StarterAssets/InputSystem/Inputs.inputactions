@@ -65,7 +65,7 @@
                     "name": "ScrollItem",
                     "type": "PassThrough",
                     "id": "c06848dc-df22-43ae-8efd-2028496ab3df",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
@@ -332,7 +332,7 @@
                 {
                     "name": "",
                     "id": "510cd152-9ff6-4eca-af37-1f0fda00ed01",
-                    "path": "<Mouse>/scroll/y",
+                    "path": "<Mouse>/scroll",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
