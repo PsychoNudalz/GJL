@@ -109,11 +109,14 @@ namespace StarterAssets
         private void Update()
         {
             JumpAndGravity();
-            GroundedCheck();
+            if (!gravityOverride)
+            {
+                GroundedCheck();
+            }
             Move();
             if (Physics.Raycast(transform.position + controller.center + new Vector3(0, controller.height / 2f, 0), transform.up, jumpHeadDetection, jumpLayerMask))
             {
-                print("Playuer hit head");
+                print("Player hit head");
                 _verticalVelocity = Mathf.Clamp(.1f, 0, _verticalVelocity);
             }
             if (Gravity != Gravity_DEFAULT && Time.time >= gravityResetTime)
@@ -138,6 +141,11 @@ namespace StarterAssets
 
         private void GroundedCheck()
         {
+            if (gravityOverride)
+            {
+                Grounded = false;
+
+            }
             // set sphere position, with offset
             Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
             //Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore) && !gravityOverride;
@@ -289,14 +297,16 @@ namespace StarterAssets
                 Cursor.visible = false;
             }
         }
-        public void SetGravity(float value, float duration = 10f)
+        public void SetGravity(float value, float duration = 99999f)
         {
             gravityResetTime = Time.time + duration;
+            gravityOverride = true;
             Gravity = value;
             Grounded = false;
-            _input.JumpInput(true);
-            gravityOverride = true;
-            JumpAndGravity();
+            _verticalVelocity += 1f;
+            //Grounded = false;
+            //_input.JumpInput(true);
+            //JumpAndGravity();
         }
         public void ResetGravity()
         {
