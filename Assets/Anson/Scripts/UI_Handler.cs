@@ -29,7 +29,7 @@ public class UI_Handler : MonoBehaviour
 
     public void UpdateInventory()
     {
-        uI_Inventory.UpdateInventoryList();
+        uI_Inventory.RefreshUI();
     }
 
 

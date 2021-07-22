@@ -7,16 +7,13 @@ using UnityEngine.Rendering;
 public class PlayerInventory : MonoBehaviour
 {
     [Header("ItemScript")]
-    //[SerializeField] List<ItemScript> items;
     [SerializeField] int index = 0;
     [SerializeField] ToolType currentItem;
 
-    [Header("Player")]
-    [SerializeField] Transform handPostision;
     [Header("UI")]
     [SerializeField] UI_Inventory uI_Inventory;
 
-    private List<ToolType> items;
+    public List<ToolType> items;
     private ToolHandler toolHandler;
 
     public ToolType CurrentItem { get => currentItem; }
@@ -36,13 +33,14 @@ public class PlayerInventory : MonoBehaviour
         if (!items.Contains(tool))
         {
             items.Add(tool);
+            currentItem = tool;
+            RotateList();
             if (uI_Inventory == null)
             {
                 uI_Inventory = FindObjectOfType<UI_Inventory>();
             }
-            uI_Inventory.UpdateInventoryList();
-            SetIndex(Mathf.Clamp(items.Count - 1, 0, items.Count));
-            UpdateItem();
+            GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
+            uI_Inventory.RefreshUI(true);
         }
         else
         {
@@ -50,88 +48,35 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    public void SetIndex(int i)
-    {
-        if (i < items.Count && i >= 0)
-        {
-            index = i;
-        }
-        else if (items.Count == 0)
-        {
-            index = 0;
-            toolHandler.SetToolEnabled(ToolType.Stick, true);
-        }
-        else
-        {
-            Debug.LogWarning("Index out of bounds");
-        }
-    }
-
-    void NextIndex()
-    {
-        if (items.Count == 0)
-        {
-            SetIndex(0);
-            return;
-        }
-        SetIndex((index + 1) % items.Count);
-    }
-    void PrevIndex()
-    {
-        if (items.Count == 0)
-        {
-            SetIndex(0);
-            return;
-        }
-        SetIndex((index - 1 + items.Count) % items.Count);
-    }
-
     public void NextItem()
     {
-        NextIndex();
-        UpdateItem();
+        if (items.Count > 1)
+        {
+            currentItem = items[1];
+            RotateList();
+        }
+        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
+        uI_Inventory.RefreshUI();
     }
 
     public void PrevItem()
     {
-        PrevIndex();
-        UpdateItem();
-    }
-
-    void UpdateItem()
-    {
-        //HosterItem();
-        if (items.Count > 0)
+        if (items.Count > 1)
         {
-            currentItem = items[index];
-            EquipItem();
+            currentItem = items[items.Count-1];
+            RotateList();
         }
-        else
-        {
-            currentItem = ToolType.None;
-        }
-        UI_Inventory.SetEquip(toolHandler.GetItemFromEnum(currentItem));
-    }
-
-    /*
-    void HosterItem()
-    {
-        if (currentItem != null)
-        {
-            GetComponentInChildren<ToolHandler>().SetToolEnabled(Tools.None);
-        }
-    }*/
-
-    void EquipItem()
-    {
         GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
-        try
+        uI_Inventory.RefreshUI();
+    }
+
+    private void RotateList()
+    {
+        while (!currentItem.Equals(items[0]))
         {
-            uI_Inventory.UpdateEquip();
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogWarning(e.StackTrace);
+            ToolType temp = items[0];
+            items.Remove(temp);
+            items.Add(temp);
         }
     }
 
@@ -150,7 +95,8 @@ public class PlayerInventory : MonoBehaviour
         {
             currentItem = ToolType.None;
         }
-        uI_Inventory.UpdateInventoryList();
+        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
+        uI_Inventory.RefreshUI(true);
 
     }
 
@@ -170,15 +116,15 @@ public class PlayerInventory : MonoBehaviour
         {
             AddItem(tool);
         }
-        SetIndex(0);
         if (items.Count == 0)
         {
             currentItem = ToolType.None;
         }
         else
         {
-            currentItem = items[index];
+            currentItem = items[0];
         }
-        uI_Inventory.UpdateInventoryList();
+        uI_Inventory.RefreshUI(true);
+        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
     }
 }

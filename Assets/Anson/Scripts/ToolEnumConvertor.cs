@@ -87,6 +87,8 @@ public static class ToolEnumConvertor
                 return "Robot Core";
             case ToolType.WaterBucket:
                 return "Water Bucket";
+            case ToolType.BakedPotato:
+                return "Baked Potato";
             default:
                 return t.ToString();
         }

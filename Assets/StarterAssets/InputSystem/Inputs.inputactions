@@ -63,7 +63,7 @@
                 },
                 {
                     "name": "ScrollItem",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "c06848dc-df22-43ae-8efd-2028496ab3df",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -335,7 +335,7 @@
                     "path": "<Mouse>/scroll",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "KeyboardMouse",
                     "action": "ScrollItem",
                     "isComposite": false,
                     "isPartOfComposite": false
