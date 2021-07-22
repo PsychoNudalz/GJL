@@ -63,6 +63,8 @@ namespace StarterAssets
         public float BottomClamp = -90.0f;
 
         [SerializeField] private Sound footsteps;
+        [SerializeField] private Sound footstepsRun;
+
         // cinemachine
         private float _cinemachineTargetPitch;
 
@@ -123,14 +125,21 @@ namespace StarterAssets
             {
                 ResetGravity();
             }
-
-            if (_speed > 0.5 && Grounded)
+            if (_input.sprint)
             {
-                footsteps.Play();
+                footstepsRun.Play();
             }
             else
             {
-                footsteps.Stop();
+                footstepsRun.Stop();
+                if (_speed > 0.5 && Grounded)
+                {
+                    footsteps.Play();
+                }
+                else
+                {
+                    footsteps.Stop();
+                }
             }
         }
 
