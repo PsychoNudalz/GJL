@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 20f9d4a818d03594c819fd7958a1c2fc
+guid: b1d11936c07e79749944778e535306bb
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CupboardBody
-    second: {fileID: 2100000, guid: f31eaeff266089645902ebcf40486de8, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: 383415146071d2b4b9f5aac247440061, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CupboardDoors
-    second: {fileID: 2100000, guid: f31eaeff266089645902ebcf40486de8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CupboardTop
-    second: {fileID: 2100000, guid: bb87848e3ed61314ea7fa4651c45d452, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Handles
-    second: {fileID: 2100000, guid: 3c03282c310e8374abbe3126c79753a5, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 83e39e8121f0d6a47a88c3cd872fe4e4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -54,9 +44,9 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.1
+    globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -93,7 +83,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -105,14 +95,14 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1.1
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
