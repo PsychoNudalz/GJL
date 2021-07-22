@@ -86,7 +86,6 @@ public class PlayerHandler : MonoBehaviour
 
     public void SetPlayerPosition(Vector3 newPosition, Quaternion newRotation)
     {
-        print($"Moving Player to {newPosition}");
         GetComponent<CharacterController>().enabled = false;
         PlayerInstance.transform.SetPositionAndRotation(newPosition, newRotation);
         GetComponent<CharacterController>().enabled = true;
@@ -95,7 +94,6 @@ public class PlayerHandler : MonoBehaviour
     public void ResetPlayer()
     {
         lifeSystemScript.ResetSystem();
-        //playerInventory.ResetInvUI();
         InputLock(false);
     }
     public string SetDeathString(string s)

@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ObjectCard : MonoBehaviour
 {
     [SerializeField] private Image cardImage; 

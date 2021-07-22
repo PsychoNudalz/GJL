@@ -7,7 +7,6 @@ using UnityEngine.Rendering;
 public class PlayerInventory : MonoBehaviour
 {
     [Header("ItemScript")]
-    //[SerializeField] List<ItemScript> items;
     [SerializeField] int index = 0;
     [SerializeField] ToolType currentItem;
 
@@ -40,9 +39,8 @@ public class PlayerInventory : MonoBehaviour
             {
                 uI_Inventory = FindObjectOfType<UI_Inventory>();
             }
+            GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
             uI_Inventory.RefreshUI(true);
-            //SetIndex(Mathf.Clamp(items.Count - 1, 0, items.Count));
-            //UpdateItem();
         }
         else
         {
@@ -57,6 +55,7 @@ public class PlayerInventory : MonoBehaviour
             currentItem = items[1];
             RotateList();
         }
+        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
         uI_Inventory.RefreshUI();
     }
 
@@ -64,10 +63,10 @@ public class PlayerInventory : MonoBehaviour
     {
         if (items.Count > 1)
         {
-            currentItem = items[items.Count - 1];
+            currentItem = items[items.Count-1];
             RotateList();
         }
-
+        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
         uI_Inventory.RefreshUI();
     }
 
@@ -78,35 +77,6 @@ public class PlayerInventory : MonoBehaviour
             ToolType temp = items[0];
             items.Remove(temp);
             items.Add(temp);
-        }
-    }
-
-    /*void UpdateItem()
-    {
-        //HosterItem();
-        if (items.Count > 0)
-        {
-            currentItem = items[0];
-            RotateList();
-            EquipItem();
-        }
-        else
-        {
-            currentItem = ToolType.None;
-        }
-        UI_Inventory.SetEquip(toolHandler.GetItemFromEnum(currentItem));
-    }*/
-
-    void EquipItem()
-    {
-        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
-        try
-        {
-            uI_Inventory.UpdateEquip();
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogWarning(e.StackTrace);
         }
     }
 
@@ -125,6 +95,7 @@ public class PlayerInventory : MonoBehaviour
         {
             currentItem = ToolType.None;
         }
+        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
         uI_Inventory.RefreshUI(true);
 
     }
@@ -145,15 +116,15 @@ public class PlayerInventory : MonoBehaviour
         {
             AddItem(tool);
         }
-        //SetIndex(0);
         if (items.Count == 0)
         {
             currentItem = ToolType.None;
         }
         else
         {
-            currentItem = items[index];
+            currentItem = items[0];
         }
         uI_Inventory.RefreshUI(true);
+        GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
     }
 }

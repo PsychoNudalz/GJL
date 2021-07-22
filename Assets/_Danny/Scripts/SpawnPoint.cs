@@ -21,7 +21,6 @@ public class SpawnPoint : MonoBehaviour
     private void MovePlayerToSpawnPoint()
     {
         GameObject player = PlayerHandler.PlayerInstance;
-        //print($"Moving {player.name}");
         player.GetComponent<PlayerHandler>().SetPlayerPosition(transform.position,transform.rotation);
         
         

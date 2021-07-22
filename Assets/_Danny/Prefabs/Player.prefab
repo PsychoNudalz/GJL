@@ -1310,8 +1310,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   currentItem: 0
-  handPostision: {fileID: 520129393707708394}
   uI_Inventory: {fileID: 0}
+  items: 
 --- !u!114 &1639918962
 MonoBehaviour:
   m_ObjectHideFlags: 0

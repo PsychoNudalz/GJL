@@ -20,6 +20,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     private Camera mainCamera;
     private bool highlightObjects = false;
+    private PlayerInput _input;
     
 
     public PlayerInventory PlayerInventory { get => playerInventory; set => playerInventory = value; }
@@ -40,6 +41,7 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 PreviewInteractable();
             }
+
             HightlightTool();
             lastPreview = Time.time;
         }
@@ -63,6 +65,19 @@ public class PlayerControllerScript : MonoBehaviour
         playerInventory.PrevItem();
     }
 
+    public void ScrollItem()
+    {
+        print($"Scroll");
+        /*if (input > 0)
+        {
+            playerInventory.NextItem();
+        }
+
+        if (input < 0)
+        {
+            playerInventory.PrevItem();
+        }*/
+    }
 
     public void Interact()
     {
