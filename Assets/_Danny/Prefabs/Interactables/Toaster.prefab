@@ -5521,15 +5521,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3951826402747147902, guid: cdb22fa1ca970a245ad83569f2a1ebdb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3951826402747147902, guid: cdb22fa1ca970a245ad83569f2a1ebdb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3951826402747147902, guid: cdb22fa1ca970a245ad83569f2a1ebdb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3951826402918436237, guid: cdb22fa1ca970a245ad83569f2a1ebdb, type: 3}
       propertyPath: m_RootOrder
