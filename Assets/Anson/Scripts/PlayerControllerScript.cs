@@ -77,10 +77,12 @@ public class PlayerControllerScript : MonoBehaviour
             scrollTime = Time.time;
             if (value.Get<Vector2>().y > 0)
             {
-                OnNextItem();
-            }else if (value.Get<Vector2>().y < 0)
-            {
                 OnPrevItem();
+
+            }
+            else if (value.Get<Vector2>().y < 0)
+            {
+                OnNextItem();
             }
         }
     }

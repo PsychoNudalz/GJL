@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class GravityChangeScript : MonoBehaviour
 {
-    public void ChangePlayerGravity(float value,float duration = 10f)
+    public void ChangePlayerGravity(float value,float duration = 300f)
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().SetGravity(value,duration);
+        FindObjectOfType< FirstPersonController>().SetGravity(value,duration);
     }
     public void ChangePlayerGravity(float value)
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().SetGravity(value);
+        FindObjectOfType<FirstPersonController>().GetComponent<FirstPersonController>().SetGravity(value);
     }
     public void ResetPlayerGravity()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().ResetGravity();
+        FindObjectOfType<FirstPersonController>().GetComponent<FirstPersonController>().ResetGravity();
     }
 }

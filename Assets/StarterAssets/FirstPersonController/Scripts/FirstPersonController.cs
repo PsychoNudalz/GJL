@@ -116,15 +116,26 @@ namespace StarterAssets
                 GroundedCheck();
             }
             Move();
-            if (Physics.Raycast(transform.position + controller.center + new Vector3(0, controller.height / 2f, 0), transform.up, jumpHeadDetection, jumpLayerMask))
-            {
-                print("Player hit head");
-                _verticalVelocity = Mathf.Clamp(.1f, 0, _verticalVelocity);
-            }
+            HeadBop();
             if (Gravity != Gravity_DEFAULT && Time.time >= gravityResetTime)
             {
                 ResetGravity();
             }
+            MovementSounds();
+        }
+
+        private void HeadBop()
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position + controller.center + new Vector3(0, controller.height / 2f, 0), transform.up,out hit, jumpHeadDetection, jumpLayerMask))
+            {
+                print($"Player hit head: {hit.collider.name}");
+                _verticalVelocity = Mathf.Clamp(.1f, 0, _verticalVelocity);
+            }
+        }
+
+        private void MovementSounds()
+        {
             if (_input.sprint && Grounded)
             {
                 footstepsRun.Play();
@@ -306,19 +317,21 @@ namespace StarterAssets
                 Cursor.visible = false;
             }
         }
-        public void SetGravity(float value, float duration = 99999f)
+        public void SetGravity(float value, float duration = 900f)
         {
             gravityResetTime = Time.time + duration;
+            print($"Set Gravity: {value}, {Time.time}, {duration}");
             gravityOverride = true;
             Gravity = value;
             Grounded = false;
-            _verticalVelocity += 1f;
+            _verticalVelocity = 1f;
             //Grounded = false;
             //_input.JumpInput(true);
             //JumpAndGravity();
         }
         public void ResetGravity()
         {
+            print("Reset gravity");
             Gravity = Gravity_DEFAULT;
             gravityOverride = false;
 
