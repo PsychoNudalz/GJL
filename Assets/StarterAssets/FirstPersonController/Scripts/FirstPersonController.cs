@@ -125,7 +125,7 @@ namespace StarterAssets
             {
                 ResetGravity();
             }
-            if (_input.sprint)
+            if (_input.sprint && Grounded)
             {
                 footstepsRun.Play();
             }
