@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class ToxicGasController : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class ToxicGasController : MonoBehaviour
     [SerializeField] int threshold;
     [SerializeField] UnityEvent onBurn;
     [SerializeField] UnityEvent onThresshold;
+    [Header("Gas Volumn")]
+    [SerializeField] Volume volume;
 
     public bool ActivateNextGas()
     {
@@ -23,6 +27,7 @@ public class ToxicGasController : MonoBehaviour
         killZones[count].Activate();
         onBurn.Invoke();
         count++;
+        volume.weight = (float)count / (float)threshold;
         if (count == threshold)
         {
             onThresshold.Invoke();

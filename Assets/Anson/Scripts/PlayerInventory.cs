@@ -50,9 +50,9 @@ public class PlayerInventory : MonoBehaviour
 
     public void NextItem()
     {
-        if (items.Count > 1)
+        if (items.Count > 0)
         {
-            currentItem = items[1];
+            currentItem = items[1%items.Count];
             RotateList();
         }
         GetComponentInChildren<ToolHandler>().SetToolEnabled(currentItem);
@@ -61,7 +61,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void PrevItem()
     {
-        if (items.Count > 1)
+        if (items.Count > 0)
         {
             currentItem = items[items.Count-1];
             RotateList();

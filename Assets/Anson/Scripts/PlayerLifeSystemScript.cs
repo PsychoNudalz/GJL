@@ -13,9 +13,16 @@ public class PlayerLifeSystemScript : LifeSystemScript
 
     public override void PlayTakeDamageEffect()
     {
-        playerVolumnController.SetBloodVignette(true, 1-GetPercentageHealth());
         base.PlayTakeDamageEffect();
+        playerVolumnController.SetBloodVignette(true, 1-GetPercentageHealth());
 
+    }
+
+    public override int healHealth(float amount)
+    {
+        playerVolumnController.SetBloodVignette(true, 1-GetPercentageHealth());
+
+        return base.healHealth(amount);
     }
 
     public override void ResetSystem()

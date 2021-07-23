@@ -51,6 +51,11 @@ public class DamageScript : MonoBehaviour
             {
                 ls.takeDamage(dmg);
             }
+            //OVERRIDE GAS HEALS IF IMMUNE CAUSE LAZY CODE AND REVERSE BLOOD EFFECT
+            else if (damageType.Equals(DamageType.Toxic))
+            {
+                ls.healHealth(dmg*5f);
+            }
             else
             {
                 //Debug.Log("Damage to " + ls.name + " Immune");
